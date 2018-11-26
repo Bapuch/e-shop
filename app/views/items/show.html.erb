@@ -1,0 +1,76 @@
+<div class="container pt90 pb60">
+    <div class='row align-items-center'>
+        <div class='col-md-7'>
+            <div id="js-grid-slider-thumbnail" class="cbp">
+                <div class="cbp-item">
+                    <div class="cbp-caption">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="images/shop/product1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="cbp-item">
+                    <div class="cbp-caption">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="images/shop/product2.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="cbp-item">
+                    <div class="cbp-caption">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="images/shop/product3.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="cbp-item">
+                    <div class="cbp-caption">
+                        <div class="cbp-caption-defaultWrap">
+                            <img src="images/shop/product4.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="js-pagination-slider">
+                <div class="cbp-pagination-item cbp-pagination-active">
+                    <img src="images/shop/product1.jpg" alt="">
+                </div>
+                <div class="cbp-pagination-item">
+                    <img src="images/shop/product2.jpg" alt="">
+                </div>
+                <div class="cbp-pagination-item">
+                    <img src="images/shop/product3.jpg" alt="">
+                </div>
+                <div class="cbp-pagination-item">
+                    <img src="images/shop/product4.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class='col-md-5'>
+            <h2><%= @item.title %></h2>
+            <div class='clearfix mb30'>
+                <span class='float-right'>
+                    <i class='fa fa-star text-warning'></i>
+                    <i class='fa fa-star text-warning'></i>
+                    <i class='fa fa-star text-warning'></i>
+                    <i class='fa fa-star text-warning'></i>
+                    <i class='fa fa-star-half-full text-warning'></i>
+                    (12 Reviews)
+                </span>
+                <h4 class='text-info'><%= @item.price %></h4>
+            </div>
+            <p>
+                <%= @item.description %>
+            </p>
+            <form method="post" class="pt20">
+                <h4><small>Quantity</small></h4>
+                <div class="quantity">
+                    <input type="button" class="minus" value="-">
+                    <input type="text" class="input-text qty text" title="Qty" value="1" name="quantity" min="1" step="1">
+                    <input type="button" class="plus" value="+">
+                </div>
+                <button type="button" class="btn btn-primary btn-icon">Add to cart</button>
+            </form>
+        </div>
+    </div>
