@@ -1,7 +1,9 @@
 require 'test_helper'
 
 class CartTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+
+   test "associations" do
+    should belong_to :user
+  end
+  
 end
