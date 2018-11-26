@@ -16,4 +16,5 @@ Item.destroy_all #destroy all items first
   new_item.description  = "This is a brief description for #{new_item.title}"
   new_item.price = rand(8.99..99.99)
   new_item.image_url = Faker::Avatar.image
+  new_item.save
 end
