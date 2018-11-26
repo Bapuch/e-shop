@@ -1,0 +1,2 @@
+class TableItem < ApplicationRecord
+end
