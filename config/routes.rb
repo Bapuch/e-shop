@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'items/index'
+  get 'items/show'
   get 'item/index'
   get 'item/show'
   root to: 'home#index'

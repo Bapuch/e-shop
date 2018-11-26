@@ -1,13 +1,13 @@
 require 'test_helper'
 
-class ItemControllerTest < ActionDispatch::IntegrationTest
+class ItemsControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get item_index_url
+    get items_index_url
     assert_response :success
   end
 
   test "should get show" do
-    get item_show_url
+    get items_show_url
     assert_response :success
   end
 
