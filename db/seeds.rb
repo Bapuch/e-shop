@@ -9,6 +9,7 @@
 
 
 # Create 20 random items
+Item.destroy_all #destroy all items first
 20.times do |i|
   new_item = Item.new
   new_item.title = "Item#{i}"
