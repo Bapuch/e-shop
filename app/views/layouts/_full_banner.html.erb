@@ -10,11 +10,11 @@
           <li><h1>MOUINTAIN BICYCLE</h1></li>	
         </ul>
         <p>You <span>create</span> the <span>journey,</span> we supply the <span>parts</span></p>
-        <a class="morebtn" href="bicycles.html">SHOP BIKES</a>
+        <%= link_to "SHOP BIKES", class: "morebtn", "#" %>
       </div>
     </div>
   </div>
   <div class="dwn">
-    <a class="scroll" href="#cate"><%= image_tag "scroll.png", alt: "" %></a>
-  </div>				 
+    <%= link_to image_tag("scroll.png", alt: ""), "#cate", class: "scroll" %>
+  </div>
 </div>
