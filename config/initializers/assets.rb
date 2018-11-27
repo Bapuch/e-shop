@@ -15,5 +15,3 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 
 Rails.application.config.assets.precompile += [/.*\.png/,/.*\.ico/,/.*\.jpg/,/.*\.js/,/.*\.scss/]
 Rails.application.config.assets.precompile << %w( *.scss *.js )
-
-Rails.application.config.assets.paths << Rails.root.join("lib")

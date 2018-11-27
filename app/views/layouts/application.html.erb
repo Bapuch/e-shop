@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <title>Prout</title>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="keywords" content="Bike-shop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
-    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
-
-
+    <title>EShop</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:500,900,100,300,700,400' rel='stylesheet' type='text/css'>
 
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Plugins CSS
+        <link href="css/plugins/plugins.css" rel="stylesheet">
+                <!-- REVOLUTION STYLE SHEETS
+        <link rel="stylesheet" type="text/css" href="revolution/css/settings.css">
+        <!-- REVOLUTION LAYERS STYLES
+        <link rel="stylesheet" type="text/css" href="revolution/css/layers.css">
+        <!-- REVOLUTION NAVIGATION STYLES
+        <link rel="stylesheet" type="text/css" href="revolution/css/navigation.css">
+        <link href="css/shop-style.css" rel="stylesheet"> -->
   </head>
 
   <body>
@@ -27,7 +30,9 @@
         </div>
       <% end %>
     </div>
+
     <%= yield %>
-    <%= render 'layouts/footer'%>
+    
+    
   </body>
 </html>
