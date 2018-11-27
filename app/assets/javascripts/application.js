@@ -28,7 +28,7 @@
 //= require jquery.flexisel
 //= require jquery.etalage.min
 
-//= require bootstrap-sprockets
+//xx= require bootstrap-sprockets
 
 
 $(document).on('turbolinks:load', function () {
