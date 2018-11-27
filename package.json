@@ -1,5 +1,12 @@
 {
   "name": "e-shop",
   "private": true,
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.26.1",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "engines": {
+    "node": "8.10.0"
+  }
 }
