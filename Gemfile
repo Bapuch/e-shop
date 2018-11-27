@@ -67,4 +67,3 @@ gem "devise", "~> 4.5"
 gem "faker", "~> 1.9"
 
 gem 'jquery-rails'
-gem 'bootstrap', '~> 4.1.3'
