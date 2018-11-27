@@ -19,13 +19,9 @@
 //= require jquery_ujs
 
 //= require popper
-//= require bootstrap-sprockets
-
-//require popper.min
-//require bootstrap.min
+//= require bootstrap
 
 //= require jquery.easydropdown
-// require scripts
 //= require move-top
 //= require easing
 //= require responsiveslides.min
@@ -91,5 +87,13 @@ $(document).on('turbolinks:load', function () {
     });
 
   });
+  
+  jQuery(function (c) {
+    $('.close1').on('click', function (c) {
+      $('.cart-header').fadeOut('slow', function (c) {
+        $('.cart-header').remove();
+      });
+    });
+    });
 
 });

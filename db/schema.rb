@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2018_11_27_142030) do
     t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
+
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -29,6 +30,7 @@ ActiveRecord::Schema.define(version: 2018_11_27_142030) do
   end
 
   create_table "items", force: :cascade do |t|
+
     t.string "title"
     t.text "description"
     t.decimal "price"
