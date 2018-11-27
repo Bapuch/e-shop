@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2018_11_26_141502) do
     t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
-  create_table "table_items", force: :cascade do |t|
+  create_table "items", force: :cascade do |t|
     t.string "title"
     t.text "description"
     t.decimal "price"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(version: 2018_11_26_141502) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
+
 
   add_foreign_key "carts", "users"
 end
