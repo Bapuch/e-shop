@@ -4,28 +4,20 @@
 	 <div class="container">
 		 <h3>CATEGORIES</h3>
 		 <div class="categorie-grids">
-			 <a href="bicycles.html"><div class="col-md-4 cate-grid grid1">
-				 <h4>FIXED / SINGLE SPEED</h4>
-				 <p>Are you ready for the 27.5 Revloution ?</p>
-				 <a class="store" href="bicycles.html">GO TO STORE</a>
-			 </div></a>
-			 <a href="bicycles.html"><div class="col-md-4 cate-grid grid2">
-				 <h4>PREMIMUM SERIES</h4>
-				 <p>Exclusive Bike Components</p>
-				 <a class="store" href="bicycles.html">GO TO STORE</a>
-			 </div></a>
-			 <a href="bicycles.html"><div class="col-md-4 cate-grid grid3">
-				 <h4>CITY BIKES</h4>
-				 <p>Street Playground</p>
-				 <a class="store" href="bicycles.html">GO TO STORE</a>
-			 </div></a>
+			 <% @categories.each_with_index do |category, i| %>
+			 	<div class="col-md-4 cate-grid grid<%= i+1 %>">
+					<h4><%= category.name %></h4>
+					<p>Venez les découvrir !</p>
+					<%= link_to "Boutique", items_path, class: "store" %>
+				</div>
+			 <% end %>
 			 <div class="clearfix"></div>
 		 </div>
 	 </div>
 </div>
 <!--bikes-->
 <div class="bikes">
-		 <h3>Nos produits</h3>
+		 <h3>PRODUITS</h3>
 		 <div class="bikes-grids">
 			 <ul id="flexiselDemo1">
          <% @items.first(8).each do |item| %>

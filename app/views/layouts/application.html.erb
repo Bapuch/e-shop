@@ -23,6 +23,7 @@
 
 </head>
 
+
 <body>
 	<!--banner-->
 	<script src="js/responsiveslides.min.js"></script>
@@ -113,3 +114,18 @@
 	<%= render 'layouts/footer'%>
 </body>
 </html>
+
+  <body>
+    <div class="container">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>">
+          <%= value %>
+        </div>
+      <% end %>
+    </div>
+    <%= render 'layouts/modals' %>
+    <%= yield %>
+    <%= render 'layouts/footer'%>
+  </body>
+</html>
+

@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="header">
+    <div class="logo">
+      <%= link_to image_tag("logo.png", alt: ""), '#' %>
+    </div>
+    <div class="top-nav">
+      <label class="mobile_menu" for="mobile_menu">
+      <span>Menu</span>
+      </label>
+      <input id="mobile_menu" type="checkbox">
+        <ul class="nav">
+        <li class="dropdown1"><%= link_to 'BICYCLES', '#' %>
+          <ul class="dropdown2">
+            <li><%= link_to 'FIXED / SINGLE SPEED', '#' %></li>
+            <li><%= link_to 'CITY BIKES', '#' %></li>
+            <li><%= link_to 'PREMIMUN SERIES', '#' %></li>
+          </ul>
+        </li>
+        <li class="dropdown1"><%= link_to 'PARTS', '#' %>
+          <ul class="dropdown2">
+            <li><%= link_to 'CHAINS', '#' %></li>
+            <li><%= link_to 'TUBES', '#' %></li>
+            <li><%= link_to 'TIRES', '#' %></li>
+            <li><%= link_to 'ISC BREAKS', '#' %></li>
+          </ul>
+        </li>
+        <li class="dropdown1"><%= link_to 'ACCESSORIES', '#' %>
+          <ul class="dropdown2">
+            <li><%= link_to 'LOCKS', '#' %></li>
+              <li><%= link_to 'HELMETS', '#' %></li>
+              <li><%= link_to 'ARM COVERS', '#' %></li>
+              <li><%= link_to 'JERSEYS', '#' %></li>
+          </ul>
+        </li>
+        <li class="dropdown1"><%= link_to 'EXTRAS', '#' %>
+          <ul class="dropdown2">
+            <li><%= link_to 'CLASSIC BELL', '#' %></li>
+            <li><%= link_to 'BOTTLE CAGE', '#' %></li>
+            <li><%= link_to 'TRUCK GRIP', '#' %></li>
+          </ul>
+        </li>
+        <li><button class="btn btn-primary btn-lg modal-btn">Sign In/Register</button>
+</li>
+        <%= link_to image_tag("cart.png", :alt => ""), cart_path, class: "shop" %>
+      </ul>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>
