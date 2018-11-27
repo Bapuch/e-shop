@@ -2,7 +2,7 @@ require 'test_helper'
 
 class TableItemTest < ActiveSupport::TestCase
   def setup
-    @item = TableItem.new(title: "Example Item")
+    @item = Item.new(title: "Example Item")
   end
 #test to find if the item titele is uniq
   test "title should be unique" do
