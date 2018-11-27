@@ -23,5 +23,56 @@
 
 //require popper.min
 //require bootstrap.min
-//=require plugins
-//=require active
+
+//= require jquery.easydropdown
+// require scripts
+//= require move-top
+//= require easing
+//= require responsiveslides.min
+//= require jquery.flexisel
+
+$(document).on('turbolinks:load', function () {
+
+  addEventListener("load", function() {setTimeout(hideURLbar, 0); }, false); function hideURLbar(){window.scrollTo(0, 1); }
+
+  jQuery(function ($) {
+    $(".scroll").click(function (event) {
+      event.preventDefault(); $('html,body').animate({
+        scrollTop: $(this.hash).offset().top
+      }, 900);
+    });
+  });
+
+
+    //jQuery(function ($) {
+  $(function () {
+    $("#slider").responsiveSlides({
+      auto: true, nav: true, speed: 500, namespace: "callbacks", pager: true,
+    });
+  });
+
+  jQuery(function ($) {
+    $("#flexiselDemo1").flexisel({
+      visibleItems: 3,
+      animationSpeed: 1000,
+      autoPlay: true,
+      autoPlaySpeed: 3000,
+      pauseOnHover: true,
+      enableResponsiveBreakpoints: true,
+      responsiveBreakpoints: {
+        portrait: {
+          changePoint: 480,
+          visibleItems: 1
+        },
+        landscape: {
+          changePoint: 640,
+          visibleItems: 2
+        },
+        tablet: {
+          changePoint: 768,
+          visibleItems: 3
+        }
+      }
+    });
+  });
+});
