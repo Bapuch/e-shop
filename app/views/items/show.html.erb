@@ -53,58 +53,26 @@
 			  </div>
 		  </div>
 		  <div class="single-bottom2">
-			  <h6>You may also like</h6>  
-			 <div class="product">
-					 <div class="product-desc">
-						  <div class="product-img product-img2">
-							 <%= image_tag "s1.jpg", class: "img-responsive " , alt: "" %>
-						 </div>
-						 <div class="prod1-desc">
-								<h5><a class="product_link" href="bicycles.html">Road Bike</a></h5>
-								<p class="product_descr"> Vivamus ante lorem, eleifend nec interdum non, ullamcorper et arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.eleifend nec interdum non, ullamcorper et arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra. </p>
-						 </div>
-						 <div class="clearfix"></div>
-					 </div>
-					 <div class="product_price">
-							<span class="price-access">$300.51</span>
-							<a class="button1" href="cart.html"><span>Add to cart</span></a>
-					 </div>
-						<div class="clearfix"></div>
-			 </div>
-			 <div class="product">
-					 <div class="product-desc">
-						  <div class="product-img product-img2">
-							 <%= image_tag "s2.jpg", class: "img-responsive " , alt: "" %>
-						 </div>
-						 <div class="prod1-desc">
-								<h5><a class="product_link" href="bicycles.html">Mountain Bike</a></h5>
-								<p class="product_descr"> Vivamus ante lorem, eleifend nec interdum non, ullamcorper et arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.eleifend nec interdum non, ullamcorper et arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra. </p>
-						 </div>
-						 <div class="clearfix"></div>
-					 </div>
-					 <div class="product_price">
-							<span class="price-access">$1500.51</span>
-							<a class="button1" href="cart.html"><span>Add to cart</span></a>
-					 </div>
-				  <div class="clearfix"></div>
-			 </div>
-			 <div class="product">
-					 <div class="product-desc">
-						  <div class="product-img product-img2">
-							 <%= image_tag "s3.jpg", class: "img-responsive " , alt: "" %>
-						 </div>
-						 <div class="prod1-desc">
-								<h5><a class="product_link" href="bicycles.html">Single Speed Bike</a></h5>
-								<p class="product_descr"> Vivamus ante lorem, eleifend nec interdum non, ullamcorper et arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.eleifend nec interdum non, ullamcorper et arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra. </p>
-						 </div>
-						 <div class="clearfix"></div>
-					 </div>
-					 <div class="product_price">
-							<span class="price-access">$800.51</span>
-							<a class="button1" href="cart.html"><span>Add to cart</span></a>
-					 </div>
-				 <div class="clearfix"></div>
-			  </div>
+			  <h6>You may also like</h6>
+        <% @random_items.each do |rand_item| %>
+        <div class="product">
+ 					 <div class="product-desc">
+ 						  <div class="product-img product-img2">
+ 							 <%= image_tag rand_item.image_url, class: "img-responsive " , alt: "" %>
+ 						 </div>
+ 						 <div class="prod1-desc">
+ 								<h5><%= link_to rand_item.title, item_path, class: "product_link" %></a></h5>
+ 								<p class="product_descr"> Vivamus ante lorem, eleifend nec interdum non, ullamcorper et arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.eleifend nec interdum non, ullamcorper et arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra. </p>
+ 						 </div>
+ 						 <div class="clearfix"></div>
+ 					 </div>
+ 					 <div class="product_price">
+ 							<span class="price-access">$300.51</span>
+ 							<a class="button1" href="cart.html"><span>Add to cart</span></a>
+ 					 </div>
+ 						<div class="clearfix"></div>
+ 			 </div>
+       <% end %>
 		 </div>
 	 </div>
 </div>
