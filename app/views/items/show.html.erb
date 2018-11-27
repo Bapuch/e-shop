@@ -34,16 +34,15 @@
 					</div>
 				 </div>
 					 <div class="details-left-info">
-							<h3>SCOTT SPARK</h3>
-								<h4>Model No: 3498</h4>
+							<h3><%= @item.title %></h3>
 							<h4></h4>
-							<p><label>$</label> 300 <a href="#">Click for offer</a></p>
-							<p class="size">SIZE ::</p>
-							<a class="length" href="#">XS</a>
-							<a class="length" href="#">M</a>
-							<a class="length" href="#">S</a>
+							<p><label>$</label> <%= @item.price %>
+							<p class="size">COLOR ::</p>
+							<a class="length" href="#">Red</a>
+							<a class="length" href="#">Blue</a>
+							<a class="length" href="#">Pink</a>
 							<div class="btn_form">
-								<a href="cart.html">buy now</a>
+                <% link_to "Add to cart" %>
 								<a href="cart.html">ADD TO CART</a>
 							</div>
 							<div class="bike-type">
