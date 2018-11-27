@@ -13,6 +13,15 @@
  *= require_tree .
  *= require_self
 
- *= require core-style
+ *= require bootstrap
 
+ *= require style
+ *= require nav
+
+ ----show
+ *= require form
+ *= require etalage
  */
+
+
+
