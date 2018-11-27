@@ -18,8 +18,8 @@
 //= require jquery3
 //= require jquery_ujs
 
-//= require popper
-//= require bootstrap
+//x= require popper
+//xx= require boxotstrap
 
 //= require jquery.easydropdown
 //= require move-top

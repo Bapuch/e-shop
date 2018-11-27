@@ -1,0 +1,14 @@
+/*
+Cube portfolio custom css using in popular places
+*/
+.cbp-l-grid-mosaic-flat .cbp-caption-activeWrap{
+    background-color: transparent;
+    opacity:1;
+    transition:all .3s;
+    -webkit-transition: all .3s;
+z-index: 10;
+}
+.cbp-l-grid-mosaic-flat .cbp-l-caption-title{
+    font-family: $title-font;
+    font-weight: 600;
+}

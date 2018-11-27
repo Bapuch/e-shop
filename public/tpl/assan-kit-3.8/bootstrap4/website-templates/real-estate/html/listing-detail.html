@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Real - estate</title>    
+        <!-- Plugins CSS -->
+        <link href="css/plugins/plugins.css" rel="stylesheet">
+        <!-- load css for cubeportfolio -->
+        <link rel="stylesheet" type="text/css" href="cubeportfolio/css/cubeportfolio.min.css">  
+        <link rel="stylesheet" type="text/css"  href="smart-form/smart-templates/css/smart-forms.css">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="preloader">
+            <div id="preloader-inner"></div>
+        </div><!--/preloader-->
+
+        <!-- Pushy Menu -->
+        <aside class="pushy pushy-right">
+            <div class="advanced-search">
+                <h4>Find Homes</h4>
+                <hr>
+                <form>
+                    <div class="form-group">
+                        <label for="location">Enter Location</label>
+                        <input type="text" id="location" class="form-control" placeholder="eg. Paris">
+                    </div><!--form group-->
+                    <div class="form-group">
+                        <label for="types">Any Types</label>
+                        <select class="form-control" id="types">
+                            <option> Any types</option>
+                            <option> Apartments</option>
+                            <option> Houses</option>
+                            <option> Commercial</option>
+                            <option> Garages</option>
+                            <option> Lots</option>
+                        </select>
+                    </div><!--form group-->
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="min-price">Min. Price ($)</label>
+                                <input type="text" id="min-price" class="form-control" placeholder="eg. $1000">
+                            </div><!--form group-->
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="max-price">Max. Price ($)</label>
+                                <input type="text" id="max-price" class="form-control" placeholder="eg. $15000">
+                            </div><!--form group-->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="min-area">Min. Area (Sq Ft)</label>
+                                <input type="text" id="min-area" class="form-control" placeholder="Sq Ft">
+                            </div><!--form group-->
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="max-area">Max. Area (Sq Ft)</label>
+                                <input type="text" id="max-area" class="form-control" placeholder="Sq Ft">
+                            </div><!--form group-->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="beds">Beds</label>
+                                <select class="form-control" id="beds">
+                                    <option> Beds</option>
+                                    <option> 1</option>
+                                    <option> 2</option>
+                                    <option> 3</option>
+                                    <option> 4</option>
+                                    <option> 5</option>
+                                </select>
+                            </div><!--form group-->
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="max-area">Baths</label>
+                                <select class="form-control" id="baths">
+                                    <option> Baths</option>
+                                    <option> 1</option>
+                                    <option> 2</option>
+                                    <option> 3</option>
+                                    <option> 4</option>
+                                    <option> 5</option>
+                                </select>
+                            </div><!--form group-->
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Search</button>
+                </form>
+
+            </div>
+        </aside>
+        <!-- Site Overlay -->
+        <div class="site-overlay"></div>
+        <div class="top-bar clearfix hidden-md-down">
+            <div class="container">
+                <div class="float-lg-left">
+                    <div class="top-contact-info">
+                        <span>
+                            <i class="ti-mobile"></i>
+                            01 - 249-9493-9493
+                        </span>
+                        <span>
+                            <i class="ti-email"></i>
+                            support@assanland.com
+                        </span>
+                    </div>
+                </div>
+                <div class="float-lg-right">
+                    <div class="clearfix">
+                        <a href="#" class="social-icon-sm si-dark si-colored-facebook si-gray-round">
+                            <i class="fa fa-facebook"></i>
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon-sm  si-dark si-colored-twitter si-gray-round">
+                            <i class="fa fa-twitter"></i>
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon-sm si-dark si-colored-google-plus si-gray-round">
+                            <i class="fa fa-google-plus"></i>
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                        <a href="#" class="social-icon-sm si-dark si-colored-skype si-gray-round">
+                            <i class="fa fa-skype"></i>
+                            <i class="fa fa-skype"></i>
+                        </a>
+                        <a href="#" class="social-icon-sm si-dark si-colored-linkedin si-gray-round">
+                            <i class="fa fa-linkedin"></i>
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="submit-property.html" class="btn btn-outline-primary btn-rounded btn-sm">Submit Property</a>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Top Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-faded navbar-standard">
+            <div class="container">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img class='logo logo-dark' src="images/logo.png" alt="">
+                </a>
+                <div  id="navbarNavDropdown" class="navbar-collapse collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Home</a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="index.html" class="dropdown-item">Home 1 - Slider</a></li>
+                                <li><a href="index-02.html" class="dropdown-item">Home 2 - Search</a></li>
+
+                                
+                                <li><a href="index-03.html" class="dropdown-item">Home 3 - Youtube hero</a></li>
+                                <li><a href="index-landing.html" class="dropdown-item">Home 6 - Landing page</a></li>
+                                <li class=" dropdown-submenu dropdown">
+                                    <a tabindex="-1" href="#" class="dropdown-item">Multi Level 1</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" class="dropdown-item">Multi Level 2</a></li>
+                                        <li><a href="#" class="dropdown-item">Multi Level 2</a></li>
+                                        <li><a href="#" class="dropdown-item">Multi Level 2</a></li>
+                                        <li class="dropdown-submenu"><a tabindex="-1" href="#" class="dropdown-item">Multi Level 2</a>
+                                            <ul class="dropdown-menu">
+                                                <li> <a href="#" class="dropdown-item">Multi Level 3</a></li>
+                                                <li><a href="#" class="dropdown-item">Multi Level 3</a></li>
+                                                <li><a href="#" class="dropdown-item">Multi Level 3</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown dropdown-full-width">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+                                Pages
+                            </a>
+                            <ul class="dropdown-menu dropdown-mega-fw dropdown-slide">
+                                <li class="container">
+                                    <div class="mega-menu-content">
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <ul class="mega-inner-nav list-unstyled">
+                                                    <li><a href="page-about.html" class="dropdown-item">About Us</a></li>
+                                                    <li><a href="page-login.html" class="dropdown-item">Login</a></li>
+                                                    <li><a href="page-register.html" class="dropdown-item">Register</a></li>
+                                                    <li><a href="page-faq.html" class="dropdown-item">FAQ</a></li>
+                                                    <li><a href="page-404.html" class="dropdown-item">404 - Error</a></li>
+
+
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <h4 class="mega-title">Recent properties</h4>
+                                                <div class="owl-carousel owl-theme owl-nav-slide">
+                                                    <div class="item">
+                                                        <div class="listing-card">
+                                                            <a class="listing-thumb" href="#">
+                                                                <img src="images/prop1.jpg" alt="" class="img-fluid">
+                                                                <span class="listing-label sale">For Sale</span>
+                                                                <div class="listing-content">
+                                                                    <h4 class="listing-title">Eastern Villa</h4>
+                                                                    <div class="listing-price">$25,0000</div>
+                                                                </div>
+                                                            </a>
+                                                        </div><!--property-card-->
+                                                    </div><!--property-item-->
+                                                    <div class="item">
+                                                        <div class="listing-card">
+                                                            <a class="listing-thumb" href="#">
+                                                                <img src="images/prop2.jpg" alt="" class="img-fluid">
+                                                                <span class="listing-label rent">For Rent</span>
+                                                                <div class="listing-content">
+                                                                    <h4 class="listing-title">Rose Homes</h4>
+                                                                    <div class="listing-price">$2700/Monthly</div>
+                                                                </div>
+                                                            </a>
+                                                        </div><!--property-card-->
+                                                    </div><!--property-item-->
+                                                    <div class="item">
+                                                        <div class="listing-card">
+                                                            <a class="listing-thumb" href="#">
+                                                                <img src="images/prop3.jpg" alt="" class="img-fluid">
+                                                                <span class="listing-label rent">For Rent</span>
+                                                                <div class="listing-content">
+                                                                    <h4 class="listing-title">Old House</h4>
+                                                                    <div class="listing-price">$25,00/Monthly</div>
+                                                                </div>
+                                                            </a>
+                                                        </div><!--property-card-->
+                                                    </div><!--property-item-->
+                                                    <div class="item">
+                                                        <div class="listing-card">
+                                                            <a class="listing-thumb" href="#">
+                                                                <img src="images/prop4.jpg" alt="" class="img-fluid">
+                                                                <span class="listing-label sale">For Sale</span>
+                                                                <div class="listing-content">
+                                                                    <h4 class="listing-title">Sharma Apartment</h4>
+                                                                    <div class="listing-price">$25,0000</div>
+                                                                </div>
+                                                            </a>
+                                                        </div><!--property-card-->
+                                                    </div><!--property-item-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Listing</a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="listing-row.html" class="dropdown-item"> Listing row</a></li>
+                                <li><a href="listing-grid.html" class="dropdown-item">listing grid</a></li>
+                                <li><a href="listing-detail.html" class="dropdown-item">listing detail</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Blog</a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="blog.html" class="dropdown-item">Blog Page</a></li>
+                                <li><a href="blog-post.html" class="dropdown-item">Blog post</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown ">
+                            <a class="nav-link  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Agents</a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="agent-list.html" class="dropdown-item">Agents List</a></li>
+                                <li><a href="agent-grid.html" class="dropdown-item">Agents-grid</a></li>
+                                <li><a href="agent-detail.html" class="dropdown-item">Agent detail</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item "><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>        
+                </div>
+                <div class=" navbar-right-elements">
+                    <ul class="list-inline">                     
+                        <li class="list-inline-item"><a href="javascript:void(0)" class=" menu-btn"><i class="ti-search"></i> </a></li>
+                    </ul>
+                </div><!--right nav icons-->
+            </div>
+        </nav>
+
+        <div class="white-page-content">
+            <div class="container pt0 pb40">
+                <ol class="breadcrumb mb30">
+
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item">Property Detail</li>
+                </ol>
+                <div class="row">
+                    <div class="col-md-9 mb30">
+                        <div class="single-prp-header mb40 clearfix">
+                            <div class="float-right text-right">
+                                <span class="float-right rating">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-half-empty"></i>
+                                    (234)
+                                </span><br>
+                                <span class="label bg-primary text-white">For Rent</span>           
+                            </div>
+                            <h3 class="mb10 left-title">Marine Apartment</h3>
+                            <span><i class="ti-location-pin"></i> 23, Law Street, Bristol</span>
+
+                        </div>
+                        <div id="js-grid-slider-thumbnail" class="cbp">
+                            <div class="cbp-item">
+                                <div class="cbp-caption">
+                                    <div class="cbp-caption-defaultWrap">
+                                        <img src="images/home1.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cbp-item">
+                                <div class="cbp-caption">
+                                    <div class="cbp-caption-defaultWrap">
+                                        <img src="images/home2.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cbp-item">
+                                <div class="cbp-caption">
+                                    <div class="cbp-caption-defaultWrap">
+                                        <img src="images/home3.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cbp-item">
+                                <div class="cbp-caption">
+                                    <div class="cbp-caption-defaultWrap">
+                                        <img src="images/home4.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="js-pagination-slider">
+                            <div class="cbp-pagination-item cbp-pagination-active">
+                                <img src="images/home1.jpg" alt="">
+                            </div>
+                            <div class="cbp-pagination-item">
+                                <img src="images/home2.jpg" alt="">
+                            </div>
+                            <div class="cbp-pagination-item">
+                                <img src="images/home3.jpg" alt="">
+                            </div>
+                            <div class="cbp-pagination-item">
+                                <img src="images/home4.jpg" alt="">
+                            </div>
+                        </div>
+                        <div class="prp-description pt50">
+                            <div class="row">
+                                <div class="col-md-5 mb50">
+                                    <h3 class="mb0">Summary</h3><hr>
+                                    <ul class="list-unstyled summary">
+                                        <li class="clearfix"><div class="float-right">21, London, 302012</div>
+                                            <i class="fa fa-map-marker"></i> Location
+                                        </li>
+                                        <li class="clearfix"><div class="float-right btn btn-sm btn-primary text-white">$2500/Monthly</div>
+                                            <i class="fa fa-dollar"></i> Price
+                                        </li>
+                                        <li class="clearfix"><div class="float-right">3</div>
+                                            <i class="fa fa-bed"></i> Rooms
+                                        </li>
+                                        <li class="clearfix"><div class="float-right">2</div>
+                                            <i class="fa fa-shower"></i> Baths
+                                        </li>
+                                        <li class="clearfix"><div class="float-right">350 Sq Ft</div>
+                                            <i class="fa fa-square-o"></i> Area
+                                        </li>
+                                        <li class="clearfix"><div class="float-right">
+                                                <span class="rating">
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star"></i>
+                                                    <i class="fa fa-star-half"></i>
+                                                </span>
+                                            </div>
+                                            <i class="fa fa-star"></i> Rating
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-7 mb50">
+                                    <h3 class="mb0">Description</h3><hr>
+                                    <p>
+                                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+                                    </p>
+                                    <p>
+                                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis et metus in libero sollicitudin venenatis eu sed enim. Nam felis lorem, suscipit ac nisl ac, iaculis dapibus tellus. Cras ante justo, aliquet quis placerat nec, molestie id turpis. Cras at tincidunt magna. Mauris aliquam sem sit amet dapibus venenatis. Sed metus orci, tincidunt sed fermentum non, ornare non quam. Aenean nec turpis at libero lobortis pretium.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row mb50">
+                                <div class="col-md-12">
+                                    <h3 class="mb0">Location</h3><hr>
+                                    <div id="markermap" style="width: 100%;height: 350px;"></div>
+                                </div>
+                            </div>
+                            <div class="row mb50">
+                                <div class="col-md-7 mb50">
+                                    <h3 class="mb0">Floor Plan</h3><hr>
+                                    <img src="images/floor-plan.jpg" alt="" class="img-fluid">
+                                </div>
+                                <div class="col-md-5 mb50">
+                                    <h3 class="mb0">Nearby Places</h3><hr>
+                                    <ul class="list-unstyled summary">
+                                        <li class="clearfix"><div class="float-right">2.3 KM</div>
+                                            Police Station
+                                        </li>
+                                        <li class="clearfix"><div class="float-right">4 KM</div>
+                                            Restaurant
+                                        </li>
+                                        <li class="clearfix"><div class="float-right">7 KM</div>
+                                            Movie Cinema
+                                        </li>
+                                        <li class="clearfix"><div class="float-right">5 KM</div>
+                                            Swimming Pool
+                                        </li>
+                                        <li class="clearfix"><div class="float-right">7.4 KM</div>
+                                            School & College
+                                        </li>
+                                        <li class="clearfix"><div class="float-right">12 KM</div>
+                                            bar & Pub
+                                        </li>
+                                        <li class="clearfix"><div class="float-right">14.5 KM</div>
+                                            High Court
+                                        </li>
+                                        <li class="clearfix"><div class="float-right">2.8 KM</div>
+                                            Play ground
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h3 class="mb0">Add your Review</h3><hr>
+
+                                    <div class="smart-wrap">
+                                        <div class="smart-forms smart-container">
+                                            <form method="post" action="/" id="feedback">
+                                                <div class="form-body">
+
+                                                    <div class="frm-row">
+
+                                                        <div class="section colm colm6">
+                                                            <label class="field prepend-icon">
+                                                                <input type="text" name="firstname" id="firstname" class="gui-input" placeholder="First name...">
+                                                                <span class="field-icon"><i class="fa fa-user"></i></span>  
+                                                            </label>
+                                                        </div><!-- end section -->
+
+                                                        <div class="section colm colm6">
+                                                            <label class="field prepend-icon">
+                                                                <input type="text" name="lastname" id="lastname" class="gui-input" placeholder="Last name...">
+                                                                <span class="field-icon"><i class="fa fa-user"></i></span>  
+                                                            </label>
+                                                        </div><!-- end section --> 
+
+                                                    </div><!-- end frm-row section -->
+
+                                                    <div class="section">
+                                                        <label class="field prepend-icon">
+                                                            <input type="text" name="company" id="company" class="gui-input" placeholder="Company">
+                                                            <span class="field-icon"><i class="fa fa-building-o"></i></span>  
+                                                        </label>
+                                                    </div><!-- end section -->                    
+
+                                                    <div class="section">
+                                                        <label class="field prepend-icon">
+                                                            <input type="email" name="email" id="email" class="gui-input" placeholder="Email address">
+                                                            <span class="field-icon"><i class="fa fa-envelope"></i></span>  
+                                                        </label>
+                                                    </div><!-- end section -->                    
+
+                                                    <div class="section">
+                                                        <label class="field prepend-icon">
+                                                            <input type="tel" name="mobile" id="mobile" class="gui-input" placeholder="Moble contact">
+                                                            <span class="field-icon"><i class="fa fa-phone-square"></i></span>  
+                                                        </label>
+                                                    </div><!-- end section --> 
+                                                    <div class="section">
+                                                        <label class="field prepend-icon">
+                                                            <textarea class="gui-textarea" id="comment" name="comment" placeholder="Feedback message"></textarea>
+                                                            <span class="field-icon"><i class="fa fa-comments"></i></span>
+                                                            <span class="input-hint"> <strong>Hint:</strong> Please enter between 80 - 300 characters.</span>   
+                                                        </label>
+                                                    </div><!-- end section -->
+
+                                                    <div class="spacer spacer-b20"></div> 
+
+                                                    <div class="section">
+
+                                                        <span class="rating block">
+
+                                                            <span class="lbl-text">Choose your rating</span>
+
+                                                            <input class="rating-input" id="five-stars" type="radio"  name="product-rate">
+                                                            <label class="rating-star" for="five-stars"><i class="fa fa-star"></i></label>
+
+                                                            <input class="rating-input" id="four-stars" type="radio"  name="product-rate">
+                                                            <label class="rating-star" for="four-stars"><i class="fa fa-star"></i></label>
+
+                                                            <input class="rating-input" id="three-stars" type="radio"  name="product-rate" checked>
+                                                            <label class="rating-star" for="three-stars"><i class="fa fa-star"></i></label>
+
+                                                            <input class="rating-input" id="two-stars" type="radio"  name="product-rate">
+                                                            <label class="rating-star" for="two-stars"><i class="fa fa-star"></i></label>
+
+                                                            <input class="rating-input" id="one-star" type="radio"  name="product-rate">
+                                                            <label class="rating-star" for="one-star"><i class="fa fa-star"></i></label>
+
+                                                        </span>
+                 
+
+                                                    </div><!-- end  section -->
+
+                                                </div><!-- end .form-body section -->
+                                                <div class="form-footer">
+                                                    <button type="submit" class="button btn-primary">Submit Review</button>
+                                                </div><!-- end .form-footer section -->
+                                            </form>
+
+                                        </div><!-- end .smart-forms section -->
+                                    </div><!-- end .smart-wrap section -->
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="sidebar-widget">
+                            <h4 class="sidebar-title">Contact Agent</h4>
+
+                            <a href="agent-detail.html">
+                                <img src="images/agent2.jpg" alt="" class="img-fluid mb20">
+                                <h3>Maria Sofiah</h3>
+                            </a>
+                            <span class="float-right rating">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-empty"></i>
+                                (234)
+                            </span>
+                            <em>241 Properties</em>
+                            <div class="clearfix"></div>
+                            <p class="pt20 mb0">
+                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
+                            </p>
+                            <hr>
+                            <form method="post" action="#" class="assan-contact">
+                                <div class="row">
+                                    <div class="col-sm-12">                                 
+                                        <div class=" mb20">
+                                            <input type="text" name="name" class="form-control" placeholder="Full Name....">
+                                        </div>
+                                        <div class=" mb20">
+                                            <input type="text" name="email" class="form-control" placeholder="Email Address....">
+                                        </div>                          
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <textarea name="message" class="form-control mb20" rows="5" placeholder="Message...."></textarea>                                  
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 text-center">
+                                        <div class="data-status"></div> <!-- data submit status -->
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 text-right">
+                                        <button type="submit" name="submit" class="btn btn btn-primary btn-rounded  mb20">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer footer-dark pt50 pb30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb40">
+                        <h3>About Us</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <a href="#" class="btn btn-sm btn-white-outline">Learn More</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb40">
+                        <h3>Recent Post</h3>
+                        <ul class="list-unstyled footer-list-item">
+                            <li>
+                                <a href="#">
+                                    Lorem ipsum dolor sit amet
+                                </a><br>
+                                <em>April 5, 2017</em>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Consectetur adipiscing elit
+                                </a><br>
+                                <em>April 5, 2017</em>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Sed do eiusmod tempor incididunt
+                                </a><br>
+                                <em>April 5, 2017</em>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb40">
+                        <h3>Featured properties</h3>
+                        <div class="clearfix">
+                            <a href="#" class="thumb-hover-icon">
+                                <img src="images/prop1.jpg" alt="" class="img-fluid" width="90">
+                                <span class="ti-plus"></span>
+                            </a><!--/.hover-->
+                            <a href="#" class="thumb-hover-icon">
+                                <img src="images/prop2.jpg" alt="" class="img-fluid" width="90">
+                                <span class="ti-plus"></span>
+                            </a><!--/.hover-->
+                            <a href="#" class="thumb-hover-icon">
+                                <img src="images/prop3.jpg" alt="" class="img-fluid" width="90">
+                                <span class="ti-plus"></span>
+                            </a><!--/.hover-->
+                            <a href="#" class="thumb-hover-icon">
+                                <img src="images/prop4.jpg" alt="" class="img-fluid" width="90">
+                                <span class="ti-plus"></span>
+                            </a><!--/.hover-->
+                            <a href="#" class="thumb-hover-icon">
+                                <img src="images/prop5.jpg" alt="" class="img-fluid" width="90">
+                                <span class="ti-plus"></span>
+                            </a><!--/.hover-->
+                            <a href="#" class="thumb-hover-icon">
+                                <img src="images/prop6.jpg" alt="" class="img-fluid" width="90">
+                                <span class="ti-plus"></span>
+                            </a><!--/.hover-->
+                        </div><!--/.clearfix-->
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb40">
+                        <h3>Contact Us</h3>
+                        <ul class="list-unstyled contact-list-item">
+                            <li>
+                                <i class="ti-home"></i>
+                                124, Monalisa Street, Lorem Ipsum, 302012
+                            </li>
+                            <li>
+                                <i class="ti-email"></i>
+                                support@assan.com
+                            </li>
+                            <li>
+                                <i class="ti-mobile"></i>
+                                1800 394 3939
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <span>&copy; Copyright 2020. All Right Reserved.</span>
+                        </div>
+                        <div class="col-sm-8 text-right">
+                            <ul class="list-inline footer-nav">
+                                <li class="list-inline-item">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">About</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">News</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">Contact</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">Terms & Conditions</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer><!--/footer-->
+        <!--back to top-->
+        <a href="#" class="back-to-top hidden-xs-down" id="back-to-top"><i class="ti-angle-up"></i></a>
+        <!-- jQuery first, then Tether, then Bootstrap JS. -->
+        <script type="text/javascript" src="js/plugins/plugins.js"></script> 
+        <script type="text/javascript" src="js/assan.custom.js"></script> 
+        <script type="text/javascript" src="cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+        <script type="text/javascript" src="js/cube-thumbSlider.js"></script> 
+        <!--google map-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAMwVpUj3-oHHW8N21819BhKttOga2Rj2s"></script>
+        <script src="js/jquery.gmap.min.js"></script> 
+        <script>
+            // Marker Map
+            $(document).ready(function () {
+                map = new GMaps({
+                    scrollwheel: false,
+                    el: '#markermap',
+                    lat: 26.981942,
+                    lng: 75.684486
+
+                });
+                map.addMarker({
+                    lat: 26.981942,
+                    lng: 75.684486,
+                    title: 'Marker with InfoWindow',
+                    infoWindow: {
+                        content: '<h4>GUNJAN Land & builders</h4><p>We build your dreams</p>'
+                    }
+                });
+            });
+        </script> 
+        <!--Contact script-->
+        <script src="js/contact.js" type="text/javascript"></script>
+    </body>
+</html>

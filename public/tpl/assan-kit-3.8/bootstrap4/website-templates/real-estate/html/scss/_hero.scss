@@ -1,0 +1,18 @@
+/*
+Hero templates
+*/
+@media(min-width:992px){
+    .hero-search{
+        padding-top: 8rem!important;
+        padding-bottom: 8rem!important;
+    }
+}
+.searchWrap{
+    padding:20px 15px;
+    background-color: rgba(0,0,0,.5);
+    border-radius: 5px;
+    &.verticalWrap{
+       padding: 40px 20px; 
+    }
+}
+

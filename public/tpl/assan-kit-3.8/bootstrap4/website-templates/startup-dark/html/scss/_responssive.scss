@@ -1,0 +1,52 @@
+/*
+Responsive style
+*/
+
+@media(max-width:991px){
+    .navbar-toggler{
+     border:0px !important;   
+    }
+    .navbar-right{
+        display: none;
+    }
+    .fullscreen.bg-parallax{
+        h1{
+            font-size: 1.7rem;
+        }
+    }
+    .dropdown-submenu .dropdown-menu{
+        display: block;
+        padding-left: 15px;
+    }
+    .navbar.navbar-transparent.fixed-top{
+        position: static!important;
+    }
+    .dropdown-menu{
+        box-shadow: none;
+    }
+    .navbar.navbar-transparent.onepagenav{
+        position: fixed!important;
+        top:0;
+        left:0;
+        width: 100%;
+        z-index: 9999;
+        background-color:#fff!important;
+    }
+}
+@media(max-width:767px){
+     .team-card{
+        .img-fluid{
+            width: 100%;
+        }
+    }
+}
+@media(max-width:575px){
+    .container{
+        width: 100%;
+    } 
+    .team-card{
+        .img-fluid{
+            width: 100%;
+        }
+    }
+}

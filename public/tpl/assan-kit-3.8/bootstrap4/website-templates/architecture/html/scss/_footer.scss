@@ -1,0 +1,40 @@
+/*
+Footer style
+*/
+.footer{
+    padding-top:90px;
+    padding-bottom:70px;
+    width:100%;
+    .container{
+        width:100%;
+        
+    }
+    h5{
+        color:#fff;
+        font-family: $base-font;
+        opacity:0.8;
+        margin-bottom: 20px;
+    }
+    ul.list-inline{
+        li{
+            position:relative;
+            color:rgba(#fff,.5);
+            padding-left: 15px;
+            &:before{
+                content: "|";
+                color:rgba(#fff,.5);
+                position: absolute;
+                left: 0;
+            }
+            &:first-child:before{
+               display: none;
+            }
+            a{
+                color:rgba(#fff,.8);
+                &:hover{
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+}

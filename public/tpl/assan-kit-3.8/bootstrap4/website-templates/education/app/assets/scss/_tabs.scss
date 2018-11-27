@@ -1,0 +1,23 @@
+/*tabs*/
+.tab-list{
+    .nav-item{
+        padding: 0px 1px;
+        .nav-link{
+            border-top: 2px solid rgba(#212121,.15);
+            background-color: $gray;
+            color: inherit;
+            &:hover,&:focus,&.active{
+                background-color: $primary;
+                color: #fff;
+                border-top-color: $primary-h;
+            }
+            &.active{
+                pointer-events: none;
+                cursor: default;
+            }
+        }
+    }
+}
+.tab-content{
+    padding: 2rem 0;
+}

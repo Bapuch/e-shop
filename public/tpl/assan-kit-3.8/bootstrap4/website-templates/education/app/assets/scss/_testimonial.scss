@@ -1,0 +1,74 @@
+/**testimonials **/
+.testimonial-card{
+   p{
+    position: relative;
+	background: #fff;
+    border: 1px solid #fff;
+    padding:2rem 2rem;
+    &:before,&:after{
+    top: 100%;
+	left: 3rem;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+    }
+    &:after {
+        border-color: rgba(255, 255, 255, 0);
+        border-top-color: #fff;
+        border-width: 10px;
+        margin-left: -10px;
+    }
+   &:before {
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #fff;
+	border-width: 11px;
+	margin-left: -11px;
+   }
+}
+.testimonial-meta{
+    padding: .5rem 1.25rem;
+    img{
+        width: 80px;
+        height:80px;
+        margin-right: 1rem;
+        border-radius: 100px;
+       float: left;
+    }
+    &:after{
+        content: "";
+        display: table;
+        width: 100%;
+    }
+    >div{
+        -ms-flex: 1;
+        flex: 1;
+        position: relative;
+    }
+}
+}
+
+.owl-theme .owl-dots .owl-dot span{
+    padding: 0px;
+    width: 14px;
+    height: 14px;
+    border-radius: 0px;
+    background-color: rgba($secondary,.9);
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    margin: 3px;
+}
+.owl-theme .owl-dots .owl-dot.active span{
+    background-color: $secondary;
+    transform: scale(.5);
+}
+.owl-theme .owl-dots .owl-dot:hover span{
+    background-color: $secondary;
+}
+.owl-theme .owl-dots .owl-dot{
+&:hover,&:focus{
+    outline: 0!important;
+}
+}

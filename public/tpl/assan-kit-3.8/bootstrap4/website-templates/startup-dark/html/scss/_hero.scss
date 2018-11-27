@@ -1,0 +1,23 @@
+/*
+Hero templates
+*/
+
+.fullscreen.bg-parallax{
+    height:100%;
+    width:100%;
+    background-position:top-center;
+    .d-flex{
+        height: 100%;
+        position: relative;
+    }
+    h1{
+        font-weight: 600;
+        color:#fff;
+        text-transform: capitalize;
+        font-family: $title-font;
+        font-size: 3rem;
+    }
+    .lead{
+        color:#eee;
+    }
+}

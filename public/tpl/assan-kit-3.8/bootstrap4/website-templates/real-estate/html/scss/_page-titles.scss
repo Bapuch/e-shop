@@ -1,0 +1,21 @@
+/*
+Page title styles
+*/
+.page-titles-img{
+        background: url(../images/texture1.jpg) no-repeat top left;
+        background-size: 100%;
+        padding-top:250px;
+        padding-bottom: 40px;
+        background-attachment: fixed;
+    h3{
+           margin-top: 5px;
+        font-family:$title-font;
+        font-weight:400;
+        color:#fff;
+    }
+}
+
+.page-title-gray{
+    padding:50px 0;
+    background-color: #fafafa;
+}
