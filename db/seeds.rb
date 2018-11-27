@@ -12,8 +12,8 @@
 Item.destroy_all #destroy all items first
 20.times do |i|
   new_item = Item.new
-  new_item.title = "Item#{i}"
-  new_item.description  = "This is a brief description for #{new_item.title}"
+  new_item.title = Faker::Name.name
+  new_item.description  = Faker::Lorem.paragraph
   new_item.price = Faker::Number.decimal(2)
   new_item.image_url = Faker::Avatar.image
   new_item.save

@@ -67,8 +67,9 @@
  						 <div class="clearfix"></div>
  					 </div>
  					 <div class="product_price">
- 							<span class="price-access">$300.51</span>
- 							<a class="button1" href="cart.html"><span>Add to cart</span></a>
+ 							<span class="price-access"><%= rand_item.price %>€</span>
+              <%= link_to "Add to cart", items_path, class: "button1" %>
+
  					 </div>
  						<div class="clearfix"></div>
  			 </div>
