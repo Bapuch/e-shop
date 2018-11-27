@@ -12,11 +12,9 @@ Category.destroy_all
 
 # Create 4 categories
 
-4.times do |i|
-  cat = Category.new
-  cat.name = "Category#{i}"
-  cat.save
-end
+Category.create(name: "Robots guerriers")
+Category.create(name: "Robots ménagers")
+Category.create(name: "Robots compagnons")
 # Create 20 random items
  #destroy all items first
 20.times do |i|
