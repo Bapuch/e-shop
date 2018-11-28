@@ -32,6 +32,7 @@ class ApplicationController < ActionController::Base
   # called (once) when the user logs in, insert any code your application needs
   # to hand off from guest_user to current_user.
   def logging_in
+    # update the cart to get the current_user.id
     guest_cart = guest_user.cart
     guest_cart.user_id = current_user.id
     guest_cart.save!
@@ -42,5 +43,10 @@ class ApplicationController < ActionController::Base
     u.save!(:validate => false)
     session[:guest_user_id] = u.id
     u
+  end
+
+  def create
+    super
+    current_or_guest_user
   end
 end
