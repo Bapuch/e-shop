@@ -128,5 +128,4 @@ $(document).on('turbolinks:load', function () {
       modal.style.display = "none";
     }
   }
-
 });
