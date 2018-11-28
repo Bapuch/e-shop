@@ -21,7 +21,7 @@
 //x= require popper
 //xx= require boxotstrap
 
-//= require jquery.easydropdown
+
 //= require move-top
 //= require easing
 //= require responsiveslides.min
