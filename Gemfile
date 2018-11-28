@@ -71,3 +71,7 @@ gem "devise", "~> 4.5"
 
 gem "faker", "~> 1.9"
 
+<<<<<<< HEAD
+=======
+gem 'jquery-rails'
+>>>>>>> development

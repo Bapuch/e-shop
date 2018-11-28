@@ -1,0 +1,103 @@
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto 20px;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+  width: 30%;
+  min-width: 230px;
+}
+.modal-content:hover {
+  box-shadow: 0 0 16px 3px white;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #0f99bb;
+  color: white;
+}
+
+.modal-body {
+  min-height: 200px;
+  padding: 5px 16px;
+  background-image: asset-url('background-modal.jpg');
+  background-size: 100% 110%;
+}
+
+.modal-footer {
+  padding: 5px 16px;
+  background-color: #0f99bb;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+.mdl-btn {
+  border: solid 2px white;
+  background-color: transparent;
+  color: white;
+  border-radius: 3px;
+  font-weight: bold;
+  align-self: flex-start;
+}
+.mdl-btn:hover {
+  box-shadow: 0 0 10px 2px white;
+}
+.mdl-btn:active {
+  border: solid 2px black;
+  background-color: white;
+  color: #0f99bb;
+}
+
+.modal-footer a {
+  color: white;
+  font-size: 75%;
+}

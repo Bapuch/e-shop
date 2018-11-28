@@ -1,0 +1,205 @@
+/**form control**/
+label{
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: .35rem;
+}
+.form-control{
+    background-color: transparent;
+    border:1px solid rgba(#221111,.15);
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    font-size: 14px;
+    color:inherit;
+    min-height: 40px;
+    &:focus{
+        background-color:#fff;
+        border-color:$primary;
+        box-shadow: 0px 0px 0px 2px rgba($primary,.2);
+    }
+}
+.search-mix{
+    position: relative;
+    overflow: hidden;
+    .form-control{
+        height: 50px;
+        padding-right: 38px;
+    }
+    .btn-search-mix{
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        width: auto;
+        height: auto;
+        padding: 0px;
+        border: 0px;
+        color: #555;
+        line-height: 1;
+        background-color:transparent;
+    }
+}
+
+/**select ui **/
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited, a.ui-button, a:link.ui-button, a:visited.ui-button, .ui-button{
+    line-height: 25px;
+    height: 40px;
+}
+.ui-state-active .ui-icon, .ui-button:active .ui-icon,.ui-state-hover .ui-icon, .ui-state-focus .ui-icon, .ui-button:hover .ui-icon, .ui-button:focus .ui-icon{
+    background-image: none;
+}
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited, a.ui-button, a:link.ui-button, a:visited.ui-button, .ui-button{
+    color:inherit;
+}
+.ui-selectmenu-button.ui-button{
+    width: 100%;
+    background-color:transparent;
+    border:1px solid rgba(#221111,.15);
+    position: relative;
+}
+.ui-selectmenu-icon.ui-icon{
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    display: inline-block;
+    background-image: none;
+    font-family: 'Linearicons';
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-feature-settings: "liga";
+    -moz-font-feature-settings: "liga=1";
+    -moz-font-feature-settings: "liga";
+    -ms-font-feature-settings: "liga" 1;
+    -o-font-feature-settings: "liga";
+    font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-indent: 0;
+    &:before{
+        content: "\e93a";
+        font-family: "Linearicons";
+        z-index: 3;
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        font-size: 12px;
+        line-height: 12px;
+        transition: all .3s;
+        -webkit-transition: all .3s;
+        text-align: center;
+        left:0;
+        top:2px;
+        color:inherit;
+        display: block;
+    }
+}
+.ui-selectmenu-button-open{
+    .ui-selectmenu-icon.ui-icon{
+        &:before{
+            transform: rotate(180deg);
+        }
+    }
+}
+.ui-widget{
+    font-family: $font;
+    font-size: 14px;
+}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover{
+    background-color: transparent;
+    color: $primary;
+    border:0px;
+}
+.ui-menu .ui-state-focus, .ui-menu .ui-state-active{
+    margin: 0px;
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus{
+    background-color: transparent;
+    border:1px solid $primary;
+    outline: 0!important;
+}
+.ui-menu .ui-menu-item-wrapper{
+    padding: .25rem 1rem;
+}
+
+
+
+/**smart form**/
+.smart-form{
+    .gui-input{
+       border-color: $gray;
+    }
+}
+.smart-forms .gui-input:hover, .smart-forms .gui-textarea:hover, .smart-forms .select > select:hover, .smart-forms .select-multiple select:hover, .smart-forms .gui-input:hover ~ .input-hint, .smart-forms .file .gui-file:hover + .gui-input, .smart-forms .gui-textarea:hover ~ .input-hint {
+    border-color: $secondary;
+}
+.smart-forms .select, .smart-forms .gui-input, .smart-forms .gui-textarea, .smart-forms .select > select, .smart-forms .select-multiple select{
+    border-color: $gray;
+}
+.smart-forms .gui-input:focus, .smart-forms .gui-textarea:focus, .smart-forms .select > select:focus, .smart-forms .select-multiple select:focus{
+    border-color: $secondary;
+    color: inherit;
+    -webkit-box-shadow:0px 0px 3px $secondary inset; 
+	-moz-box-shadow:0px 0px 3px $secondary inset;  
+	-o-box-shadow:0px 0px 3px $secondary inset;	
+	box-shadow:0px 0px 3px $secondary inset;
+}
+.smart-forms .input-hint{
+    padding: 0px;
+    background-color: transparent;
+    padding-top: .5rem;
+    border:0px;
+}
+.smart-forms .gui-input:focus ~ .field-icon i, .smart-forms .gui-textarea:focus ~ .field-icon i{
+    color: $secondary;
+}
+.smart-forms .form-body{
+    padding: 0px;
+}
+.smart-container{
+    margin: 0px;
+    box-shadow: none;
+}
+.smart-forms .form-footer{
+    background: none;
+    padding: 1rem 0;
+    overflow: visible;
+}
+.smart-forms{
+    .button{
+        padding: .85rem 1.5rem;
+        position: relative;
+        z-index: 3;
+        border-radius: 3px;
+        font-family: $font-title;
+        font-size: .8rem;
+        font-weight: 600;
+        &.btn-primary{
+            background-color: $primary;
+        }
+        &.btn-light{
+            background-color: $gray;
+        }
+    }
+}
+.smart-forms .append-picker-icon button, .smart-forms .prepend-picker-icon button, .smart-forms .smart-widget .button{
+    border-color: $gray;
+    background: #fafafa;
+}
+.smart-wrap{
+    padding: 30px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 60px rgba($primary,.15);
+}
+@media(min-width:768px){
+.smart-wrap{
+    margin-top: -200px;
+}
+}

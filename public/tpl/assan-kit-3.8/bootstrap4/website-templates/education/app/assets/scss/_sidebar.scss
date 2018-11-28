@@ -1,0 +1,16 @@
+/** template sidebar**/
+.sidebar-widget{
+    h5{
+        margin-bottom: 1.5rem;
+    }
+    .list-links{
+        .media:nth-child(2){
+            padding: 1rem 0;
+        }
+        li:first-child{
+            a{
+                padding-top: 0px;
+            }
+        }
+    }
+}

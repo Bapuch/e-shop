@@ -1,0 +1,90 @@
+/*
+Sidebar ....
+*/
+.sidebar-nav{
+    .sidenav-item{
+        display: block;
+        padding:10px 0;
+        color:$dark-color;
+        border-bottom:1px solid #eee;
+        position:relative;
+        &:after{
+            content: "\e93c";
+            font-family: 'Linearicons';
+            position: absolute;
+            right: 0;
+            top: 12px;
+            transition: all .3s;
+            -webkit-transition: all .3s;
+            margin-right: 20px;
+            opacity:0;
+        }
+        &.active,&:hover{
+            color:$primary-color;
+            padding-left:10px;
+            &:after{
+                opacity: 1;
+                margin-right:0;
+            }
+        }
+    }
+
+}
+.sidebar-title{
+    font-weight: 400;
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+.sidebar-column{
+    .list-unstyled .media{
+        .img-fluid{
+            width: 88px;
+        }
+        .media-body{
+            font-size:12px;
+            h5{
+                font-size: 18px;
+                a{
+                    color:#aeaeae;
+                    font-size: 13px;
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
+}
+.categories{
+    li{
+        &.active {
+            a{
+                font-weight: 700;   
+                color:#333;
+            }
+            ul{
+                padding-left: 15px;
+                li a{
+                    font-weight: 400;
+                    color:#333;
+                     &:hover{
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+        a{
+            display: block;
+            font-size: 13px;
+            padding: 3px 0px;
+            border-bottom: 1px solid #eee;
+            color:#999;
+             &:hover{
+                        color: $primary-color;
+                    }
+        }
+        &:last-child a{
+            border-bottom: 0px;
+        }
+    }
+}

@@ -3,4 +3,15 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  has_one :cart
+  before_create :build_default_cart
+
+  private
+  def build_default_cart
+    # build default profile instance. Will use default params.
+    # The foreign key to the owning User model is set automatically
+    build_cart
+    true
+  end
 end

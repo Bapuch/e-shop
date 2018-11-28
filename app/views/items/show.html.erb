@@ -1,37 +1,14 @@
-<div class="container pt90 pb60">
-    <div class='row align-items-center'>
-        <div class='col-md-7'>
-            <div id="js-grid-slider-thumbnail" class="cbp">
-                <div class="cbp-item">
-                    <div class="cbp-caption">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="images/shop/product1.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="cbp-item">
-                    <div class="cbp-caption">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="images/shop/product2.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="cbp-item">
-                    <div class="cbp-caption">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="images/shop/product3.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="cbp-item">
-                    <div class="cbp-caption">
-                        <div class="cbp-caption-defaultWrap">
-                            <img src="images/shop/product4.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
+<%= render 'layouts/small_banner' %>
+<div class="product">
+	 <div class="container">
+		 <div class="ctnt-bar cntnt">
+			 <div class="content-bar">
+				 <div class="single-page">
+					 <div class="product-head">
+						<%= link_to "Home", root_path %> <span>::</span>
+						</div>
 
+<<<<<<< HEAD
             <div id="js-pagination-slider">
                 <div class="cbp-pagination-item cbp-pagination-active">
                     <img src="images/shop/product1.jpg" alt="">
@@ -48,7 +25,9 @@
             </div>
         </div>
         <div class='col-md-5'>
-            <h2><%= @item.title %></h2>
+            <h2>
+                <%= @item.title %>
+            </h2>
             <div class='clearfix mb30'>
                 <span class='float-right'>
                     <i class='fa fa-star text-warning'></i>
@@ -58,7 +37,9 @@
                     <i class='fa fa-star-half-full text-warning'></i>
                     (12 Reviews)
                 </span>
-                <h4 class='text-info'><%= @item.price %></h4>
+                <h4 class='text-info'>
+                    <%= @item.price %>
+                </h4>
             </div>
             <p>
                 <%= @item.description %>
@@ -74,3 +55,72 @@
             </form>
         </div>
     </div>
+=======
+						<!--//details-product-slider-->
+					 <div class="details-left-slider">
+						 <div class="grid images_3_of_2">
+						  <ul id="etalage">
+							<li>
+								<a href="optionallink.html">
+									<%= image_tag @item.image_url, class: "etalage_thumb_image img-responsive" %>
+									<%= image_tag @item.image_url, class: "etalage_source_image img-responsive", title: "" %>
+								</a>
+							</li>
+							<li>
+								<%= image_tag @item.image_url, class: "etalage_thumb_image img-responsive" %>
+								<%= image_tag @item.image_url, class: "etalage_source_image img-responsive", title: "" %>
+							</li>
+							<li>
+								<%= image_tag @item.image_url, class: "etalage_thumb_image" , class: "img-responsive"  %>
+								<%= image_tag @item.image_url, class: "etalage_source_image img-responsive"  %>
+							</li>
+						    <li>
+								<%= image_tag @item.image_url, class: "etalage_thumb_image" , class: "img-responsive"  %>
+								<%= image_tag @item.image_url, class: "etalage_source_image img-responsive"  %>
+							</li>
+            </ul>
+					</div>
+				 </div>
+					 <div class="details-left-info">
+							<h3><%= @item.title %></h3>
+							<h4></h4>
+							<p><label>$</label> <%= @item.price %>
+							<p class="size">COLOR ::</p>
+							<a class="length" href="#">Red</a>
+							<a class="length" href="#">Blue</a>
+							<a class="length" href="#">Pink</a>
+							<div class="btn_form">
+                <%= link_to "ADD TO CART", add_to_cart_path, remote: true, data: {params: {id: @item.id}.to_param} %>
+							</div>
+							<h5>Description  ::</h5>
+							<p class="desc"><%= @item.description %></p>
+					 </div>
+					 <div class="clearfix"></div>
+				  </div>
+			  </div>
+		  </div>
+		  <div class="single-bottom2">
+			  <h6>You may also like</h6>
+        <% @random_items.each do |rand_item| %>
+        <div class="product">
+ 					 <div class="product-desc">
+ 						  <div class="product-img product-img2">
+ 							 <%= image_tag rand_item.image_url, class: "img-responsive " , alt: "" %>
+ 						 </div>
+ 						 <div class="prod1-desc">
+ 								<h5><%= link_to rand_item.title, item_path, class: "product_link" %></a></h5>
+ 								<p class="product_descr"> <%= rand_item.description %></p>
+ 						 </div>
+ 						 <div class="clearfix"></div>
+ 					 </div>
+ 					  <div class="product_price">
+ 							<span class="price-access"><%= rand_item.price %>€</span>
+              <%= link_to "Add to cart", add_to_cart_path, remote: true, data: {params: {id: rand_item.id}.to_param}, class: "button1" %>
+            </div>
+ 						<div class="clearfix"></div>
+ 			 </div>
+       <% end %>
+		 </div>
+	 </div>
+</div>
+>>>>>>> 9e462497b0f3a22b977cc9e09cb92d89cef222ae

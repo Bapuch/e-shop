@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Real - estate</title>    
+        <!-- Plugins CSS -->
+        <link href="css/plugins/plugins.css" rel="stylesheet">
+        <!-- load css for cubeportfolio -->
+        <link rel="stylesheet" type="text/css" href="cubeportfolio/css/cubeportfolio.min.css">     
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="preloader">
+            <div id="preloader-inner"></div>
+        </div><!--/preloader-->
+
+        <!-- Pushy Menu -->
+        <aside class="pushy pushy-right">
+            <div class="advanced-search">
+                <h4>Find Homes</h4>
+                <hr>
+                <form>
+                    <div class="form-group">
+                        <label for="location">Enter Location</label>
+                        <input type="text" id="location" class="form-control" placeholder="eg. Paris">
+                    </div><!--form group-->
+                    <div class="form-group">
+                        <label for="types">Any Types</label>
+                        <select class="form-control" id="types">
+                            <option> Any types</option>
+                            <option> Apartments</option>
+                            <option> Houses</option>
+                            <option> Commercial</option>
+                            <option> Garages</option>
+                            <option> Lots</option>
+                        </select>
+                    </div><!--form group-->
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="min-price">Min. Price ($)</label>
+                                <input type="text" id="min-price" class="form-control" placeholder="eg. $1000">
+                            </div><!--form group-->
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="max-price">Max. Price ($)</label>
+                                <input type="text" id="max-price" class="form-control" placeholder="eg. $15000">
+                            </div><!--form group-->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="min-area">Min. Area (Sq Ft)</label>
+                                <input type="text" id="min-area" class="form-control" placeholder="Sq Ft">
+                            </div><!--form group-->
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="max-area">Max. Area (Sq Ft)</label>
+                                <input type="text" id="max-area" class="form-control" placeholder="Sq Ft">
+                            </div><!--form group-->
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="beds">Beds</label>
+                                <select class="form-control" id="beds">
+                                    <option> Beds</option>
+                                    <option> 1</option>
+                                    <option> 2</option>
+                                    <option> 3</option>
+                                    <option> 4</option>
+                                    <option> 5</option>
+                                </select>
+                            </div><!--form group-->
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="max-area">Baths</label>
+                                <select class="form-control" id="baths">
+                                    <option> Baths</option>
+                                    <option> 1</option>
+                                    <option> 2</option>
+                                    <option> 3</option>
+                                    <option> 4</option>
+                                    <option> 5</option>
+                                </select>
+                            </div><!--form group-->
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Search</button>
+                </form>
+
+            </div>
+        </aside>
+        <!-- Site Overlay -->
+        <div class="site-overlay"></div>
+        <div class="top-bar clearfix hidden-md-down">
+            <div class="container">
+                <div class="float-lg-left">
+                    <div class="top-contact-info">
+                        <span>
+                            <i class="ti-mobile"></i>
+                            01 - 249-9493-9493
+                        </span>
+                        <span>
+                            <i class="ti-email"></i>
+                            support@assanland.com
+                        </span>
+                    </div>
+                </div>
+                <div class="float-lg-right">
+                    <div class="clearfix">
+                        <a href="#" class="social-icon-sm si-dark si-colored-facebook si-gray-round">
+                            <i class="fa fa-facebook"></i>
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="#" class="social-icon-sm  si-dark si-colored-twitter si-gray-round">
+                            <i class="fa fa-twitter"></i>
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-icon-sm si-dark si-colored-google-plus si-gray-round">
+                            <i class="fa fa-google-plus"></i>
+                            <i class="fa fa-google-plus"></i>
+                        </a>
+                        <a href="#" class="social-icon-sm si-dark si-colored-skype si-gray-round">
+                            <i class="fa fa-skype"></i>
+                            <i class="fa fa-skype"></i>
+                        </a>
+                        <a href="#" class="social-icon-sm si-dark si-colored-linkedin si-gray-round">
+                            <i class="fa fa-linkedin"></i>
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="submit-property.html" class="btn btn-outline-primary btn-rounded btn-sm">Submit Property</a>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Top Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-faded navbar-standard">
+            <div class="container">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <img class='logo logo-dark' src="images/logo.png" alt="">
+                </a>
+                <div  id="navbarNavDropdown" class="navbar-collapse collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown active">
+                            <a class="nav-link  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Home</a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="index.html" class="dropdown-item">Home 1 - Slider</a></li>
+                                <li><a href="index-02.html" class="dropdown-item">Home 2 - Search</a></li>                                                            
+                                <li><a href="index-03.html" class="dropdown-item">Home 3 - Youtube hero</a></li>
+                                <li><a href="index-landing.html" class="dropdown-item">Home 6 - Landing page</a></li>
+                                <li class=" dropdown-submenu dropdown">
+                                    <a tabindex="-1" href="#" class="dropdown-item">Multi Level 1</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#" class="dropdown-item">Multi Level 2</a></li>
+                                        <li><a href="#" class="dropdown-item">Multi Level 2</a></li>
+                                        <li><a href="#" class="dropdown-item">Multi Level 2</a></li>
+                                        <li class="dropdown-submenu"><a tabindex="-1" href="#" class="dropdown-item">Multi Level 2</a>
+                                            <ul class="dropdown-menu">
+                                                <li> <a href="#" class="dropdown-item">Multi Level 3</a></li>
+                                                <li><a href="#" class="dropdown-item">Multi Level 3</a></li>
+                                                <li><a href="#" class="dropdown-item">Multi Level 3</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown dropdown-full-width">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+                                Pages
+                            </a>
+                            <ul class="dropdown-menu dropdown-mega-fw dropdown-slide">
+                                <li class="container">
+                                    <div class="mega-menu-content">
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <ul class="mega-inner-nav list-unstyled">
+                                                    <li><a href="page-about.html" class="dropdown-item">About Us</a></li>
+                                                    <li><a href="page-login.html" class="dropdown-item">Login</a></li>
+                                                    <li><a href="page-register.html" class="dropdown-item">Register</a></li>
+                                                    <li><a href="page-faq.html" class="dropdown-item">FAQ</a></li>
+                                                    <li><a href="page-404.html" class="dropdown-item">404 - Error</a></li>
+                                                    
+                                                    
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <h4 class="mega-title">Recent properties</h4>
+                                                <div class="owl-carousel owl-theme owl-nav-slide">
+                                                    <div class="item">
+                                                        <div class="listing-card">
+                                                            <a class="listing-thumb" href="#">
+                                                                <img src="images/prop1.jpg" alt="" class="img-fluid">
+                                                                <span class="listing-label sale">For Sale</span>
+                                                                <div class="listing-content">
+                                                                    <h4 class="listing-title">Eastern Villa</h4>
+                                                                    <div class="listing-price">$25,0000</div>
+                                                                </div>
+                                                            </a>
+                                                        </div><!--property-card-->
+                                                    </div><!--property-item-->
+                                                    <div class="item">
+                                                        <div class="listing-card">
+                                                            <a class="listing-thumb" href="#">
+                                                                <img src="images/prop2.jpg" alt="" class="img-fluid">
+                                                                <span class="listing-label rent">For Rent</span>
+                                                                <div class="listing-content">
+                                                                    <h4 class="listing-title">Rose Homes</h4>
+                                                                    <div class="listing-price">$2700/Monthly</div>
+                                                                </div>
+                                                            </a>
+                                                        </div><!--property-card-->
+                                                    </div><!--property-item-->
+                                                    <div class="item">
+                                                        <div class="listing-card">
+                                                            <a class="listing-thumb" href="#">
+                                                                <img src="images/prop3.jpg" alt="" class="img-fluid">
+                                                                <span class="listing-label rent">For Rent</span>
+                                                                <div class="listing-content">
+                                                                    <h4 class="listing-title">Old House</h4>
+                                                                    <div class="listing-price">$25,00/Monthly</div>
+                                                                </div>
+                                                            </a>
+                                                        </div><!--property-card-->
+                                                    </div><!--property-item-->
+                                                    <div class="item">
+                                                        <div class="listing-card">
+                                                            <a class="listing-thumb" href="#">
+                                                                <img src="images/prop4.jpg" alt="" class="img-fluid">
+                                                                <span class="listing-label sale">For Sale</span>
+                                                                <div class="listing-content">
+                                                                    <h4 class="listing-title">Sharma Apartment</h4>
+                                                                    <div class="listing-price">$25,0000</div>
+                                                                </div>
+                                                            </a>
+                                                        </div><!--property-card-->
+                                                    </div><!--property-item-->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Listing</a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="listing-row.html" class="dropdown-item"> Listing row</a></li>
+                                <li><a href="listing-grid.html" class="dropdown-item">listing grid</a></li>
+                                <li><a href="listing-detail.html" class="dropdown-item">listing detail</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Blog</a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="blog.html" class="dropdown-item">Blog Page</a></li>
+                                <li><a href="blog-post.html" class="dropdown-item">Blog post</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">Agents</a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li><a href="agent-list.html" class="dropdown-item">Agents List</a></li>
+                                <li><a href="agent-grid.html" class="dropdown-item">Agents-grid</a></li>
+                                <li><a href="agent-detail.html" class="dropdown-item">Agent detail</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown"><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>        
+                </div>
+                <div class=" navbar-right-elements">
+                    <ul class="list-inline">                     
+                        <li class="list-inline-item"><a href="javascript:void(0)" class=" menu-btn"><i class="ti-search"></i> </a></li>
+                    </ul>
+                </div><!--right nav icons-->
+            </div>
+        </nav>
+        <div class="bg-parallax parallax-overlay pt100 pb100 hero-search" data-jarallax-video="https://www.youtube.com/watch?v=I6jmZ5plZ3o&" data-jarallax-original-styles="null">
+            <div class="container">
+                <h2 class="text-white h1 font700 mb10 text-center">Find best location for you</h2>
+                <p class="text-white-gray text-center lead mb30">
+                    A clean real estate template
+                </p>
+                <div class="searchWrap">
+                    <form role="form">                      
+                        <div class="row">
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                   
+                                    <input type="text" id="location1" class="form-control" placeholder="eg. Paris">
+                                </div>
+                            </div>
+                             <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="form-group">
+                                   
+                                    <select class="form-control" id="status">
+                                        <option>Status</option>
+                                        <option>Rent</option>
+                                        <option>Sale</option>
+                                    </select>
+                                </div>
+                            </div>
+                             <div class="col-lg-3 col-md-6 col-sm-6">
+                                 <div class="form-group">
+                                 
+                                    <select class="form-control" id="price">
+                                        <option>$5000+</option>
+                                        <option>$10000+</option>
+                                        <option>$15000+</option>
+                                    </select>
+                                </div>
+                            </div>
+                             <div class="col-lg-3 col-md-6 col-sm-6">
+                                 <button type="button" class="btn btn-primary btn-block">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div><!--Hero-->
+        <div class="container pt90 pb50">
+            <h3 class="left-title">Newly Added</h3>
+            <div class="row">
+                <div class="col-md-12 mb40">
+                    <div class="owl-carousel owl-theme owl-nav-slide">
+                        <div class="item">
+                            <div class="listing-card">
+                                <a class="listing-thumb" href="#">
+                                    <img src="images/prop1.jpg" alt="" class="img-fluid">
+                                    <span class="listing-label sale">For Sale</span>
+                                    <div class="listing-content">
+                                        <h4 class="listing-title">Eastern Villa</h4>
+                                        <div class="listing-price">$25,0000</div>
+                                    </div>
+                                </a>
+                                <ul class="listing-meta list-inline">
+                                    <li class="list-inline-item">
+                                        <span>Area</span>
+                                        400 Sq Ft
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span>Room</span>
+                                        3
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span>Beds</span>
+                                        3
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span>Baths</span>
+                                        1
+                                    </li>
+                                </ul>
+                            </div><!--property-card-->
+                        </div><!--property-item-->
+                        <div class="item">
+                            <div class="listing-card">
+                                <a class="listing-thumb" href="#">
+                                    <img src="images/prop2.jpg" alt="" class="img-fluid">
+                                    <span class="listing-label rent">For Rent</span>
+                                    <div class="listing-content">
+                                        <h4 class="listing-title">Rose Homes</h4>
+                                        <div class="listing-price">$2700/Monthly</div>
+                                    </div>
+                                </a>
+                                <ul class="listing-meta list-inline">
+                                    <li class="list-inline-item">
+                                        <span>Area</span>
+                                        400 Sq Ft
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span>Room</span>
+                                        3
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span>Beds</span>
+                                        3
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span>Baths</span>
+                                        1
+                                    </li>
+                                </ul>
+                            </div><!--property-card-->
+                        </div><!--property-item-->
+                        <div class="item">
+                            <div class="listing-card">
+                                <a class="listing-thumb" href="#">
+                                    <img src="images/prop3.jpg" alt="" class="img-fluid">
+                                    <span class="listing-label rent">For Rent</span>
+                                    <div class="listing-content">
+                                        <h4 class="listing-title">Old House</h4>
+                                        <div class="listing-price">$25,00/Monthly</div>
+                                    </div>
+                                </a>
+                                <ul class="listing-meta list-inline">
+                                    <li class="list-inline-item">
+                                        <span>Area</span>
+                                        400 Sq Ft
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span>Room</span>
+                                        3
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span>Beds</span>
+                                        3
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span>Baths</span>
+                                        1
+                                    </li>
+                                </ul>
+                            </div><!--property-card-->
+                        </div><!--property-item-->
+                        <div class="item">
+                            <div class="listing-card">
+                                <a class="listing-thumb" href="#">
+                                    <img src="images/prop4.jpg" alt="" class="img-fluid">
+                                    <span class="listing-label sale">For Sale</span>
+                                    <div class="listing-content">
+                                        <h4 class="listing-title">Sharma Apartment</h4>
+                                        <div class="listing-price">$25,0000</div>
+                                    </div>
+                                </a>
+                                <ul class="listing-meta list-inline">
+                                    <li class="list-inline-item">
+                                        <span>Area</span>
+                                        400 Sq Ft
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span>Room</span>
+                                        3
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span>Beds</span>
+                                        3
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span>Baths</span>
+                                        1
+                                    </li>
+                                </ul>
+                            </div><!--property-card-->
+                        </div><!--property-item-->
+                    </div>
+                </div>
+            </div>
+        </div><!--Properties-->
+        <div class="bg-faded pt90 pb50 ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 mb40 text-center">
+                        <i class="ti-user fa-4x text-primary"></i>
+                        <h4 class="text-uppercase font500  pt30 pb10">Best Agents</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  
+                        </p>
+                    </div>
+                    <div class="col-md-4 mb40 text-center">
+                        <i class="ti-palette fa-4x text-primary"></i>
+                        <h4 class="text-uppercase font500  pt30 pb10">Modern tools</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  
+                        </p>
+                    </div>
+                    <div class="col-md-4 mb40 text-center">
+                        <i class="ti-cup fa-4x text-primary"></i>
+                        <h4 class="text-uppercase font500 pt30 pb10">Award winners</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div><!--Features-->
+        <div class="container pt100 pb50">
+            <h3 class="left-title">Featured Property</h3>
+            <div class="row">
+                <div class="col-md-12 mb40">
+                    <div class="owl-carousel owl-theme owl-nav-slide">
+                        <div class="item">
+                            <div class="listing-card">
+                                <a class="listing-thumb" href="#">
+                                    <span class="featured">Featured</span>
+                                    <img src="images/prop8.jpg" alt="" class="img-fluid">
+                                    <span class="listing-label sale">For Sale</span>
+                                    <div class="listing-content">
+                                        <h4 class="listing-title">Eastern Villa</h4>
+                                        <div class="listing-price">$25,0000</div>
+                                    </div>
+                                </a>
+                                <ul class="listing-meta list-inline">
+                                    <li class="list-inline-item">
+                                        <span>Area</span>
+                                        400 Sq Ft
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span>Room</span>
+                                        3
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span>Beds</span>
+                                        3
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span>Baths</span>
+                                        1
+                                    </li>
+                                </ul>
+                            </div><!--property-card-->
+                        </div><!--property-item-->
+                        <div class="item">
+                            <div class="listing-card">
+                                <a class="listing-thumb" href="#">
+                                    <span class="featured">Featured</span>
+                                    <img src="images/prop7.jpg" alt="" class="img-fluid">
+                                    <span class="listing-label rent">For Rent</span>
+                                    <div class="listing-content">
+                                        <h4 class="listing-title">Rose Homes</h4>
+                                        <div class="listing-price">$2700/Monthly</div>
+                                    </div>
+                                </a>
+                                <ul class="listing-meta list-inline">
+                                    <li class="list-inline-item">
+                                        <span>Area</span>
+                                        400 Sq Ft
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span>Room</span>
+                                        3
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span>Beds</span>
+                                        3
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span>Baths</span>
+                                        1
+                                    </li>
+                                </ul>
+                            </div><!--property-card-->
+                        </div><!--property-item-->
+                        <div class="item">
+                            <div class="listing-card">
+                                <a class="listing-thumb" href="#">
+                                    <span class="featured">Featured</span>
+                                    <img src="images/prop6.jpg" alt="" class="img-fluid">
+                                    <span class="listing-label rent">For Rent</span>
+                                    <div class="listing-content">
+                                        <h4 class="listing-title">Old House</h4>
+                                        <div class="listing-price">$25,00/Monthly</div>
+                                    </div>
+                                </a>
+                                <ul class="listing-meta list-inline">
+                                    <li class="list-inline-item">
+                                        <span>Area</span>
+                                        400 Sq Ft
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span>Room</span>
+                                        3
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span>Beds</span>
+                                        3
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span>Baths</span>
+                                        1
+                                    </li>
+                                </ul>
+                            </div><!--property-card-->
+                        </div><!--property-item-->
+                        <div class="item">
+                            <div class="listing-card">
+                                <a class="listing-thumb" href="#">
+                                    <span class="featured">Featured</span>
+                                    <img src="images/prop5.jpg" alt="" class="img-fluid">
+                                    <span class="listing-label sale">For Sale</span>
+                                    <div class="listing-content">
+                                        <h4 class="listing-title">Sharma Apartment</h4>
+                                        <div class="listing-price">$25,0000</div>
+                                    </div>
+                                </a>
+                                <ul class="listing-meta list-inline">
+                                    <li class="list-inline-item">
+                                        <span>Area</span>
+                                        400 Sq Ft
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span>Room</span>
+                                        3
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span>Beds</span>
+                                        3
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <span>Baths</span>
+                                        1
+                                    </li>
+                                </ul>
+                            </div><!--property-card-->
+                        </div><!--property-item-->
+                    </div>
+                </div>
+            </div>
+        </div><!--Featured properties-->
+        <div class="bg-faded pt100 pb100 bg-parallax" data-jarallax='{"speed": 0.2}' style='background-image: url("images/bg2.jpg")'>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 mr-auto ml-auto">
+                        <div class="center-title mb60 light">
+                            <h3>Customer Reviews</h3>
+                            <p class="lead">
+                                We collect reviews from our customers so you can easily imagine why we are the best, Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="owl-carousel owl-reviews owl-theme">
+                        <div class="item ">
+                            <div class="review-card">
+                                <div class="review-author text-center">
+                                    <img src='images/author1.jpg' alt='' class='img-fluid'>
+                                    <h5>Emily Doe</h5>
+                                    <span>Assan Customer</span>
+                                </div>
+                                <p class='lead'>
+                                    " Very good package i ever seen, lot's of templates and elements that help me to create an easy website "
+                                </p>
+                                <ul class='rating list-inline'>
+                                    <li class='fa fa-star text-warning'></li>
+                                    <li class='fa fa-star text-warning'></li>
+                                    <li class='fa fa-star text-warning'></li>
+                                    <li class='fa fa-star text-warning'></li>
+                                    <li class='fa fa-star text-warning'></li>
+                                </ul>
+                            </div>
+                        </div><!--/.items-->
+                        <div class="item ">
+                            <div class="review-card">
+                                <div class="review-author text-center">
+                                    <img src='images/author2.jpg' alt='' class='img-fluid'>
+                                    <h5>John Doe</h5>
+                                    <span>Assan Customer</span>
+                                </div>
+                                <p class='lead'>
+                                    " Very good package i ever seen, lot's of templates and elements that help me to create an easy website "
+                                </p>
+                                <ul class='rating list-inline'>
+                                    <li class='fa fa-star text-warning'></li>
+                                    <li class='fa fa-star text-warning'></li>
+                                    <li class='fa fa-star text-warning'></li>
+                                    <li class='fa fa-star text-warning'></li>
+                                    <li class='fa fa-star text-warning'></li>
+                                </ul>
+                            </div>
+                        </div><!--/.items-->
+                        <div class="item ">
+                            <div class="review-card">
+                                <div class="review-author text-center">
+                                    <img src='images/author3.jpg' alt='' class='img-fluid'>
+                                    <h5>Robin Ambrose</h5>
+                                    <span>Assan Customer</span>
+                                </div>
+                                <p class='lead'>
+                                    " Very good package i ever seen, lot's of templates and elements that help me to create an easy website "
+                                </p>
+                                <ul class='rating list-inline'>
+                                    <li class='fa fa-star text-warning'></li>
+                                    <li class='fa fa-star text-warning'></li>
+                                    <li class='fa fa-star text-warning'></li>
+                                    <li class='fa fa-star text-warning'></li>
+                                    <li class='fa fa-star text-warning'></li>
+                                </ul>
+                            </div>
+                        </div><!--/.items-->
+                        <div class="item ">
+                            <div class="review-card">
+                                <div class="review-author text-center">
+                                    <img src='images/author1.jpg' alt='' class='img-fluid'>
+                                    <h5>Gunjan Sharma</h5>
+                                    <span>Assan Customer</span>
+                                </div>
+                                <p class='lead'>
+                                    " Very good package i ever seen, lot's of templates and elements that help me to create an easy website "
+                                </p>
+                                <ul class='rating list-inline'>
+                                    <li class='fa fa-star text-warning'></li>
+                                    <li class='fa fa-star text-warning'></li>
+                                    <li class='fa fa-star text-warning'></li>
+                                    <li class='fa fa-star text-warning'></li>
+                                    <li class='fa fa-star text-warning'></li>
+                                </ul>
+                            </div>
+                        </div><!--/.items-->
+                    </div>
+
+                </div>
+            </div>
+        </div><!--Reviews-->
+        <div class="container pt80 pb80">
+            <div class="row">
+                <div class="col-md-8 mr-auto ml-auto">
+                    <div class="center-title mb60 ">
+                        <h3>Popular Places</h3>
+                        <p class="lead">
+                            Most popular places, Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix">
+                <div id="js-grid-mosaic-flat" class="cbp cbp-l-grid-mosaic-flat">
+                    <div class="cbp-item web-design graphic">
+                        <a href="listing-grid.html.jpg" class="cbp-caption cbp-lightbox places-caption" data-title="Bolt UI<br>by Tiberiu Neamu">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="images/london.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap places-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">London</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div><!--place item-->
+                    <div class="cbp-item web-design graphic">
+                        <a href="listing-grid.html" class="cbp-caption cbp-lightbox places-caption" data-title="Bolt UI<br>by Tiberiu Neamu">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="images/liverpool.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap places-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Liverpool</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div><!--place item-->
+                    <div class="cbp-item web-design graphic">
+                        <a href="listing-grid.html" class="cbp-caption cbp-lightbox places-caption" data-title="Bolt UI<br>by Tiberiu Neamu">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="images/Manchester.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap places-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Manchester</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div><!--place item-->
+                    <div class="cbp-item web-design graphic">
+                        <a href="listing-grid.html" class="cbp-caption cbp-lightbox places-caption" data-title="Bolt UI<br>by Tiberiu Neamu">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="images/bristol.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap places-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Bristol</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div><!--place item-->
+                    <div class="cbp-item web-design graphic">
+                        <a href="listing-grid.html" class="cbp-caption cbp-lightbox places-caption" data-title="Bolt UI<br>by Tiberiu Neamu">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="images/birmingham.jpg" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+                                        <div class="cbp-l-caption-title">Birmingham</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div><!--place item-->
+                </div>
+            </div>
+        </div><!--Popular places-->
+        <div class="bg-faded pt80 pb40">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 mr-auto ml-auto">
+                        <div class="center-title mb60 ">
+                            <h3>Our Agents</h3>
+                            <p class="lead">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb40">
+                        <div class="agent-card">
+                            <a href="agent-detail.html" class="agent-hover">
+                                <img src="images/agent1.jpg" alt="" class="img-fluid">
+                                <span>See Detail</span>
+                            </a>
+                            <div class="agent-desc">
+                                <h4 class="font500 text-uppercase text-primary">Cartly Embrose</h4>
+                                <span>Agent In London</span>
+                                <hr>
+                                <div class="clearfix">
+                                    <a href="#" class="social-icon-sm si-gray si-facebook si-gray-round">
+                                        <i class="fa fa-facebook"></i>
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="social-icon-sm si-gray si-twitter si-gray-round">
+                                        <i class="fa fa-twitter"></i>
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="social-icon-sm si-gray si-g-plus si-gray-round">
+                                        <i class="fa fa-google-plus"></i>
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                    <a href="#" class="social-icon-sm si-gray si-skype si-gray-round">
+                                        <i class="fa fa-skype"></i>
+                                        <i class="fa fa-skype"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>                       
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb40">
+                        <div class="agent-card">
+                            <a href="agent-detail.html" class="agent-hover">
+                                <img src="images/agent2.jpg" alt="" class="img-fluid">
+                                <span>See Detail</span>
+                            </a>
+                            <div class="agent-desc">
+                                <h4 class="font500 text-uppercase text-primary">Mark Adams</h4>
+                                <span>Agent In London</span>
+                                <hr>
+                                <div class="clearfix">
+                                    <a href="#" class="social-icon-sm si-gray si-facebook si-gray-round">
+                                        <i class="fa fa-facebook"></i>
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="social-icon-sm si-gray si-twitter si-gray-round">
+                                        <i class="fa fa-twitter"></i>
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="social-icon-sm si-gray si-g-plus si-gray-round">
+                                        <i class="fa fa-google-plus"></i>
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                    <a href="#" class="social-icon-sm si-gray si-skype si-gray-round">
+                                        <i class="fa fa-skype"></i>
+                                        <i class="fa fa-skype"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>                       
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb40">
+                        <div class="agent-card">
+                            <a href="agent-detail.html" class="agent-hover">
+                                <img src="images/agent3.jpg" alt="" class="img-fluid">
+                                <span>See Detail</span>
+                            </a>
+                            <div class="agent-desc">
+                                <h4 class="font500 text-uppercase text-primary">John Doe</h4>
+                                <span>Agent In Birmingham</span>
+                                <hr>
+                                <div class="clearfix">
+                                    <a href="#" class="social-icon-sm si-gray si-facebook si-gray-round">
+                                        <i class="fa fa-facebook"></i>
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="social-icon-sm si-gray si-twitter si-gray-round">
+                                        <i class="fa fa-twitter"></i>
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="social-icon-sm si-gray si-g-plus si-gray-round">
+                                        <i class="fa fa-google-plus"></i>
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                    <a href="#" class="social-icon-sm si-gray si-skype si-gray-round">
+                                        <i class="fa fa-skype"></i>
+                                        <i class="fa fa-skype"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>                       
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb40">
+                        <div class="agent-card">
+                            <a href="agent-detail.html" class="agent-hover">
+                                <img src="images/agent4.jpg" alt="" class="img-fluid">
+                                <span>See Detail</span>
+                            </a>
+                            <div class="agent-desc">
+                                <h4 class="font500 text-uppercase text-primary">Emily Milinda</h4>
+                                <span>Agent In Menchester</span>
+                                <hr>
+                                <div class="clearfix">
+                                    <a href="#" class="social-icon-sm si-gray si-facebook si-gray-round">
+                                        <i class="fa fa-facebook"></i>
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                    <a href="#" class="social-icon-sm si-gray si-twitter si-gray-round">
+                                        <i class="fa fa-twitter"></i>
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="#" class="social-icon-sm si-gray si-g-plus si-gray-round">
+                                        <i class="fa fa-google-plus"></i>
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                    <a href="#" class="social-icon-sm si-gray si-skype si-gray-round">
+                                        <i class="fa fa-skype"></i>
+                                        <i class="fa fa-skype"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-faded pt100 pb100 bg-parallax parallax-overlay call-to-action" data-jarallax='{"speed": 0.2}' style='background-image: url("images/bg2.jpg")'>
+            <div class="container text-center">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h2 class="text-white font300">We help peoples to achieve their dreams</h2>
+                    </div>
+                    <div class="col-md-4">
+                        <a href="listing-grid.html" class="btn btn-lg btn-white-outline">Browse Properties</a>
+                    </div>
+                </div>
+            </div>
+        </div><!--Call to action-->
+        <div class="container pt90 pb50">
+            <div class="row">
+                <div class="col-md-8 mr-auto ml-auto">
+                    <div class="center-title mb60 ">
+                        <h3>Latest News</h3>
+                        <p class="lead">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 mb40">
+                    <div class="news-card">
+                        <a href="#" class="news-thumb">
+                            <img src="images/prop8.jpg" alt="" class="img-fluid">
+                            <div class="news-overlay">
+                                <span>June 25, 2017</span>
+                                <h3>Lorem ipsum dolor sit maet</h3>
+                            </div>
+                        </a>
+                        <div class="news-content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb40">
+                    <div class="news-card">
+                        <a href="#" class="news-thumb">
+                            <img src="images/prop5.jpg" alt="" class="img-fluid">
+                            <div class="news-overlay">
+                                <span>June 25, 2017</span>
+                                <h3>Lorem ipsum dolor sit maet</h3>
+                            </div>
+                        </a>
+                        <div class="news-content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>  
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb40">
+                    <div class="news-card">
+                        <a href="#" class="news-thumb">
+                            <img src="images/prop6.jpg" alt="" class="img-fluid">
+                            <div class="news-overlay">
+                                <span>June 25, 2017</span>
+                                <h3>Lorem ipsum dolor sit maet</h3>
+                            </div>
+                        </a>
+                        <div class="news-content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            </p>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer footer-dark pt50 pb30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb40">
+                        <h3>About Us</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <a href="#" class="btn btn-sm btn-white-outline">Learn More</a>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb40">
+                        <h3>Recent Post</h3>
+                        <ul class="list-unstyled footer-list-item">
+                            <li>
+                                <a href="#">
+                                    Lorem ipsum dolor sit amet
+                                </a><br>
+                                <em>April 5, 2017</em>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Consectetur adipiscing elit
+                                </a><br>
+                                <em>April 5, 2017</em>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Sed do eiusmod tempor incididunt
+                                </a><br>
+                                <em>April 5, 2017</em>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb40">
+                        <h3>Featured properties</h3>
+                        <div class="clearfix">
+                            <a href="#" class="thumb-hover-icon">
+                                <img src="images/prop1.jpg" alt="" class="img-fluid" width="90">
+                                <span class="ti-plus"></span>
+                            </a><!--/.hover-->
+                            <a href="#" class="thumb-hover-icon">
+                                <img src="images/prop2.jpg" alt="" class="img-fluid" width="90">
+                                <span class="ti-plus"></span>
+                            </a><!--/.hover-->
+                            <a href="#" class="thumb-hover-icon">
+                                <img src="images/prop3.jpg" alt="" class="img-fluid" width="90">
+                                <span class="ti-plus"></span>
+                            </a><!--/.hover-->
+                            <a href="#" class="thumb-hover-icon">
+                                <img src="images/prop4.jpg" alt="" class="img-fluid" width="90">
+                                <span class="ti-plus"></span>
+                            </a><!--/.hover-->
+                            <a href="#" class="thumb-hover-icon">
+                                <img src="images/prop5.jpg" alt="" class="img-fluid" width="90">
+                                <span class="ti-plus"></span>
+                            </a><!--/.hover-->
+                            <a href="#" class="thumb-hover-icon">
+                                <img src="images/prop6.jpg" alt="" class="img-fluid" width="90">
+                                <span class="ti-plus"></span>
+                            </a><!--/.hover-->
+                        </div><!--/.clearfix-->
+                    </div>
+                    <div class="col-lg-3 col-md-6 mb40">
+                        <h3>Contact Us</h3>
+                        <ul class="list-unstyled contact-list-item">
+                            <li>
+                                <i class="ti-home"></i>
+                                124, Monalisa Street, Lorem Ipsum, 302012
+                            </li>
+                            <li>
+                                <i class="ti-email"></i>
+                                support@assan.com
+                            </li>
+                            <li>
+                                <i class="ti-mobile"></i>
+                                1800 394 3939
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <span>&copy; Copyright 2020. All Right Reserved.</span>
+                        </div>
+                        <div class="col-sm-8 text-right">
+                            <ul class="list-inline footer-nav">
+                                <li class="list-inline-item">
+                                    <a href="#">Home</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">About</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">News</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">Contact</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="#">Terms & Conditions</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer><!--/footer-->
+        <!--back to top-->
+        <a href="#" class="back-to-top hidden-xs-down" id="back-to-top"><i class="ti-angle-up"></i></a>
+        <!-- jQuery first, then Tether, then Bootstrap JS. -->
+        <script type="text/javascript" src="js/plugins/plugins.js"></script> 
+        <script type="text/javascript" src="js/assan.custom.js"></script> 
+        <!-- load cubeportfolio -->
+        <script type="text/javascript" src="cubeportfolio/js/jquery.cubeportfolio.min.js"></script>
+        <script>
+            //places masonry
+            (function ($, window, document, undefined) {
+                'use strict';
+
+                // init cubeportfolio
+                $('#js-grid-mosaic-flat').cubeportfolio({
+                    filters: '#js-filters-mosaic-flat',
+                    layoutMode: 'mosaic',
+                    sortToPreventGaps: true,
+                    mediaQueries: [{
+                            width: 1500,
+                            cols: 6
+                        }, {
+                            width: 1100,
+                            cols: 4
+                        }, {
+                            width: 800,
+                            cols: 3
+                        }, {
+                            width: 480,
+                            cols: 2,
+                            options: {
+                                caption: '',
+                                gapHorizontal: 15,
+                                gapVertical: 15
+                            }
+                        }],
+                    defaultFilter: '*',
+                    animationType: 'fadeOutTop',
+                    gapHorizontal: 0,
+                    gapVertical: 0,
+                    gridAdjustment: 'responsive',
+                    caption: 'fadeIn',
+                    displayType: 'fadeIn',
+                    displayTypeSpeed: 100,
+                    // lightbox
+                    lightboxDelegate: '.cbp-lightbox',
+                    lightboxGallery: true,
+                    lightboxTitleSrc: 'data-title',
+                    lightboxCounter: '<div class="cbp-popup-lightbox-counter">{{current}} of {{total}}</div>',
+                    plugins: {
+                        loadMore: {
+                            selector: '#js-loadMore-mosaic-flat',
+                            action: 'click',
+                            loadItems: 3
+                        }
+                    }
+                });
+            })(jQuery, window, document);
+        </script> 
+    </body>
+</html>

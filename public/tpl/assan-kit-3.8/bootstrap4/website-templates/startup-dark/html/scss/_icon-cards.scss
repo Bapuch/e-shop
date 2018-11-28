@@ -1,0 +1,23 @@
+/*
+Icon Styles
+*/
+
+.icon-card{
+    .icon{
+        float: left;
+        margin-right: 1rem;
+        width:70px;
+        text-align:center;
+        >i{
+            font-size: 35px;
+        }
+    }
+}
+.icon-content{
+    overflow:hidden;
+    h4{
+        font-size: 1rem;
+        text-transform: capitalize;
+        font-weight: 400;
+    }
+}

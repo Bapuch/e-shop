@@ -1,2 +1,57 @@
-<h1>Items#index</h1>
-<p>Find me in app/views/items/index.html.erb</p>
+
+
+<div id="cate" class="categories">
+	 <div class="container">
+		 <h3>CATEGORIES</h3>
+		 <div class="categorie-grids">
+			 <% @categories.each_with_index do |category, i| %>
+			 	<div class="col-md-4 cate-grid grid<%= i+1 %>">
+					<h4><%= category.name %></h4>
+					<p>Venez les découvrir !</p>
+					<%= link_to "Boutique", items_path, class: "store" %>
+				</div>
+			 <% end %>
+			 <div class="clearfix"></div>
+		 </div>
+	 </div>
+</div>
+<!--bikes-->
+<div class="bikes">
+		 <h3>PRODUITS</h3>
+		 <div class="bikes-grids">
+			 <ul id="flexiselDemo1">
+         <% @items.first(8).each do |item| %>
+         <li>
+           <%= image_tag item.image_url %>
+           <div class="bike-info">
+						 <div class="model">
+							 <h4><%= item.title %><span><%= item.price %>€</span></h4>
+						 </div>
+						 <div class="model-info">
+							 <a href="bicycles.html">BUY</a>
+						 </div>
+						 <div class="clearfix"></div>
+					 </div>
+					 <div class="viw">
+						<%= link_to "Show", item_path(item.id) %>
+					 </div>
+         </li>
+         <% end %>
+		   </ul>
+	</div>
+</div>
+<!---->
+<div class="contact">
+	<div class="container">
+		<h3>CONTACT US</h3>
+		<p>Please contact us for all inquiries and purchase options.</p>
+		<form>
+			 <input type="text" placeholder="NAME" required="">
+			 <input type="text" placeholder="SURNAME" required="">
+			 <input class="user" type="text" placeholder="USER@DOMAIN.COM" required=""><br>
+			 <textarea placeholder="MESSAGE"></textarea>
+			 <input type="submit" value="SEND">
+		</form>
+	</div>
+</div>
+<!---->
