@@ -21,7 +21,12 @@
 //x= require popper
 //xx= require boxotstrap
 
-
+//= require jquery.easydropdown
+//= require move-top
+//= require easing
+//= require responsiveslides.min
+//= require jquery.flexisel
+//= require jquery.etalage.min
 
 //xx= require bootstrap-sprockets
 
@@ -84,7 +89,7 @@ $(document).on('turbolinks:load', function () {
     });
 
   });
-
+  
   jQuery(function (c) {
     $('.close1').on('click', function (c) {
       $('.cart-header').fadeOut('slow', function (c) {
@@ -103,7 +108,7 @@ $(document).on('turbolinks:load', function () {
   // Get the <span> element that closes the modal
   var span = document.getElementsByClassName("close");
 
-  // When the user clicks on one of the dropdown buttons, open the modal
+  // When the user clicks on one of the dropdown buttons, open the modal 
   for (var i = 0, len = buttons.length; i < len; i++) {
     buttons[i].onclick = function () {
       modal.style.display = "flex";

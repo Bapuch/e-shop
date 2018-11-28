@@ -19,15 +19,9 @@ Category.create(name: "Robots compagnons")
  #destroy all items first
 20.times do |i|
   new_item = Item.new
-<<<<<<< HEAD
-  new_item.title = "Item#{i}"
-  new_item.description  = "This is a brief description for #{new_item.title}"
-  new_item.price = rand(8.99..99.99)
-=======
   new_item.title = Faker::Name.name
   new_item.description  = Faker::Lorem.paragraph(8)
   new_item.price = Faker::Number.decimal(2)
->>>>>>> development
   new_item.image_url = Faker::Avatar.image
   # temporaly, add item to first category
   new_item.category_id = Category.first.id
