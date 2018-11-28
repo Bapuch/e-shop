@@ -80,4 +80,4 @@ test:
 #
 production:
   <<: *default
-  database: e-shop_development
+  database: e-shop_production
