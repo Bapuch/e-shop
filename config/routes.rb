@@ -7,4 +7,7 @@ Rails.application.routes.draw do
   root to: 'items#index'
   devise_for :users
   resources :items, only: [:index, :show]
+
+  get 'add_to_cart', to: 'items#add_to_cart'
+  put 'delete_item', to: "shop#delete_item"
 end

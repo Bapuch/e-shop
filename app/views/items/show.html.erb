@@ -90,8 +90,7 @@
 							<a class="length" href="#">Blue</a>
 							<a class="length" href="#">Pink</a>
 							<div class="btn_form">
-                <% link_to "Add to cart"  %>
-								<a href="cart.html">ADD TO CART</a>
+                <%= link_to "ADD TO CART", add_to_cart_path, remote: true, data: {params: {id: @item.id}.to_param} %>
 							</div>
 							<h5>Description  ::</h5>
 							<p class="desc"><%= @item.description %></p>
@@ -114,11 +113,10 @@
  						 </div>
  						 <div class="clearfix"></div>
  					 </div>
- 					 <div class="product_price">
+ 					  <div class="product_price">
  							<span class="price-access"><%= rand_item.price %>€</span>
-              <%= link_to "Add to cart", items_path, class: "button1" %>
-
- 					 </div>
+              <%= link_to "Add to cart", add_to_cart_path, remote: true, data: {params: {id: rand_item.id}.to_param}, class: "button1" %>
+            </div>
  						<div class="clearfix"></div>
  			 </div>
        <% end %>
