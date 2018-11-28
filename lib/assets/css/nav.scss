@@ -5,9 +5,8 @@ a:hover{
 label.mobile_menu span {
 	  margin-left: 10px;
 	  color:#FFF;
-      font-size:1em;
+    font-size:1em;
 	  display: none;
-	  
 }
 .navigation{
 	float:left;
@@ -72,7 +71,7 @@ li.dropdown1:hover{
 .nav > li:hover > a{
 	  color: #000;	
 	border-color:none;
-	background: url(../images/menu-arrow-hover.png) no-repeat 103% 54%;
+	background: image-url('menu-arrow.png') no-repeat 103% 54%;
 }
 .nav li > ul li a:hover{
 	text-decoration:none;
@@ -120,10 +119,10 @@ li.dropdown1:hover{
 	position:absolute;
 	right:5px;
 	top:15px;
-	background:url(../images/arrow-before.png) no-repeat center;
+	background:image-url("images/arrow-before.png") no-repeat center;
 }
 .nav > li > ul  li:hover a span.arrow{
-	background:url(../images/nav-arrow.png) no-repeat center
+	background:image-url("images/nav-arrow.png") no-repeat center
 }
 .nav > li > ul  li:hover {
 	color:#000;	
@@ -331,7 +330,7 @@ input#mobile_menu { display: none; }
 	}
 	.nav li > ul li a span.arrow {
 	   right:20px;
-	   background: url(../images/nav-arrow2.png) no-repeat center;	
+	   background: image-url('images/nav-arrow2.png') no-repeat center;
 	}
 	.nav li ul, .nav li .fulldrop, .nav li .coldrop {
 		top:33px;		
@@ -347,12 +346,12 @@ input#mobile_menu { display: none; }
 	    background-color:#CACACA;
 	}
 	.nav > li > a {
-	background: url(../images/menu-arrow.png) no-repeat 97% 48% #828282;
+	background: image-url('menu-arrow.png') no-repeat 97% 48% #828282;
 	border-bottom: 1px solid #fff;
 	color:#fff;
 	}
 	.nav > li:hover > a{
-		background:url(../images/menu-arrow.png) no-repeat 97% 48%;
+		background:image-url('menu-arrow.png') no-repeat 97% 48%;
 	}
 	.nav .fulldrop, .nav .coldrop {
 		width:95%;
@@ -452,7 +451,7 @@ label.mobile_menu {
     background: #828282;
 	border-bottom: 1px solid #fff;
   color: #fff;
-  background: url(../images/menu-arrow.png) no-repeat 97% 48% #828282;
+  background: image-url('menu-arrow.png') no-repeat 97% 48% #828282;
 }
 }
 @media only screen and (max-width:640px) {

@@ -18,9 +18,10 @@
 //= require jquery3
 //= require jquery_ujs
 
-//x= require popper
-//xx= require boxotstrap
+//xx= require popper
+//= require bootstrap.min
 
+//xx= require jquery.easydropdownprod
 //= require jquery.easydropdown
 //= require move-top
 //= require easing
@@ -29,6 +30,8 @@
 //= require jquery.etalage.min
 
 //xx= require bootstrap-sprockets
+
+//xx= jquery.min
 
 
 $(document).on('turbolinks:load', function () {

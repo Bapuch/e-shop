@@ -29,17 +29,17 @@ padding:0;
 }
 /*----*/
 .banner-bg1{
-	background:url(bg.jpg) no-repeat;
+	background:image-url('bg.jpg') no-repeat;
 	background-size:cover;
 	min-height:835px;
 }
 .banner-bg2 {
-	background:url(bg2.jpg) no-repeat;
+	background:image-url('bg2.jpg') no-repeat;
 	background-size:cover;
 	min-height:835px;
 }
 .banner-bg3 {
-	background:url(bg3.jpg) no-repeat;
+	background:image-url('bg3.jpg') no-repeat;
 	background-size:cover;
 	min-height:835px;
 }
@@ -124,7 +124,7 @@ ul.callbacks_tabs.callbacks1_tabs {
   text-decoration: none;
   height: 69px;
   width: 77px;
-  background: transparent url("slid.png") no-repeat left top;
+  background: transparent image-url("slid.png") no-repeat left top;
   margin-top: -45px;
   }
 .callbacks_nav.next {
@@ -168,7 +168,7 @@ a.morebtn:hover{
 }
 /*--categories--*/
 .categories{
-	background:url(cate.jpg) no-repeat;
+	background:image-url('cate.jpg') no-repeat;
 	background-size:cover;
 	min-height:600px;
 	text-align:center;
@@ -193,13 +193,13 @@ a.morebtn:hover{
 	width:31%;
 }
 .grid1{
-	background:url(c1.jpg) no-repeat;
+	background:image-url('c1.jpg') no-repeat;
 }
 .grid2{
-	background:url(c2.jpg) no-repeat;
+	background:image-url('c2.jpg') no-repeat;
 }
 .grid3{
-	background:url(c3.jpg) no-repeat;
+	background:image-url('c3.jpg') no-repeat;
 }
 .cate-grid h4{
 	color:#fcff19;
@@ -332,7 +332,7 @@ select{
 }
 /*--contact--*/
 .contact{
-	background:url(contact.jpg) no-repeat 0px 0px;
+	background:image-url('contact.jpg') no-repeat 0px 0px;
 	min-height:560px;
 	background-size:cover;
 	text-align:center;
@@ -426,7 +426,7 @@ select{
 }
 /*--bycycle--*/
 .banner-sec{
-	background:url(bg.jpg) no-repeat;
+	background:image-url('bg.jpg') no-repeat;
 	background-size:cover;
 	min-height:200px;
 }
@@ -611,7 +611,7 @@ margin-bottom: 2em;
 }
 /* .focus class is also added on hover */
 .metro:hover .selected::after, .metro.focus .selected::after {
-  background: url(p_minus.png) no-repeat 0px 10px;
+  background: image-url('p_minus.png') no-repeat 0px 10px;
 }
 .metro li:hover{
 	background-color:#ECEB4D;
@@ -636,11 +636,11 @@ margin-bottom: 2em;
 	top: 0;
 	bottom: 0;
 	padding:6px;
-	background:url(p_plus.png) no-repeat 0px 10px;
+	background:image-url('p_plus.png') no-repeat 0px 10px;
 }
 .metro:hover .selected::after,
 .metro.focus .selected::after{
-	background:url(p_minus.png) no-repeat 0px 10px;
+	background:image-url('p_minus.png') no-repeat 0px 10px;
 }
 /* DROP DOWN WRAPPER */
 .metro div{
@@ -1184,7 +1184,7 @@ p.qty {
 	line-height:1.3em;
 }
 .close-btn {
-  background: url('close.png') no-repeat 0px 0px;
+  background: image-url('close.png') no-repeat 0px 0px;
   opacity: 0.5;
   cursor: pointer;
   width: 28px;
