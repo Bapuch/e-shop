@@ -1,4 +1,4 @@
-
+<%= render 'layouts/small_banner' %>
 <div class="cart">
 	 <div class="container">
 		 <div class="cart-top">
@@ -48,7 +48,7 @@
 			 <h4 class="last-price">TOTAL</h4>
 			 <span class="total final"><%= @cart.items.sum(:price) + 150 %></span>
 			 <div class="clearfix"></div>
-			 <%= link_to "Place Order", class: "order" %>
+			 <%= link_to "Place Order",'#', class: "order" %>
 			 <div class="total-item">
 				 <h3>OPTIONS</h3>
 				 <h4>COUPONS</h4>

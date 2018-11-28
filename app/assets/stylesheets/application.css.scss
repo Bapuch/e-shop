@@ -14,14 +14,24 @@
  *= require_self
 
  *x=x require bootstrap
-
- *= require style
- *= require nav
-
- ----show
- *= require form
- *= require etalage
+x
+x *x=x require style
+ *x=x require nav
+x
+x--x-x-show
+ *x=x require form
+ *x=x require etalage
  */
+
+ @import 'bootstrap';
+
+ @import 'style';
+ @import 'nav';
+
+// ----show
+ @import 'form';
+ @import 'etalage';
+
 
 
 
