@@ -1,10 +1,11 @@
 class UserMailer < ApplicationMailer
-default from: saphyr.team.thp@gmail.com
- 
-def welcome_email
-    @user = params[:user]
-    @url  = 'http://example.com/login'
-    mail(to: @user.email, subject: 'Welcome to My Awesome Site')
+
+    def welcome_email
+        headers['X-MJ-CustomID'] = 'custom value'
+        headers['X-MJ-EventPayload'] = 'custom payload'
+    
+        mail(from: "saphyr.team.thp@gmail.com", 
+            to: current.user.email,
+            subject: "Commande prise en compte Merci de votre fidelite")
     end
-  end
 end

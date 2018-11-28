@@ -6,8 +6,8 @@ class ShopController < ApplicationController
     @all_carts = Cart
   end
 
-  def order
-    @order = Order.find(params[:id])
+  def place_order
+    @order = Order.create
     if @order.users.include? current_user
       flash[:success] = "Vous allez passer au paiement"
       redirect_to @order
