@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
-
+  get 'users/show'
   get 'cart', to: 'shop#cart'
   get 'shop/order'
   get 'product', to: 'product#show'
   get 'category', to: 'category#index'
   root to: 'items#index'
   devise_for :users,
-              :controllers => { :registrations => "devise/my_devise/registrations"}
+                :controllers => { :registrations => "registrations"}
   resources :items, only: [:index, :show]
   resources :charges, only: [:new, :create]
   get 'add_to_cart', to: 'items#add_to_cart'
