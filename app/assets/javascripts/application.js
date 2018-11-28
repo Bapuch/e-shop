@@ -131,8 +131,8 @@ $(document).on('turbolinks:load', function () {
 
   // pour le cart
     jQuery(function (c) {
-      let $close = $('.close-btn');
-      $close.on('click', function (event) {
+      let closeBtn = $('.close-btn');
+      closeBtn.on('click', function (event) {
         var $i = event.target.id.split("_")[1];
         $('#cart-header' + $i).fadeOut('slow', function (c) {
           $('#cart-header' + $i).remove();
