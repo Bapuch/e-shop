@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'users/show'
   get 'cart', to: 'shop#cart'
   get 'shop/order'
   get 'product', to: 'product#show'
