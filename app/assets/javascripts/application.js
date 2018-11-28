@@ -21,10 +21,7 @@
 //x= require popper
 //xx= require boxotstrap
 
-//= require easing
-//= require responsiveslides.min
-//= require jquery.flexisel
-//= require jquery.etalage.min
+
 
 //xx= require bootstrap-sprockets
 
