@@ -21,8 +21,6 @@
 //x= require popper
 //xx= require boxotstrap
 
-
-//= require move-top
 //= require easing
 //= require responsiveslides.min
 //= require jquery.flexisel
