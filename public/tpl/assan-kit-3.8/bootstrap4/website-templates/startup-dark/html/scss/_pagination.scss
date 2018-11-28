@@ -1,0 +1,16 @@
+/*
+Pagination styles
+*/
+.page-link{
+    border:0px;
+    margin-left: 5px;
+    border-radius: 3px;
+    background-color:#fbfbfb;
+    color:#999;
+}
+.page-item.active .page-link {
+    z-index: 2;
+    color: #fff;
+    background-color: $primary-color;
+}
+

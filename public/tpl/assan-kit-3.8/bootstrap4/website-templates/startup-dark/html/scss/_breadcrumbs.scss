@@ -1,0 +1,24 @@
+/*
+Page breadcrumbs
+*/
+.page-breadcrumb{
+    &.title-space-lg{
+        padding-top: 15rem;
+padding-bottom: 2rem;        
+    }
+    h1{
+        color:#fff;
+        text-transform: capitalize;
+        font-weight: 500;
+        font-size: 1.5rem;
+    }
+    .breadcrumb{
+        background-color: transparent;
+        padding: 0px;
+        margin-bottom:10px;
+        li{
+            color: #fff;
+            font-size: 12px;
+        }
+    }
+}

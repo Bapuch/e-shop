@@ -1,0 +1,27 @@
+/*
+Portfolio cards
+*/
+.cbp-l-caption-title{
+    font-family: $title-font;
+    font-weight: 400;
+    font-size: 1.25rem;
+    letter-spacing: .25rem;
+    line-height: 1.85;
+}
+.cbp-l-caption-desc{
+    font-family: $base-font;
+}
+.cbp-l-filters-button .cbp-filter-item{
+    font-family: $base-font;
+    font-weight:500;
+    padding:0px 10px;
+    border:0px;
+    text-transform: uppercase;
+    color:#333;
+    background-color: transparent;
+}
+.cbp-l-filters-button .cbp-filter-item.cbp-filter-item-active{
+    background-color: transparent;
+    color:#aeaeae;
+    font-weight:700;
+}

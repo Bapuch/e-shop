@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Dashboard</title>    
+        <!-- Bootstrap-->
+        <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!--Common Plugins CSS -->
+        <link href="css/plugins/plugins.css" rel="stylesheet">
+        <!--fonts-->
+        <link href="lib/line-icons/line-icons.css" rel="stylesheet">
+        <link href="lib/font-awesome/css/fontawesome-all.min.css" rel="stylesheet">  
+                <link href="lib/chartist/chartist.min.css" rel="stylesheet" />
+        <link href="css/chartist-custom.css" rel="stylesheet" />
+        <!-- jvectormap -->
+        <link href="lib/vector-map/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body class="layout-aside-mini">
+
+        <div class="page-wrapper" id="page-wrapper">
+            <aside id="page-aside-mini" class="aside-icon-o aside-light">
+                <span class="aside-close h-md-up text-muted"><i class="icon-Close"></i></span>
+                <div class="sidenav-mini">
+                      <a href="#" class="app-logo d-flex justify-content-center align-items-center">
+                        <i class="fa fa-paper-plane"></i><span class="logo-caption"> </span>
+                    </a>
+                    <div class="flex">
+                        <nav class="aside-mini-content">
+                            <ul class="nav">
+                                <li class="nav-item dropdown">
+                                    <a data-toggle="dropdown" data-placement="right" title="Home" href="#" class="nav-link">
+                                       <span class="nav-text">Home</span>  <i class="fa fa-home"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu">
+                                        <div class="pl-4 text-light pb-1 mb-2 fs-1x">Dashboard Pages <span class="badge ml-2 badge-primary">3</span></div>
+                                        <a href="index.html" class="dropdown-item"><i class="fa fa-chart-line"></i>Analytics</a>
+                                         <a href="index-02.html" class="dropdown-item"><i class="fa fa-shopping-cart"></i>E-commerce</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item active">
+                                    <a data-toggle="tooltip" data-placement="right" title="Analytics" href="#" class="nav-link">
+                                     <span class="nav-text">Analytics</span>   <i class="fa fa-chart-line"></i> 
+                                    </a>
+                                </li>
+                                 <li class="nav-item">
+                                    <a data-toggle="tooltip" data-placement="right" title="inbox" href="#" class="nav-link">
+                                   <span class="nav-text">Envelope</span>      <i class="far fa-envelope"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a data-toggle="tooltip" data-placement="right" title="Contacts" href="#" class="nav-link">
+                                         <span class="nav-text">Contacts</span><i class="far fa-address-book"></i>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a data-toggle="tooltip" data-placement="right" title="Projects" href="#" class="nav-link">
+                                      <span class="nav-text">Projects</span>  <i class="far fa-folder-open"></i> 
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a data-toggle="tooltip" data-placement="right" title="Support Tickets" href="#" class="nav-link">
+                                      <span class="nav-text">Tickets</span>  <i class="fa fa-ticket-alt"></i> 
+                                         <span class="badge badge-warning">2</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item text-center py-4 h-md-down">
+                                    <i class="fa fa-ellipsis-h text-muted"></i>
+                                </li>
+                                <li class="nav-item dropup">
+                                    <a data-toggle="dropdown" data-placement="right" title="More" href="#" class="nav-link">
+                                       <span class="nav-text">More</span> <i class="fa fa-ellipsis-v"></i> 
+                                    </a>
+                                     <div class="dropdown-menu dropdown-menu">
+                                        <a href="#" class="dropdown-item">Dropdown item</a>
+                                         <a href="#" class="dropdown-item">Another item</a>
+                                          <a href="#" class="dropdown-item">Easy text change</a>
+                                           <a href="#" class="dropdown-item">Docs included</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="aside-footer p-3 pl-25 text-muted">
+                          V1.0
+                    </div>
+                </div>
+            </aside>
+            <main class="content">
+                 <header class="navbar page-header darkHeader navbar-expand-lg">
+                    <ul class="nav flex-row mr-auto">
+                        <li class="nav-item">
+                           
+                            <a class="nav-link sidenav-mini-btn h-lg-up">
+                                <span class="fa fa-bars fs16"></span>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <ul class="nav flex-row order-lg-2 ml-auto nav-icons">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="dropdown-notify" data-toggle="dropdown">
+                                <i class="icon-Envelope"></i>
+                                <span class="badge badge-primary d-block text-white">1</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right no-padding" aria-labelledby="dropdown-notify">
+                                <div class="dropdown-header-top flex d-flex align-items-center">
+                                    <span class="d-flex flex text-dark dropdown-title">Notifications</span>
+                                    <a class="d-flex d-inline-flex text-primary">
+                                        <i class="fas fa-check fs10 mr-2 d-flex d-inline-flex align-self-center"></i> 
+                                        Mark all as read
+                                    </a>
+                                </div>
+                                <div style="height: 320px">
+                                    <div class="slim-scroll">
+                                        <ul class="list">
+                                            <li class="list-item align-items-center unread">
+                                                <a href="#" class="list-link"></a>
+                                                <div class="list-thumb avatar avatar50 bg-info text-white rounded-circle">
+                                                    <i class="icon-Twitter"></i>
+                                                </div>
+                                                <div class="list-body">
+                                                    <span class="list-title">
+                                                        New Followers
+                                                    </span>
+                                                    <span class="list-content">
+                                                        6 New Followers
+                                                    </span>
+                                                    <span class="list-meta">
+                                                        3 Hours ago
+                                                    </span>
+                                                </div>
+                                            </li><!--item-->
+                                            <li class="list-item align-items-center unread">
+                                                <a href="#" class="list-link"></a>
+                                                <div class="list-thumb avatar avatar50 bg-warning text-white rounded-circle">
+                                                    <i class="icon-Ticket"></i>
+                                                </div>
+                                                <div class="list-body">
+                                                    <span class="list-title">
+                                                        New Support Ticket
+                                                    </span>
+                                                    <span class="list-content">
+                                                        Adam need some helps
+                                                    </span>
+                                                    <span class="list-meta">
+                                                        5 Hours ago
+                                                    </span>
+                                                </div>
+                                            </li><!--item-->
+                                            <li class="list-item align-items-center">
+                                                <a href="#" class="list-link"></a>
+                                                <div class="list-thumb avatar avatar50 bg-teal text-white rounded-circle">
+                                                    <i class="icon-Paypal"></i>
+                                                </div>
+                                                <div class="list-body">
+                                                    <span class="list-title">
+                                                        Payment Sent
+                                                    </span>
+                                                    <span class="list-content">
+                                                        You have sent $200 to Joseph
+                                                    </span>
+                                                    <span class="list-meta">
+                                                        18 Hours ago
+                                                    </span>
+                                                </div>
+                                            </li><!--item-->
+                                            <li class="list-item align-items-center">
+                                                <a href="#" class="list-link"></a>
+                                                <div class="list-thumb avatar avatar50 bg-danger text-white rounded-circle">
+                                                    <i class="icon-Envelope"></i>
+                                                </div>
+                                                <div class="list-body">
+                                                    <span class="list-title">
+                                                        Email Confirmation
+                                                    </span>
+                                                    <span class="list-content">
+                                                        Confirm your email to complete sign up
+                                                    </span>
+                                                    <span class="list-meta">
+                                                        Yesterday
+                                                    </span>
+                                                </div>
+                                            </li><!--item-->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a class="dropdown-footer">View All Notifications</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link" href="#" id="dropdownChat" data-toggle="dropdown">
+                                <i class="icon-Speach-Bubbles"></i>
+                                <span class="badge badge-success text-white anibadge d-block">9</span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right no-padding dropdown-menu-lg" aria-labelledby="dropdownChat">
+
+                                <div class="dropdown-header-top flex d-flex align-items-center">
+                                    <span class="d-flex flex text-dark dropdown-title">Recent</span>
+                                    <a class="d-flex d-inline-flex text-primary">
+                                        <i class="fa fs10 fa-plus mr-2 d-flex d-inline-flex align-self-center"></i> 
+                                        New Message
+                                    </a>
+                                </div>
+                                <div style="height: 350px">
+                                    <div class="slim-scroll">
+                                        <ul class="list chat-list">
+                                            <li class="list-item align-items-center chat-user user-online unread">
+                                                <a href="#" class="list-link"></a>
+                                                <div class="list-thumb avatar avatar50 rounded-circle">
+                                                    <img src="images/avatar1.jpg" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="list-body">
+                                                    <span class="list-title">
+                                                        Emily Doe
+                                                    </span>
+                                                    <span class="list-content">
+                                                        We'have created a support ticket but 
+                                                    </span>
+                                                    <span class="list-meta">
+                                                        3 Hours ago
+                                                    </span>
+                                                </div>
+                                            </li><!--item-->
+                                            <li class="list-item align-items-center chat-user">
+                                                <a href="#" class="list-link"></a>
+                                                <div class="list-thumb avatar avatar50 rounded-circle">
+                                                    <img src="images/avatar2.jpg" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="list-body">
+                                                    <span class="list-title">
+                                                        Adam Voges
+                                                    </span>
+                                                    <span class="list-content">
+                                                        We'have created a support ticket but 
+                                                    </span>
+                                                    <span class="list-meta">
+                                                        7 Hours ago
+                                                    </span>
+                                                </div>
+                                            </li><!--item-->
+                                            <li class="list-item align-items-center chat-user">
+                                                <a href="#" class="list-link"></a>
+                                                <div class="list-thumb avatar avatar50 rounded-circle">
+                                                    <img src="images/avatar5.jpg" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="list-body">
+                                                    <span class="list-title">
+                                                        Pamela Anderson
+                                                    </span>
+                                                    <span class="list-content">
+                                                        We'have created a support ticket but 
+                                                    </span>
+                                                    <span class="list-meta">
+                                                        20 Hours ago
+                                                    </span>
+                                                </div>
+                                            </li><!--item-->
+                                            <li class="list-item align-items-center chat-user user-dnd">
+                                                <a href="#" class="list-link"></a>
+                                                <div class="list-thumb avatar avatar50 rounded-circle">
+                                                    <img src="images/avatar4.jpg" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="list-body">
+                                                    <span class="list-title">
+                                                        Robin Edwards
+                                                    </span>
+                                                    <span class="list-content">
+                                                        We'have created a support ticket but 
+                                                    </span>
+                                                    <span class="list-meta">
+                                                        Yesterday
+                                                    </span>
+                                                </div>
+                                            </li><!--item-->
+                                            <li class="list-item align-items-center chat-user user-away">
+                                                <a href="#" class="list-link"></a>
+                                                <div class="list-thumb avatar avatar50 bg-primary-light text-primary rounded-circle">
+                                                    <i class='icon-Boy'></i>
+                                                </div>
+                                                <div class="list-body">
+                                                    <span class="list-title">
+                                                        Abraham Josef
+                                                    </span>
+                                                    <span class="list-content">
+                                                        We'have created a support ticket but 
+                                                    </span>
+                                                    <span class="list-meta">
+                                                        3 Days ago
+                                                    </span>
+                                                </div>
+                                            </li><!--item-->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <a class="dropdown-footer">View All Messages</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown tools-dropdown h-lg-down">
+                            <a href="#" data-toggle="dropdown" class=" nav-link">
+                                <i class="icon-Filter-2"></i></a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-lg">
+
+                                <div class="row no-margin">
+
+                                    <div class="col-4 p-3 text-center">
+                                        <a href="index.html" class="d-block tool-item">
+                                            <i class="icon-New-Mail text-teal"></i>
+                                            <div class="tool-heading fs12">New Email</div>
+                                        </a>
+                                    </div>
+                                    <div class="col-4 p-3 text-center">
+                                        <a href="index.html" class="d-block tool-item">
+                                            <i class="icon-Folder-Add text-success"></i>
+                                            <div class="tool-heading fs12">New Project</div>
+                                        </a>
+                                    </div>
+                                    <div class="col-4 p-3 text-center">
+                                        <a href="index.html" class="d-block tool-item">
+                                            <i class="icon-Administrator text-primary"></i>
+                                            <div class="tool-heading fs12">My Profile</div>
+                                        </a>
+                                    </div>
+                                    <div class="col-4 p-3  text-center">
+                                        <a href="index.html" class="d-block tool-item">
+                                            <i class="icon-Gear text-dark"></i>
+                                            <div class="tool-heading fs12">Settings</div>
+                                        </a>
+                                    </div>
+                                    <div class="col-4 p-3 text-center">
+                                        <a href="index.html" class="d-block tool-item">
+                                            <i class="icon-Server-2 text-info"></i>
+                                            <div class="tool-heading fs12">Server Space</div>
+                                        </a>
+                                    </div>
+                                    <div class="col-4 p-3 text-center">
+                                        <a href="index.html" class="d-block tool-item">
+                                            <i class="icon-Ticket text-danger"></i>
+                                            <div class="tool-heading fs12">Tickets</div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown user-dropdown align-items-center">
+                            <a class="nav-link" href="#" id="dropdown-user" role="button" data-toggle="dropdown">
+                                <span class="user-states states-online">
+                                    <img src="images/avatar6.jpg" width="35" alt="" class=" img-fluid rounded-circle">
+                                </span>
+                                <span class="ml-2 h-lg-down dropdown-toggle">
+                                    Hi, Sarah
+                                </span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-user">
+                                <div class="text-center p-3 pt-0 b-b mb-5">
+                                    <span class="mb-0 d-block font300 text-title fs-1x">Hi! <span class="font700">Sarah Taylor</span></span>
+                                    <span class="fs12 mb-0 text-muted">Administrator</span>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="icon-User"></i>My Profile</a>
+                                <a class="dropdown-item" href="#"><i class="icon-Newspaper"></i> Tasks</a>
+                                <a class="dropdown-item" href="#"><i class="icon-Speach-Bubble4 "></i> Messages <span class="badge badge-text text-primary-active bg-primary-light ml-2">5 New</span></a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#"><i class="icon-Gear"></i> Settings<span class="badge badge-text text-danger-active bg-danger-light ml-2">Update</span></a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="page-login.html"><i class="icon-Power"></i> logout</a>
+
+                            </div>
+                        </li>
+                        <li class="h-lg-up nav-item">
+                            <a href="#" class=" nav-link collapsed" data-toggle="collapse" data-target="#navbarToggler" aria-expanded="false">
+                                <i class="icon-Magnifi-Glass2"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="collapse navbar-collapse search-collapse" id="navbarToggler">
+                        <form class="form-inline ml-1">     
+                            <button class="no-padding bg-trans border0" type="button"><i class="icon-Magnifi-Glass2"></i></button>
+                            <input class="form-control border0" type="search" placeholder="Search..." aria-label="Search">
+                        </form>
+                    </div>
+                </header>
+                 
+                 <div class="page-content">
+                    
+                    <div class="page-header-img">
+                         <img src="images/cover1.jpg" alt="" class="img-fluid">
+                     </div>
+                     <div class="page-header-space d-flex flex-row flex">
+                         <div class="container-fluid">
+                             <h4 class="font400 text-white">Analytics</h4>
+                         </div>
+                     </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                <div class="list bg-white shadow-sm rounded mb-30">
+                                    <div class="list-item">
+                                        <div class="list-thumb avatar si-colored-facebook text-white rounded avatar40">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </div>
+                                        <div class="list-body text-right">
+                                            <span class="list-title fs-1x">345.7K</span>
+                                            <span class="list-content">Facebook Likes
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--col-->
+                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                <div class="list bg-white shadow-sm rounded mb-30">
+                                    <div class="list-item">
+                                        <div class="list-thumb avatar si-colored-twitter text-white rounded avatar40">
+                                            <i class="fab fa-twitter"></i>
+                                        </div>
+                                        <div class="list-body text-right">
+                                            <span class="list-title fs-1x">973.2K</span>
+                                            <span class="list-content">Followers
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--col-->
+                            <div class="col-xl-3 col-lg-4 col-md-6 mb-30">
+                                <div class="list bg-white shadow-sm rounded">
+                                    <div class="list-item">
+                                        <div class="list-thumb avatar bg-danger text-white rounded avatar40">
+                                            <i class="fa fa-user-circle"></i>
+                                        </div>
+                                        <div class="list-body text-right">
+                                            <span class="list-title fs-1x">3386</span>
+                                            <span class="list-content">New Visitors
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--col-->
+                            <div class="col-xl-3 col-lg-4 col-md-6">
+                                <div class="list bg-white shadow-sm rounded mb-30">
+                                    <div class="list-item">
+                                        <div class="list-thumb avatar bg-success text-white rounded avatar40">
+                                            <i class="fa fa-dollar-sign"></i>
+                                        </div>
+                                        <div class="list-body text-right">
+                                            <span class="list-title fs-1x">6,959</span>
+                                            <span class="list-content">Earnings
+
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--col-->
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+
+                                <div class="portlet-box portlet-fullHeight border0 shadow-sm mb-30">
+                                    <div class="portlet-header flex-row flex d-flex align-items-center">
+                                        <div class="flex d-flex flex-column">
+                                            <h3>User Analytics</h3> 
+                                            <span>Last Week</span>
+                                        </div>
+                                        <div class="portlet-tools">
+                                            <ul class="nav">
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link"><i class="fa fa-sync"></i></a>
+
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="portlet-body pt-0">
+                                        <div class="row align-items-center">
+                                            <div class='col-lg-5'>
+                                                <div class="row pt-4 pb-4 text-center">
+                                                    <div class="col-4 ml-auto b-r">
+                                                        <span class="fa fa-square text-pink-light mb-2"></span>
+                                                        <h4 class="mb-0">8721</h4>
+
+                                                        <span class="">Visitors</span>
+                                                        <div class="text-muted fs12 pt-1">
+                                                            <i class="mr-2 fa fa-arrow-up text-success"></i> 3.5%
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-4 mr-auto">
+                                                        <i class='fa fa-square text-primary mb-2'></i>
+                                                        <h4 class="mb-0"><sub class="fs10 text-muted fa fa-dollar-sign"></sub> 721</h4>
+                                                        <span class="">Sales</span>
+                                                        <div class="text-muted fs12 pt-1">
+                                                            <i class="mr-2 fa fa-arrow-up text-success"></i> .5%
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class='col-lg-7'>
+                                                <div class='chartist'>
+                                                    <div class="ct-chart"></div>
+                                                </div>
+                                                <!--<canvas id="lineChart" height="130"></canvas>-->
+                                            </div>
+                                        </div><!--portlet-->
+                                    </div>
+                                </div>
+                            </div><!--col-->
+
+                        </div>
+                        <div class='row'>
+                            <div class='col-12'>
+                                <div class="portlet-box bg-trans mb-30 border0 ">
+                                    <div class='portlet-body'>
+                                        <div class="row align-items-center">
+                                            <div class="col-lg-8">
+                                                 <div id="world-map-markers" style="width:100%;height: 300px"></div>
+                                            </div>
+                                             <div class="col-lg-4">
+                                                 <h5 class="font500 fs-1x b-b pb-2 mb-3 brd-primary-active">Top countries</h5>
+                                                 <div class="clearfix pb-2">
+                                                     <span class="float-right">
+                                                         <i class="fa fa-eye mr-2"></i> 3992
+                                                     </span>
+                                                     <span class="font500 text-muted">Usa</span>
+                                                 </div>
+                                                 <div class="progress bg-white shadow-sm mb-3" style="height: 9px">
+                                                     <div style="width: 75%" class="progress-bar bg-primary progress-bar-animated progress-bar-striped">
+                                                         
+                                                     </div>
+                                                 </div>
+                                                 <div class="clearfix pb-2">
+                                                     <span class="float-right">
+                                                         <i class="fa fa-eye mr-2"></i> 2394
+                                                     </span>
+                                                     <span class="font500 text-muted">Australia</span>
+                                                 </div>
+                                                 <div class="progress bg-white shadow-sm mb-3" style="height: 9px">
+                                                     <div style="width: 60%" class="progress-bar bg-danger progress-bar-animated progress-bar-striped">
+                                                         
+                                                     </div>
+                                                 </div>
+                                                 <div class="clearfix pb-2">
+                                                     <span class="float-right">
+                                                         <i class="fa fa-eye mr-2"></i> 3943
+                                                     </span>
+                                                     <span class="font500 text-muted">Israel</span>
+                                                 </div>
+                                                 <div class="progress bg-white shadow-sm" style="height: 9px">
+                                                     <div style="width: 35%" class="progress-bar bg-success progress-bar-animated progress-bar-striped">
+                                                         
+                                                     </div>
+                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="portlet-box portlet-fullHeight mb-30">
+                                    <div class="portlet-header flex-row flex d-flex align-items-center">
+                                        <div class="flex d-flex flex-column">
+                                            <h3>Recent Customers</h3> 
+                                        </div>
+                                        <div class="portlet-tools">
+                                            <ul class="nav">
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link"><i class="fa fa-sync"></i></a>
+
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="portlet-body no-padding">
+                                        <div class="list">
+                                            <div class="list-item b-b bg-light">
+                                                <div class="list-thumb shadow-sm avatar40 bg-primary text-primary-light rounded-circle">
+                                                    JA
+                                                </div>
+                                                <div class="list-body">
+                                                    <span class="float-right fs12 text-muted"><i class="fa fa-clock mr-2"></i>Just Now</span>
+                                                    <span class="list-title">John Adams</span>
+                                                    <span class="list-content pt-1">
+                                                        <i class="fa text-muted fa-map-marker mr-1 fs10"></i>
+                                                        Sau Polo, 302012,  Argentina
+                                                    </span>
+                                                </div>
+                                            </div><!--list item-->
+                                            <div class="list-item b-b">
+                                                <div class="list-thumb shadow-sm avatar40 rounded-circle">
+                                                    <img src="images/avatar1.jpg" alt="" class="img-fluid">
+                                                </div>
+                                                <div class="list-body">
+                                                    <span class="float-right fs12 text-muted"><i class="fa fa-clock mr-2"></i>Just Now</span>
+                                                    <span class="list-title">Amily Howkins</span>
+                                                    <span class="list-content pt-1">
+                                                        <i class="fa text-muted fa-map-marker mr-1 fs10"></i>
+                                                        Sau Polo, 302012,  Argentina
+                                                    </span>
+                                                </div>
+                                            </div><!--list item-->
+                                            <div class="list-item b-b bg-light">
+                                                <div class="list-thumb shadow-sm avatar40 rounded-circle">
+                                                    <img src="images/avatar4.jpg" alt="" class="img-fluid">
+                                                </div>
+                                                <div class="list-body">
+                                                    <span class="float-right fs12 text-muted"><i class="fa fa-clock mr-2"></i>Just Now</span>
+                                                    <span class="list-title">John Sinha</span>
+                                                    <span class="list-content pt-1">
+                                                        <i class="fa text-muted fa-map-marker mr-1 fs10"></i>
+                                                        Sau Polo, 302012,  Argentina
+                                                    </span>
+                                                </div>
+                                            </div><!--list item-->
+                                            <div class="list-item b-b">
+                                                <div class="list-thumb shadow-sm avatar40 rounded-circle">
+                                                    <img src="images/avatar5.jpg" alt="" class="img-fluid">
+                                                </div>
+                                                <div class="list-body">
+                                                    <span class="float-right fs12 text-muted"><i class="fa fa-clock mr-2"></i>Just Now</span>
+                                                    <span class="list-title">Luiciya Wangdu</span>
+                                                    <span class="list-content pt-1">
+                                                        <i class="fa text-muted fa-map-marker mr-1 fs10"></i>
+                                                        Sau Polo, 302012,  Argentina
+                                                    </span>
+                                                </div>
+                                            </div><!--list item-->
+                                            <div class="list-item b-b bg-light">
+                                                <div class="list-thumb shadow-sm avatar40 bg-teal text-teal-light rounded-circle">
+                                                    AB
+                                                </div>
+                                                <div class="list-body">
+                                                    <span class="float-right fs12 text-muted"><i class="fa fa-clock mr-2"></i>Just Now</span>
+                                                    <span class="list-title">Abraham Banjara</span>
+                                                    <span class="list-content pt-1">
+                                                        <i class="fa text-muted fa-map-marker mr-1 fs10"></i>
+                                                        Sau Polo, 302012,  Argentina
+                                                    </span>
+                                                </div>
+                                            </div><!--list item-->
+                                            <div class="list-item">
+                                                <div class="list-thumb shadow-sm avatar40 rounded-circle">
+                                                    <img src="images/avatar6.jpg" alt="" class="img-fluid">
+                                                </div>
+                                                <div class="list-body">
+                                                    <span class="float-right fs12 text-muted"><i class="fa fa-clock mr-2"></i>Just Now</span>
+                                                    <span class="list-title">Juliat Thomas</span>
+                                                    <span class="list-content pt-1">
+                                                        <i class="fa text-muted fa-map-marker mr-1 fs10"></i>
+                                                        Francisco, 344564,  USA
+                                                    </span>
+                                                </div>
+                                            </div><!--list item-->
+                                        </div>
+                                    </div>
+                                </div><!--portlet-->
+                            </div><!--col-->
+                            <div class="col-lg-6">
+                                <div class="portlet-box portlet-fullHeight mb-30">
+                                    <div class="portlet-header flex-row flex d-flex align-items-center">
+                                        <div class="flex d-flex flex-column">
+                                            <h3>Todo</h3> 
+                                        </div>
+                                        <div class="portlet-tools">
+                                            <ul class="nav">
+                                                <li class="nav-item">
+                                                    <a href="#" class="nav-link"><i class="fa fa-sync"></i></a>
+
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="portlet-body no-padding">
+                                        <div class="p-3">
+                                            <div class="customUi-checkbox check-todo checkboxUi-primary">
+                                                <input type="checkbox" id="todo1" checked>
+                                                <label for="todo1" class="mb-0">
+                                                    <span class="label-checkbox"></span>
+                                                    <span class='fs12 text-muted d-block pb-1 text-primary'>
+                                                        <i class='fa fa-tag mr-2 fs10'></i>  Project #2
+                                                    </span>
+                                                    <span class="label-helper">
+                                                        Lorem ipsum dolor sit amet todo text will change  dolor sit amet todo text will change ease
+                                                    </span>
+                                                    <span class='fs12 text-muted d-block text-primary'>
+
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div><!--Todo item-->
+                                        <div class="p-3">
+                                            <div class="customUi-checkbox check-todo checkboxUi-primary">
+                                                <input type="checkbox" id="todo2" checked>
+                                                <label for="todo2" class="mb-0">
+                                                    <span class='fs12 text-muted d-block pb-1 text-primary'>
+                                                        <i class='fa fa-tag mr-2 fs10'></i>  Project #2
+                                                    </span>
+                                                    <span class="label-checkbox"></span>
+                                                    <span class="label-helper">
+                                                        Lorem ipsum dolor sit amet todo text will change  dolor sit amet todo text will change ease
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div><!--Todo item-->
+                                        <div class="p-3">
+                                            <div class="customUi-checkbox check-todo checkboxUi-primary">
+                                                <input type="checkbox" id="todo3">
+                                                <label for="todo3" class="mb-0">
+                                                    <span class='fs12 text-muted d-block pb-1 text-primary'>
+                                                        <i class='fa fa-tag mr-2 fs10'></i>  Project #2
+                                                    </span>
+                                                    <span class="label-checkbox"></span>
+                                                    <span class="label-helper">
+                                                        Lorem ipsum dolor sit amet todo text will change  dolor sit amet todo text will change ease
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div><!--Todo item-->
+                                        <div class="p-3">
+                                            <div class="customUi-checkbox check-todo checkboxUi-primary">
+                                                <input type="checkbox" id="todo4">
+                                                <label for="todo4" class="mb-0">
+                                                    <span class='fs12 text-muted d-block pb-1 text-primary'>
+                                                        <i class='fa fa-tag mr-2 fs10'></i>  Project #2
+                                                    </span>
+                                                    <span class="label-checkbox"></span>
+                                                    <span class="label-helper">
+                                                        Lorem ipsum dolor sit amet todo text will change  dolor sit amet todo text will change ease
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div><!--Todo item-->
+                                    </div>
+                                </div><!--portlet-->
+                            </div><!--col-->
+                        </div>
+                    </div>
+                </div>
+                 <footer class="content-footer bg-light b-t">
+                    <div class="d-flex flex align-items-center pl-15 pr-15">
+                        <div class="d-flex flex p-3 ml-auto">
+                            <div>
+                                <a href="#" class="d-inline-flex pl-0 pr-2 b-r">Contact</a>
+                                <a href="#" class="d-inline-flex pl-2 pr-2 b-r">Storage</a>
+                                <a href="#" class="d-inline-flex pl-2 pr-2 ">Privacy</a>
+                            </div>
+                        </div>
+                        <div class="d-flex flex p-3 mr-auto justify-content-end">
+                            <div class="text-muted">© Copyright 2014-2018. Assan</div>
+                        </div>
+                    </div>
+                </footer><!-- footer end-->
+            </main><!-- page content end-->
+        </div><!-- app's main wrapper end -->
+        <!-- Common plugins -->
+        <script type="text/javascript" src="js/plugins/plugins.js"></script> 
+        <script type="text/javascript" src="js/appUi-custom.js"></script> 
+            <script type="text/javascript" src="lib/chartjs/dist/chart.min.js"></script>
+        <script type="text/javascript" src="lib/peity/jquery.peity.min.js"></script>
+        <script src="lib/chartist/chartist.min.js"></script>
+        <script src="lib/chartist/chartist-tooltip.js"></script>
+        
+        <!-- jvectormap -->
+        <script src="lib/vector-map/jquery-jvectormap-2.0.2.min.js"></script>
+        <script src="lib/vector-map/jquery-jvectormap-world-mill-en.js"></script>
+       <script type="text/javascript" src="js/dashboard.custom.js"></script> 
+    </body>
+</html>

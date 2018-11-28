@@ -1,0 +1,21 @@
+/*
+Revolution slider customization
+*/
+
+
+/**main slider**/
+.property-title{
+    color:#fff;
+    font-weight:400;
+    text-transform: capitalize;
+    letter-spacing: -1px;
+    font-family:$title-font;
+}
+.property-price{
+    font-family: $styled-font;
+    font-weight: 400;
+    color:#fff;
+    display: block;
+    padding: 10px 0px!important;
+    border-bottom:2px solid #fff;
+}

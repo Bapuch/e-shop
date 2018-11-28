@@ -1183,8 +1183,9 @@ p.qty {
 	font-weight:400;
 	line-height:1.3em;
 }
-.close1,.close2{
+.close-btn {
   background: url('close.png') no-repeat 0px 0px;
+  opacity: 0.5;
   cursor: pointer;
   width: 28px;
   height: 28px;
@@ -1196,6 +1197,11 @@ p.qty {
   -o-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
 }
+
+.close-btn:hover {
+  opacity: 0.9;
+}
+
 .cart-header {  
   position: relative;  
 }

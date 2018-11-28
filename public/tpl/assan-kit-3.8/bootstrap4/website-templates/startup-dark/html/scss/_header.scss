@@ -1,0 +1,66 @@
+/*
+Assan Header Style
+*/
+.nav-link {
+    color: #fff;
+    letter-spacing: 0px;
+    display: inline-block;
+    text-transform: capitalize;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: $title-font;
+}
+.nav-item.active .nav-link{
+    color: $primary-color!important;
+}
+.navbar-dark .navbar-nav .nav-link{
+    color: #fff;
+}
+@media(min-width:992px){
+    .navbar-expand-lg.navbar{
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    .navbar-expand-lg .navbar-nav .nav-link{
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 1.3rem;
+        padding-bottom: 1.3rem;
+    }
+    .navbar .navbar-nav .btn.btn-sm {
+            position: relative;
+            top: 15px;
+        }
+    .navbar-transparent.navbar-dark{
+        position: absolute;
+        left:0;
+        top:0;
+        width:100%;
+        z-index: 999;
+        background-color: rgba(#000,.0)!important;
+        &.fixed-top{
+            background-color: #000!important;
+            position: fixed;
+            animation: fadeInDown 0.3s ease-out forwards;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+        }
+    }
+
+}
+
+
+/**off canvas pushy**/
+.pushy{
+    width: 300px;
+    background-color: #212121;
+    padding:20px 15px;
+    h3{
+        color: #aeaeae;
+    }
+}
+.pushy-right {
+    -webkit-transform: translate3d(300px, 0, 0);
+    -ms-transform: translate3d(300px, 0, 0);
+    transform: translate3d(300px, 0, 0);
+}

@@ -1,0 +1,70 @@
+/*
+Header style
+*/
+.left-nav{
+    display: table-cell;
+    vertical-align: top;
+    width:250px;
+    background-color:#fff;
+    z-index:3000;
+    position:relative;
+        box-shadow:inset -2px 0px 30px rgba(0,0,0,.02);
+    .logo{
+        padding-bottom: 25px;
+    }
+    .nav-container{
+        position: fixed!important;
+        height: 100%!important;
+        box-sizing: content-box;
+        top: 0px!important;
+        z-index: 3000;
+        width:250px;
+overflow-y:auto;
+        .nav-parent{
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+            position: relative;
+            height:100%;
+            border-collapse:collapse;
+            .row-navbar{
+                display: table-row;
+            }
+            .row-social{
+                display: table-cell;
+                vertical-align: bottom;
+                a{
+                    color: #333;
+                    display: inline-block;
+                    margin: 3px;
+                }
+            }
+        }
+    }
+    .verticle-nav{
+        text-align: center;
+
+        >li>a{
+            display: block;
+            letter-spacing: .2em;
+            color:#333;
+            font-size: .88rem;
+            font-weight: 400;
+            padding: .6rem 2rem;
+            font-family: $title-font;
+            text-transform: uppercase;
+            &:hover,&:focus,&:active,&.active{
+                color: #aeaeae;
+            }
+        }
+    }
+    &.left-darknav{
+        background-color: #000;
+        .verticle-nav>li>a,.nav-parent .row-social a{
+            color: #aeaeae;
+            &:hover,&:focus,&:active,&.active{
+                color: #fff;
+            }
+        }
+    }
+}

@@ -18,8 +18,8 @@
 //= require jquery3
 //= require jquery_ujs
 
-//= require popper
-//= require bootstrap
+//x= require popper
+//xx= require boxotstrap
 
 //= require jquery.easydropdown
 //= require move-top
@@ -28,7 +28,7 @@
 //= require jquery.flexisel
 //= require jquery.etalage.min
 
-//= require bootstrap-sprockets
+//xx= require bootstrap-sprockets
 
 
 $(document).on('turbolinks:load', function () {
@@ -128,4 +128,16 @@ $(document).on('turbolinks:load', function () {
       modal.style.display = "none";
     }
   }
+
+  // pour le cart
+    jQuery(function (c) {
+      let closeBtn = $('.close-btn');
+      closeBtn.on('click', function (event) {
+        var $i = event.target.id.split("_")[1];
+        $('#cart-header' + $i).fadeOut('slow', function (c) {
+          $('#cart-header' + $i).remove();
+        });
+      });
+    });
+
 });

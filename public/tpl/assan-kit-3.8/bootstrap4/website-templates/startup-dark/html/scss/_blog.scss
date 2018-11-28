@@ -1,0 +1,121 @@
+/*
+Blog post entries
+*/
+.entry-card{
+    -webkit-box-shadow: 0px 5px 15px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0px 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.05);
+
+}
+.entry-content{
+    background-color:#313131;
+    padding: 36px 36px 36px 36px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    .entry-title{
+        margin-bottom:5px;
+        font-weight:400;
+        font-size:.9rem;
+        line-height:1.5rem;
+        a{
+            color:#fff;
+            &:hover{
+                color:$primary-color;
+            }
+        }
+    }
+    .entry-meta{
+        span{
+            font-size:12px;
+        }
+    }
+}
+
+.entry-thumb{
+    display:block;
+    position:relative;
+    overflow:hidden;
+    border-top-left-radius:6px;
+    border-top-right-radius:6px;
+    img{
+        border-top-left-radius:6px;
+        border-top-right-radius:6px;
+    }
+    .thumb-hover{
+        position: absolute;
+        width:100px;
+        height:100px;
+        background: rgba($primary-color,.85);
+        display: block;
+        top:50%;
+        left:50%;
+        color: #fff;
+        font-size: 40px;
+        line-height: 100px;
+        border-radius: 50%;
+        margin-top:-50px;
+        margin-left:-50px;
+        text-align: center;
+        transform: scale(0);
+        -webkit-transform: scale(0);
+        opacity:0;
+        transition: all .3s ease-in-out;
+        -webkit-transition: all .3s ease-in-out;
+    }
+    &:hover{
+        .thumb-hover{
+            opacity:1;
+            transform: scale(1);
+            -webkit-transform: scale(1);
+        }
+    }
+}
+
+.blog-post-wide{
+    margin-bottom: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(#255,.3);
+    .post-thumb{
+        margin-bottom: 20px;
+    }
+}
+.post-meta{
+    padding-top:10px;
+    li{
+        font-size:13px;
+        font-weight:400;
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+        &:after {
+            margin-top: -5px;
+            content: "/";
+            margin-left: 10px;
+        }
+        &:last-child:after{
+            display: none;
+        }
+        i{
+            margin-right: 5px;
+        }
+        a{
+            color:#aeaeae;
+            &:hover{
+                color: #fff;
+            }
+        }
+    }
+}
+.post-content{
+    p{
+        margin-bottom: 30px;
+    }
+   a h3{
+        font-weight: 300;
+        transition:all .3s;
+        -webkit-transition:all .3s;
+        &:hover{
+                color: $primary-color;
+            }
+    }
+}
