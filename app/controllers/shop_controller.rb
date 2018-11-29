@@ -4,8 +4,15 @@ class ShopController < ApplicationController
   end
 
   def delete_item
-    item = current_or_guest_user.cart.items.where(id: params[:id])
-    current_or_guest_user.cart.items.delete(item)
+    cart_items = current_or_guest_user.cart.items
+    item = cart_items.where(id: params[:id])
+    cart_items.delete(item)
+
+    @sum = cart_items.sum(:price)
+    respond_to do |f|
+      f.html {redirect_to cart_path}
+      f.js
+    end
   end
 
   def update_quantity
@@ -30,10 +37,10 @@ class ShopController < ApplicationController
         cart.save
       end
     end
-
+    @sum = cart.items.sum(:price)
     respond_to do |f|
       f.html {redirect_to cart_path}
-      f.js {@sum: }
+      f.js
     end
   end
 

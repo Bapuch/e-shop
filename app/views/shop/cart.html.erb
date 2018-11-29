@@ -9,7 +9,7 @@
       <h2>My Shopping Bag</h2>
       <% @cart.items.distinct.each do |item| %>
         <div class="cart-header" id="cart-header<%= item.id %>">
-          <%= link_to "" , delete_item_path(id: item.id), method: 'put', class: "close-btn", id: "close_#{item.id }" %>
+          <%= link_to "", delete_item_path(id: item.id), method: 'put', class: "close-btn", id: "close_#{item.id }" %>
           <div class="cart-sec">
             <div class="cart-item cyc">
                 <%= image_tag item.image_url %>
