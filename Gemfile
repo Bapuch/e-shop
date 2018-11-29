@@ -69,7 +69,11 @@ gem "devise", "~> 4.5"
 gem "faker", "~> 1.9"
 
 gem 'jquery-rails'
-gem 'bootstrap-sass', '~> 3.3.7'
-gem 'sass-rails', '>= 3.2'
+
 
 gem "rails_admin", "~> 1.4"
+
+
+gem 'bootstrap'
+
+
