@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'users/show'
   get 'cart', to: 'shop#cart'
-  get 'shop/order'
+  get 'placeorder', to: 'shop#placeorder'
   get 'product', to: 'product#show'
   get 'category', to: 'category#index'
   root to: 'items#index'
