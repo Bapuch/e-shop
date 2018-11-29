@@ -70,5 +70,10 @@ gem "faker", "~> 1.9"
 
 gem 'jquery-rails'
 
+
+gem "rails_admin", "~> 1.4"
+
+
 gem 'bootstrap'
+
 

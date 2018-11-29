@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'users/show'
   get 'cart', to: 'shop#cart'
   get 'placeorder', to: 'shop#placeorder'
