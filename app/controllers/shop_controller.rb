@@ -13,6 +13,13 @@ class ShopController < ApplicationController
   end
 
   def place_order
-    puts "PLACe ORDER"
+    puts "PLACE ORDER"
+    # first create an order
+    @cart = Cart.find(params[:id])
+    
+    @cart.items.each do |item|
+    end
+    # then empty the cart
+    
   end
 end
