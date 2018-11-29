@@ -11,4 +11,8 @@ class ShopController < ApplicationController
     item = current_or_guest_user.cart.items.where(id: params[:id])
     current_or_guest_user.cart.items.delete(item)
   end
+
+  def place_order
+    puts "PLACe ORDER"
+  end
 end
