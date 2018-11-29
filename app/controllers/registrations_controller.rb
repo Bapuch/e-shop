@@ -4,8 +4,12 @@ class RegistrationsController < Devise::RegistrationsController
 
   def create
     super
-    sendemail
+      @user = User.new
+      if @user.save
+        UserMailer.signup_confirmation(@user).deliver
+        redirect_to @user, notice: "Signed up successfully."
     
+      end
   end
 
   def sendemail
