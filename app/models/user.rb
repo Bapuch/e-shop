@@ -3,8 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
-
-  has_one :cart
+  has_many :orders
+  has_one :cart, dependent: :destroy
   before_create :build_default_cart
 
   private
