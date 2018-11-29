@@ -13,5 +13,7 @@ Rails.application.routes.draw do
   resources :charges, only: [:new, :create]
   get 'add_to_cart', to: 'items#add_to_cart'
   put 'delete_item', to: "shop#delete_item"
+  put 'update_quantity', to: "shop#update_quantity"
   put 'place_order', to: "shop#place_order"
+
 end

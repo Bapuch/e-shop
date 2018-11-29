@@ -1,10 +1,12 @@
 class ChargesController < ApplicationController
+  before_action :authenticate_user!
+
   def new
+    @cart = current_user.cart
   end
 
   def create
     # Amount in cents
-    puts "CREATE *********** "
     @amount = 500
 
     customer = Stripe::Customer.create(
@@ -19,20 +21,24 @@ class ChargesController < ApplicationController
       :currency    => 'usd'
     )
 
-    "sending to place order *********"
+    flash[:success]
     place_order
+<<<<<<< HEAD
     #envoie mail pour l'admin et le user UserMailer...
     self.order_confirmation
+=======
+
+    flash[:success] = "Your order has been registered. Thanks!"
+>>>>>>> 69f72c2227b6816573e52396f4b0ecb6817eca77
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to new_charge_path
   end
 
   def place_order
-    puts " PLACING ORDER **************"
     # first create an order
     if user_signed_in?
-      @cart = Cart.find(params[:id])
+      @cart = current_user.cart
 
       @order_id = current_user.id + Time.now.to_i + rand(1000)
       @date = Time.now
@@ -47,8 +53,6 @@ class ChargesController < ApplicationController
       # then empty the cart
       @cart.items.destroy_all
 
-      # redirect to the cart view which should be empty now
-      redirect_to cart_path
     end
   end
 
@@ -69,4 +73,6 @@ class ChargesController < ApplicationController
     end 
   end 
   
+
+
 end

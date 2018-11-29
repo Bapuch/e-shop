@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
   def current_or_guest_user
     if current_user
       if session[:guest_user_id] && session[:guest_user_id] != current_user.id
+
         logging_in
         # reload guest_user to prevent caching problems before destruction
         guest_user(with_retry = false).try(:reload).try(:destroy)
@@ -33,11 +34,17 @@ class ApplicationController < ActionController::Base
   def logging_in
     guest = guest_user
     current_cart = current_user.cart
-    puts " LOGGGING IN ********* "
 
-    # if guest exists then save all items in current cart into its own cart
-    unless guest.nil? || current_cart.nil?
-      puts " DELETING CART ****************"
+    # if guest exists and the current_user does not already have a pending cart from previous session
+    # then save all items in current cart into its own cart
+    puts "guest nil"
+    puts guest.nil?
+    puts "empty cart ?"
+    puts current_cart.items.empty?
+    puts "test: "
+    puts guest.nil? || !current_cart.items.empty?
+
+    unless guest.nil? || !current_cart.items.empty?
       guest_cart = guest.cart
       current_cart.items.destroy_all unless current_user.cart.items.empty?
       current_cart.items = guest_cart.items
