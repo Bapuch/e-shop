@@ -4,7 +4,7 @@ class UserMailer < ApplicationMailer
         mail(to: 'hoang_christine@yahoo.fr', subject: 'Sign Up Confirmation')  
     end
 
-    def order_done 
+    def order_confirmation
         mail(to: 'hoang_christine@yahoo.fr', subject: 'Order Confirmation') 
     end 
 

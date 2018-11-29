@@ -4,10 +4,12 @@ class RegistrationsController < Devise::RegistrationsController
 
   def create
     super
-
       if @user.persisted?
         #persisted? => to verify that the user was actually persisted to the database
         UserMailer.signup_confirmation.deliver_now
       end
   end
+
+
+
 end

@@ -21,6 +21,8 @@ class ChargesController < ApplicationController
 
     "sending to place order *********"
     place_order
+    #envoie mail pour l'admin et le user UserMailer...
+    self.order_confirmation
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to new_charge_path
@@ -57,4 +59,14 @@ class ChargesController < ApplicationController
     item.total_price = item.quantity * item.unit_price
     item.save!
   end
+
+  
+  def order_confirmation
+    @user = current_user
+    if @user.(params[:admin]) == true
+        @order = current_user.order
+        UserMailer.order_confirmation.deliver_now
+    end 
+  end 
+  
 end

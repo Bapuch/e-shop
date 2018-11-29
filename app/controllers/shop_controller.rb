@@ -4,13 +4,11 @@ class ShopController < ApplicationController
     @all_carts = Cart
   end
 
+
   def delete_item
     item = current_or_guest_user.cart.items.where(id: params[:id])
     current_or_guest_user.cart.items.delete(item)
   end
 
-  def order_confirmation
-    UserMailer.order_confirmation.deliver_now
-  end 
 
 end
