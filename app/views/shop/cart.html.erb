@@ -7,11 +7,8 @@
 
     <div class="col-md-9 cart-items">
       <h2>My Shopping Bag</h2>
-
       <% @cart.items.distinct.each do |item| %>
-
         <div class="cart-header" id="cart-header<%= item.id %>">
-          <!-- <div class="close-btn" id="close_<%= item.id %>"></div> -->
           <%= link_to "" , delete_item_path(id: item.id), method: 'put', class: "close-btn", id: "close_#{item.id }" %>
           <div class="cart-sec">
             <div class="cart-item cyc">
@@ -21,7 +18,10 @@
                 <h3><%= item.title %><span>Model No: 3578</span></h3>
                 <h4><span>Rs. $ </span><%= item.price %></h4>
                 <p class="qty">Qty ::</p>
-                <input min="1" type="number" id="quantity" name="quantity" value="<%= @cart.items.where(id: item.id).count %>" class="form-control input-small">
+                <%= form_with url: update_quantity_path(item_id: item.id), method: :put do |form| %>
+                  <%= form.number_field :qty, value: @cart.items.where(id: item.id).count, min: 1, max: 9, class: "form-control input-small" %>
+                  <%= form.submit 'Update Quantity' %>
+                <% end %>
               </div>
               <div class="clearfix"></div>
             <div class="delivery">
@@ -35,22 +35,29 @@
     </div>
     <div class="col-md-3 cart-total">
       <%= link_to "Continue to basket", '#', class: "continue" %>
-      <div class="price-details">
-        <h3>Price Details</h3>
-        <span>Total</span>
-        <span class="total"><%= @cart.items.sum(:price) %></span>
-        <span>Discount</span>
-        <span class="total">---</span>
-        <span>Delivery Charges</span>
-        <span class="total">150.00</span>
+
+      <div class="price-section">
+        <div class="price-details">
+          <h3>Price Details</h3>
+          <span>Total</span>
+          <span class="total"><%= @cart.items.sum(:price) %></span>
+          <span>Discount</span>
+          <span class="total">---</span>
+          <span>Delivery Charges</span>
+          <span class="total">150.00</span>
+          <div class="clearfix"></div>
+        </div>
+        <h4 class="last-price">TOTAL</h4>
+        <span class="total final"><%= @cart.items.sum(:price) + 150 %></span>
         <div class="clearfix"></div>
       </div>
-      <h4 class="last-price">TOTAL</h4>
-      <span class="total final"><%= @cart.items.sum(:price) + 150 %></span>
-      <div class="clearfix"></div>
-      <%= link_to "Place Order", place_order_path(id: @cart.id), method: 'put', class: "order #{'modal-btn' unless user_signed_in?}" %>
-	  
-      <div class="total-item">  
+      <% if user_signed_in? %>
+        <%= link_to "Place Order", new_charge_path, method: 'put', class: "order" %>
+      <% else %>
+        <button class="order modal-btn">Place Order</button>
+        <p class="small">you must be logged in to place an order</p>
+      <% end %>
+      <div class="total-item">
         <h3>OPTIONS</h3>
         <h4>COUPONS</h4>
         <%= link_to "Apply Coupons", '#', class: "cpns"%>

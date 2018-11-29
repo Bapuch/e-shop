@@ -21,7 +21,6 @@
 //xx= require popper
 //= require bootstrap.min
 
-//xx= require jquery.easydropdownprod
 //= require jquery.easydropdown
 //= require move-top
 //= require easing
