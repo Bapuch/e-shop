@@ -4,22 +4,10 @@ class RegistrationsController < Devise::RegistrationsController
 
   def create
     super
-      @user = User.new
-      if @user.save
-        UserMailer.signup_confirmation(@user).deliver
-        redirect_to @user, notice: "Signed up successfully."
-    
+
+      if @user.persisted?
+        #persisted? => to verify that the user was actually persisted to the database
+        UserMailer.signup_confirmation.deliver_now
       end
-  end
-
-  def sendemail
-      puts params
-      puts current_user
-
-    unless current_user.nil?
-      puts current_user.email
-      puts 'pppppppppppppppppppppppppppppppppppppp'
-     UserMailer.new.welcome_email
-    end 
   end
 end

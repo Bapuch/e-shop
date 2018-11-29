@@ -10,4 +10,8 @@ class ShopController < ApplicationController
     item = current_user.cart.items.where(id: params[:id])
     current_user.cart.items.delete(item)
   end
+
+  def order_confirmation
+    if @order.
+  end 
 end

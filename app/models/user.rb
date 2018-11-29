@@ -9,7 +9,7 @@ class User < ApplicationRecord
 
   private
   
-    def send_welcome_email_to_user
+  def send_welcome_email_to_user
     UserMailer.welcome_email(self).deliver_later
   end
   
