@@ -1,14 +1,11 @@
 <div class="footer">
 	 <div class="container wrap">
 		<div class="logo2">
-			 <a href="index.html"><%= image_tag "logo2.png", alt: "" %></a>
+			<%= link_to image_tag("logo2.png", alt: ""), items_path %>
 		</div>
 		<div class="ftr-menu">
 			 <ul>
-				 <li><a href="bicycles.html">BICYCLES</a></li>
-				 <li><a href="parts.html">PARTS</a></li>
-				 <li><a href="accessories.html">ACCESSORIES</a></li>
-				 <li><a href="404.html">EXTRAS</a></li>
+				 <li><%= link_to "Robots", items_path %></li>
 			 </ul>
 		</div>
 		<div class="clearfix"></div>
