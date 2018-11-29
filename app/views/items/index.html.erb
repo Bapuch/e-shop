@@ -15,7 +15,7 @@
 	 </div>
 </div>
 <!--bikes-->
-<div class="bikes">
+<div id="boutique" class="bikes">
 		 <h3>PRODUITS</h3>
 		 <div class="bikes-grids">
 			 <ul id="flexiselDemo1">
@@ -27,7 +27,7 @@
 							 <h4><%= item.title %><span><%= item.price %>€</span></h4>
 						 </div>
 						 <div class="model-info">
-							 <a href="bicycles.html">BUY</a>
+							 <%= link_to "Acheter", item_path(item) %>
 						 </div>
 						 <div class="clearfix"></div>
 					 </div>
@@ -40,6 +40,7 @@
 	</div>
 </div>
 <!---->
+<!--
 <div class="contact">
 	<div class="container">
 		<h3>CONTACT US</h3>
@@ -53,4 +54,6 @@
 		</form>
 	</div>
 </div>
+-->
+
 <!---->
