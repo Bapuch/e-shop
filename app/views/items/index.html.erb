@@ -3,7 +3,7 @@
 	 <div class="container">
 		 <h3>CATEGORIES</h3>
 		 <div class="categorie-grids">
-			 <% @categories.each_with_index do |category, i| %>
+			 <% @categories.each.with_index do |category, i| %>
 			 	<div class="col-md-4 cate-grid grid<%= i+1 %>">
 					<h4><%= category.name %></h4>
 					<p>Venez les découvrir !</p>

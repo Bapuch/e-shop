@@ -1,4 +1,10 @@
 <%= render 'layouts/small_banner' %>
+<div class="jumbotron jumbotron-fluid bg-dark text-light">
+  <div class="container bg-dark text-light">
+    <h1 class="display-4">Fluid jumbotron</h1>
+    <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+  </div>
+</div>
 <div class="cart">
 	 <div class="container">
 		 <div class="cart-top">
@@ -21,6 +27,8 @@
                   data-amount="500"
                   data-locale="auto"></script>
         <% end %>
+
+        <%= link_to "Confirm Order", new_charge_path, class: "order #{'modal-btn' unless user_signed_in?}" %>
     </div>
   </div>
 </div>

@@ -1,7 +1,7 @@
 <div class="container">
   <div class="header">
     <div class="logo">
-      <%= link_to image_tag("logo.png", alt: ""), '#' %>
+      <%= link_to image_tag("logo.png", alt: ""), items_path %>
     </div>
     <div class="top-nav">
       <label class="mobile_menu" for="mobile_menu">
@@ -42,14 +42,14 @@
           <% unless user_signed_in? %>
           <li><button class="btn btn-primary btn-lg modal-btn">Sign In/Register</button></li>
           <% else %>
-          <%= link_to image_tag("cart.png", :alt => ""), cart_path, class: "shop" %>
           <li class="nav-item">
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn-logout" %>
           </li>
           <li class="nav-item">
-            <%= link_to "Edit profil", edit_user_registration_path %>
+            <%= link_to "#{current_user.email}", users_show_path %>
           </li>
           <% end %>
+          <%= link_to image_tag("cart.png", :alt => ""), cart_path, class: "shop" %>
         </ul>
       </div>
     <div class="clearfix"></div>
