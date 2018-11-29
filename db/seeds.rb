@@ -10,11 +10,11 @@ Item.destroy_all
 Category.destroy_all
 
 
-# Create 4 categories
+# Create 3 categories
 
 Category.create(name: "Robots guerriers")
 Category.create(name: "Robots ménagers")
-Category.create(name: "Robots compagnons")
+Category.create(name: "Sexbot")
 # Create 20 random items
  #destroy all items first
 20.times do |i|
