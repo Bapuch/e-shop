@@ -1,6 +1,4 @@
 class ShopController < ApplicationController
-  # before_action :authenticate_user!
-
   def cart
     @cart = current_or_guest_user.cart
     @all_carts = Cart

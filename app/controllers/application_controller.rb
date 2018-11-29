@@ -3,7 +3,6 @@ class ApplicationController < ActionController::Base
 
   # if user is logged in, return current_user, else return guest_user
   def current_or_guest_user
-    
     if current_user
       puts 1
       if session[:guest_user_id] && session[:guest_user_id] != current_user.id
@@ -44,22 +43,31 @@ class ApplicationController < ActionController::Base
   # to hand off from guest_user to current_user.
   def logging_in
     puts 2
+    puts 20.001
+     puts "*** current user cart id:"
+    puts current_user.id
     guest = guest_user
+    current_cart = current_user.cart
     puts "guest : #{guest}"
-    puts "guest cart : #{guest.cart} --- with id: #{}"
+    puts "guest cart : #{guest.cart} --- with id: #{guest.cart.id}"
     puts "test : #{guest.nil? || guest.cart.nil?}"
-    puts "cached : #{@cached_guest_user} --------- any cart ?:  #{@cached_guest_user.cart} --------- with id::  #{@cached_guest_user.cart}"
-    unless guest.nil? || guest.cart.nil?
-    # update the cart to get the current_user.id
-    puts 2.1
-    guest_cart = guest.cart
-    puts guest_cart
-    guest_cart.user_id = current_user.id
-    guest_cart.save!
-    current_user.cart = guest_cart
-    current_user.save!
-    puts "*** guest cart user id:"
-    puts guest_cart.user_id
+    puts "cached : #{@cached_guest_user} --------- any cart ?:  #{@cached_guest_user.cart} --------- with id::  #{@cached_guest_user.cart.id}"
+      unless guest.nil? || guest.cart.nil?
+      # update the cart to get the current_user.id
+      puts 2.1
+      guest_cart = guest.cart
+      puts guest_cart
+      current_cart.items.destroy_all unless current_user.cart.items.empty?
+      current_cart.items = guest_cart.items
+      current_cart.save!
+
+      puts "*** guest cart user id:"
+      puts guest_cart.user_id
+      puts 20.002
+      puts "*** current user cart id:"
+      puts current_user.id
+
+
     end
   end
 
