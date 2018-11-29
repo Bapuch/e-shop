@@ -1,0 +1,4 @@
+$(document).ready(function() {
+  let new_section = $("<%= j (render 'layouts/quantity'), locals: { sum: @sum}%>");
+  $(".price-section").html(new_section);
+});
