@@ -48,7 +48,7 @@
       <h4 class="last-price">TOTAL</h4>
       <span class="total final"><%= @cart.items.sum(:price) + 150 %></span>
       <div class="clearfix"></div>
-      <%= link_to "Place Order",'#', class: "order" %>
+      <%= link_to "Place Order", place_order_path, method: 'put', class: "order #{'modal-btn' unless user_signed_in?}" %>
       <div class="total-item">
         <h3>OPTIONS</h3>
         <h4>COUPONS</h4>
@@ -57,6 +57,6 @@
         <p><%= link_to "Log In", "#" %> to use accounts - linked coupons</p>
         <% end %>
       </div>
-			</div>
-	 </div>
+		</div>
+	</div>
 </div>
