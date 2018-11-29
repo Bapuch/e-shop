@@ -10,7 +10,7 @@ class ShopController < ApplicationController
   end
 
   def order_confirmation
-
+    UserMailer.order_confirmation.deliver_now
   end 
 
 end
