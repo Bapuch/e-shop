@@ -33,9 +33,11 @@ class ApplicationController < ActionController::Base
   def logging_in
     guest = guest_user
     current_cart = current_user.cart
+    puts " LOGGGING IN ********* "
 
     # if guest exists then save all items in current cart into its own cart
-    unless guest.nil? # || guest.cart.nil?
+    unless guest.nil? || current_cart.nil?
+      puts " DELETING CART ****************"
       guest_cart = guest.cart
       current_cart.items.destroy_all unless current_user.cart.items.empty?
       current_cart.items = guest_cart.items
@@ -45,7 +47,6 @@ class ApplicationController < ActionController::Base
 
   def create_guest_user
     u = User.new(:email => "guest_#{Time.now.to_i}#{rand(100)}@example.com") #:name => "guest",
-
     # build cart upon new user creation, neccessary as validation will be ignored
     u.build_cart
     u.save!(:validate => false)
