@@ -2,7 +2,7 @@
 <h1>Votre profil</h1>
 <%= link_to "Modifier", edit_user_registration_path, class: "badge badge-primary" %>
 
-<p>Your e-mail: <%= @user.email %></p>
+<p>E-mail: <%= @user.email %></p>
 
 <h2>Récapitulatif de vos commandes:</h2>
 
@@ -31,4 +31,4 @@
     <% end %>
   </tbody>
 </table>
-<p>Vous avez dépensé <%= @user.get_total_price %>€ chez nous. Merci <3 </p>
+<p class="text-center">Vous avez dépensé <%= @user.get_total_price %>€ chez nous. Merci <3 </p>
