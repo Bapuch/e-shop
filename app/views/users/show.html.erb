@@ -4,7 +4,7 @@
 
 <p>Your e-mail: <%= @user.email %></p>
 
-<h2>Récapitulatif de vos commandes:</h2> 
+<h2>Récapitulatif de vos commandes:</h2>
 
 
 <table class="table table-striped">
@@ -21,7 +21,7 @@
   <tbody>
     <% @user.orders.each do |order| %>
     <tr>
-      <th scope="row"><%= order.id %></th>
+      <th scope="row"><%= order.order_id %></th>
       <td><%= order.date %></td>
       <td><%= order.title %></td>
       <td><%= order.description %></td>
