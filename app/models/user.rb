@@ -16,6 +16,10 @@ class User < ApplicationRecord
     return sum
   end
 
+  def is_admin?
+    self.admin
+  end
+
   private
   def build_default_cart
     # build default profile instance. Will use default params.
