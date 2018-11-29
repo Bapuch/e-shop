@@ -143,4 +143,14 @@ $(document).on('turbolinks:load', function () {
       });
     });
 
+
+    // link stripe button to place_order_cmd
+    jQuery(function (){
+      let stripeBtn = $('.stripe-button-el');
+      console.log('in STRIPE JS');
+      console.log(stripeBtn);
+      stripeBtn.on('click', function() {
+
+      });
+    });
 });

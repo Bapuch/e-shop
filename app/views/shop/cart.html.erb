@@ -48,31 +48,16 @@
       <h4 class="last-price">TOTAL</h4>
       <span class="total final"><%= @cart.items.sum(:price) + 150 %></span>
       <div class="clearfix"></div>
-      <%= link_to "Place Order", place_order_path(id: @cart.id), method: 'put', class: "order #{'modal-btn' unless user_signed_in?}" %>
-     	<div class="text-center">
-		<%= form_tag charges_path do %>
-		  <article>
-		    <% if flash[:error].present? %
-		    	<div id="error_explanation">	
-			  <p><%= flash[:error] %></p>
-			</div>
-	  	    <% end %>
-		  </article>
-		<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-											data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-											data-description="Mon Panier"
-											data-amount= <%= 	(@cart.items.sum(:price) + 150)*100 %>
-											data-locale="auto">
-							</script>
-							<% end %>
+
+      <div class="text-center">
+        <%= link_to "Place Order", place_order_path(id: @cart.id), method: 'put', class: "order #{'modal-btn' unless user_signed_in?}" %>
 				</div>
-	    
-      <div class="total-item">  
+      <div class="total-item">
         <h3>OPTIONS</h3>
         <h4>COUPONS</h4>
         <%= link_to "Apply Coupons", '#', class: "cpns"%>
         <% unless user_signed_in? %>
-        <p><%= link_to "Log In", "#" %> to use accounts - linked coupons</p>
+          <p><%= link_to "Log In", "#" %> to use accounts - linked coupons</p>
         <% end %>
       </div>
 		</div>

@@ -10,6 +10,10 @@ class ShopController < ApplicationController
   end
 
   def place_order
+    puts "IN ORDER"
+  end
+
+  def create_order
     # first create an order
       if user_signed_in?
       @cart = Cart.find(params[:id])

@@ -21,6 +21,8 @@
                   data-amount="500"
                   data-locale="auto"></script>
         <% end %>
+
+        <%= link_to "Confirm Order", new_charge_path, class: "order #{'modal-btn' unless user_signed_in?}" %>
     </div>
   </div>
 </div>
