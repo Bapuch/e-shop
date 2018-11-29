@@ -6,9 +6,6 @@ class ShopController < ApplicationController
     @all_carts = Cart
   end
 
-  def order
-  end
-
   def delete_item
     item = current_user.cart.items.where(id: params[:id])
     current_user.cart.items.delete(item)
