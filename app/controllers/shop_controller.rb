@@ -16,8 +16,9 @@ class ShopController < ApplicationController
     puts "PLACE ORDER"
     # first create an order
     @cart = Cart.find(params[:id])
-    
+    order = current_user.orders.new
     @cart.items.each do |item|
+      order.
     end
     # then empty the cart
     
