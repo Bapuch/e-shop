@@ -1,0 +1,26 @@
+<%= render 'layouts/small_banner' %>
+<div class="cart">
+	 <div class="container">
+		 <div class="cart-top">
+			<%= link_to 'Home', root_path %>
+		 </div>
+
+    <div class='text-center'>
+        <%= form_tag charges_path do %>
+          <article>
+            <% if flash[:error].present? %>
+              <div id="error_explanation">
+                <p><%= flash[:error] %></p>
+              </div>
+            <% end %>
+          </article>
+
+          <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                  data-description="You have to pay"
+                  data-amount="500"
+                  data-locale="auto"></script>
+        <% end %>
+    </div>
+  </div>
+</div>
