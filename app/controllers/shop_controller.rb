@@ -28,14 +28,7 @@ class ShopController < ApplicationController
       end
 
       # then empty the cart
-      puts @cart.items.count
-      puts "22"
-      i = @cart.items.first
-      puts Item.find(i.id)
       @cart.items.destroy_all
-      puts @cart.items.count
-      puts "33"
-      i = @cart.items.first
 
       # redirect to the cart view which should be empty now
       redirect_to cart_path
@@ -44,6 +37,8 @@ class ShopController < ApplicationController
 
   def add_order_item(title, des, price, quantity, url)
     item = current_user.orders.new(user_id: current_user.id, order_id: @order_id, date: @date, label: "item", title: title, description: des, unit_price: price, quantity: quantity, image_url: url)
+
+    # calculate and save total price for each item
     item.total_price = item.quantity * item.unit_price
     item.save!
   end
