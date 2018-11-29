@@ -268,7 +268,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rails (~> 5.2.1)
-  sass-rails (~> 5.0)
+  sass-rails (>= 3.2)
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
