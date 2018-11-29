@@ -18,7 +18,7 @@ class ShopController < ApplicationController
     @cart = Cart.find(params[:id])
     order = current_user.orders.new
     @cart.items.each do |item|
-      order.
+      # order.
     end
     # then empty the cart
     
