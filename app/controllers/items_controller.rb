@@ -15,7 +15,5 @@ class ItemsController < ApplicationController
     current_or_guest_user.cart.items << @item
     flash[:success] = 'Item successfully added to cart!'
     redirect_to item_path(params[:id])
-
-
   end
 end

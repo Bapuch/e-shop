@@ -1,16 +1,15 @@
 <%= render 'layouts/small_banner' %>
 <div class="product">
-	 <div class="container">
-		 <div class="ctnt-bar cntnt">
-			 <div class="content-bar">
-				 <div class="single-page">
-					 <div class="product-head">
+  <div class="container">
+    <div class="ctnt-bar cntnt">
+      <div class="content-bar">
+        <div class="single-page">
+          <div class="product-head">
 						<%= link_to "Home", root_path %> <span>::</span>
 						</div>
-
 						<!--//details-product-slider-->
-					 <div class="details-left-slider">
-						 <div class="grid images_3_of_2">
+          <div class="details-left-slider">
+            <div class="grid images_3_of_2">
 						  <ul id="etalage">
 							<li>
 								<a href="optionallink.html">
@@ -32,8 +31,8 @@
 							</li>
             </ul>
 					</div>
-				 </div>
-					 <div class="details-left-info">
+        </div>
+          <div class="details-left-info">
 							<h3><%= @item.title %></h3>
 							<h4></h4>
 							<p><label>$</label> <%= @item.price %>
@@ -46,8 +45,8 @@
 							</div>
 							<h5>Description  ::</h5>
 							<p class="desc"><%= @item.description %></p>
-					 </div>
-					 <div class="clearfix"></div>
+          </div>
+          <div class="clearfix"></div>
 				  </div>
 			  </div>
 		  </div>
@@ -56,22 +55,22 @@
         <% @random_items.each do |rand_item| %>
         <div class="product">
  					 <div class="product-desc">
- 						  <div class="product-img product-img2">
+            <div class="product-img product-img2">
  							 <%= image_tag rand_item.image_url, class: "img-responsive " , alt: "" %>
  						 </div>
  						 <div class="prod1-desc">
- 								<h5><%= link_to rand_item.title, item_path, class: "product_link" %></a></h5>
- 								<p class="product_descr"> <%= rand_item.description %></p>
+              <h5><%= link_to rand_item.title, item_path, class: "product_link" %></a></h5>
+              <p class="product_descr"> <%= rand_item.description %></p>
  						 </div>
  						 <div class="clearfix"></div>
  					 </div>
- 					  <div class="product_price">
- 							<span class="price-access"><%= rand_item.price %>€</span>
+          <div class="product_price">
+            <span class="price-access"><%= rand_item.price %>€</span>
               <%= link_to "Add to cart", add_to_cart_path, remote: true, data: {params: {id: rand_item.id}.to_param}, class: "button1" %>
             </div>
- 						<div class="clearfix"></div>
+          <div class="clearfix"></div>
  			 </div>
-       <% end %>
-		 </div>
-	 </div>
+      <% end %>
+    </div>
+  </div>
 </div>

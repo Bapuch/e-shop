@@ -11,4 +11,5 @@ Rails.application.routes.draw do
 
   get 'add_to_cart', to: 'items#add_to_cart'
   put 'delete_item', to: "shop#delete_item"
+  put 'place_order', to: "shop#place_order"
 end
