@@ -1,9 +1,34 @@
 <%= render 'layouts/small_banner' %>
 <h1>Votre profil</h1>
+<%= link_to "Modifier", edit_user_registration_path, class: "badge badge-primary" %>
 
-<p>Your e-mail: <%= @user.email %></p>
+<p>E-mail: <%= @user.email %></p>
 
-Récapitulatif de vos commandes:
+<h2>Récapitulatif de vos commandes:</h2>
 
 
-<%= link_to "Modifier votre profil", edit_user_registration_path %>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Date</th>
+      <th scope="col">Title</th>
+      <th scope="col">Description</th>
+      <th scope="col">Unit price</th>
+      <th scope="col">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @user.orders.each do |order| %>
+    <tr>
+      <th scope="row"><%= order.order_id %></th>
+      <td><%= order.date %></td>
+      <td><%= order.title %></td>
+      <td><%= order.description %></td>
+      <td><%= order.unit_price %></td>
+      <td><%= order.total_price %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+<p class="text-center">Vous avez dépensé <%= @user.get_total_price %>€ chez nous. Merci <3 </p>
