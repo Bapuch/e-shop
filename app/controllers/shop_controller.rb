@@ -9,5 +9,8 @@ class ShopController < ApplicationController
     current_or_guest_user.cart.items.delete(item)
   end
 
+  def order_confirmation
+
+  end 
 
 end
