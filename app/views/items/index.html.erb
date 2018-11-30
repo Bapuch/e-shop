@@ -16,27 +16,27 @@
 </div>
 <!--bikes-->
 <div id="boutique" class="bikes">
-		 <h3>PRODUITS</h3>
-		 <div class="bikes-grids">
-			 <ul id="flexiselDemo1">
-         <% @items.first(8).each do |item| %>
-         <li>
-           <%= image_tag item.image_url %>
-           <div class="bike-info">
-						 <div class="model">
-							 <h4><%= item.title %><span><%= item.price %>€</span></h4>
-						 </div>
-						 <div class="model-info">
-							 <%= link_to "Acheter", item_path(item) %>
-						 </div>
-						 <div class="clearfix"></div>
-					 </div>
-					 <div class="viw">
-						<%= link_to "Show", item_path(item.id) %>
-					 </div>
-         </li>
-         <% end %>
-		   </ul>
+    <h3>PRODUITS</h3>
+    <div class="bikes-grids">
+      <ul id="flexiselDemo1">
+        <% @items.first(8).each do |item| %>
+        <li>
+          <%= image_tag item.image_url %>
+          <div class="bike-info">
+            <div class="model">
+              <h4><%= item.title %><span><%= item.price %>€</span></h4>
+            </div>
+            <div class="model-info">
+              <%= link_to "Acheter", item_path(item) %>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <div class="viw">
+          <%= link_to "Show", item_path(item.id) %>
+          </div>
+        </li>
+        <% end %>
+      </ul>
 	</div>
 </div>
 <!---->

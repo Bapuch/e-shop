@@ -34,7 +34,7 @@
       <% end %>
     </div>
     <div class="col-md-3 cart-total">
-      <%= link_to "Continue to basket", '#', class: "continue" %>
+      <%= link_to "Back to Shopping", items_path, class: "continue" %>
 
       <div class="price-section">
         <div class="price-details">
@@ -52,7 +52,7 @@
         <div class="clearfix"></div>
       </div>
       <% if user_signed_in? %>
-        <%= link_to "Place Order", new_charge_path, method: 'put', class: "order" %>
+        <%= link_to "Place Order", new_charge_path, class: "order" %>
       <% else %>
         <button class="order modal-btn">Place Order</button>
         <p class="small">you must be logged in to place an order</p>
