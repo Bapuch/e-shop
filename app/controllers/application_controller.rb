@@ -42,12 +42,6 @@ class ApplicationController < ActionController::Base
 
     # if guest exists and the current_user does not already have a pending cart from previous session
     # then save all items in current cart into its own cart
-    puts "guest nil"
-    puts guest.nil?
-    puts "empty cart ?"
-    puts current_cart.items.empty?
-    puts "test: "
-    puts guest.nil? || !current_cart.items.empty?
 
     unless guest.nil? || !current_cart.items.empty?
       guest_cart = guest.cart
