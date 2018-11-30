@@ -3,65 +3,7 @@
   <div class="container">
     <h2>BIKE-PARTS ALL</h2>
     <div class="bike-parts-sec">
-        <div class="bike-parts">
-        <div class="top">
-          <ul>
-            <li><%= link_to 'home', root_path %></li>
-            <li><%= link_to '/', '#'%></li>
-            <li><%= link_to 'categories', items_path %></li>
-          </ul>
-        </div>
-        <div class="bike-apparels">
-          <% tot_parts = (@items.count / 4).ceil %>
-          <% tot_parts.times do |i| %>
-            <div class="parts<%= i %>">
-              <% @items.all.each_with_index do |item, j|%>
-                <% if j >= (4 * i) && j <= (i * 4) + 3 %>
-                  <div class="part-sec">
-                    <%= link_to image_tag("#{item.image_url}_1.png", alt: item.image_url), item_path(item.id)%>
-                    <div class="part-info">
-                      <%= link_to item_path(item.id) do %>
-                        <h5>
-                          <%= item.title %>
-                          <%= content_tag :span, "$#{item.price}", :class => "home-link" %>
-                        </h5>
-                      <% end %>
-                      <%= link_to "View Item", item_path(item.id), class: "add-cart" %>
-                      <%= link_to "ADD TO CART", add_to_cart_path, remote: true, data: {params: {id: item.id}.to_param}, class: "qck" %>
-                    </div>
-                  </div>
-                <% end %>
-              <% end %>
-              <div class="clearfix"></div>
-            </div>
-          <% end %>
-        </div>
-      </div>
-
-      <div class="rsidebar span_1_of_left">
-        <section  class="sky-form">
-          <h4>components</h4>
-          <div class="row row1 scroll-pane">
-            <div class="col col-4">
-              <% @categories.all.each do |cat| %>
-                <label class="checkbox"><input type="checkbox" name="checkbox" checked="true"><i></i> <%= cat.name %> (<%= cat.items.count %>)</label>
-              <% end%>
-            </div>
-          </div>
-          <section  class="sky-form">
-          <h4>Price</h4>
-            <div class="row row1 scroll-pane">
-              <div class="col col-4">
-                <label class="checkbox"><input type="checkbox" name="checkbox" checked="true"><i></i>Less than $50.00 (<%= @items.where("price < ?", 50).count %>)</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox" checked="true"><i></i>Less than $100.00 (<%= @items.where("price < ?", 100).count %>)</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox" checked="true"><i></i>Less than $200.00 (<%= @items.where("price < ?", 200).count %>)</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox" checked="true"><i></i>Less than $300.00 (<%= @items.where("price < ?", 300).count %>)</label>
-                <label class="checkbox"><input type="checkbox" name="checkbox" checked="true"><i></i>Less than $500.00 (<%= @items.where("price < ?", 400).count %>)</label>
-              </div>
-            </div>
-          </section>
-      </div>
-      <div class="clearfix"></div>
+      <%= render 'layouts/category', locals: { all_items: @all_items, items: @items, categories: @categories, active_cat: @active_cat} %>
     </div>
   </div>
 </div>
