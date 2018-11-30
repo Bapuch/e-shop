@@ -13,7 +13,7 @@ Category.destroy_all
 # Create 3 categories
 
 Category.create(name: "Robots guerriers")
-Category.create(name: "Robots ménagers")
+Category.create(name: "Cleanbot")
 Category.create(name: "Sexbot")
 # Create 20 random items
  #destroy all items first
@@ -27,3 +27,4 @@ Category.create(name: "Sexbot")
   new_item.category_id = Category.first.id
   new_item.save
 end
+
