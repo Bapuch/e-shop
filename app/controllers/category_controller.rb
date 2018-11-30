@@ -3,9 +3,6 @@ class CategoryController < ApplicationController
     @categories = Category
     @active_cat = 0
     @all_items = Item
-    puts params
-    puts "ICI LA HY HO"
-
     if params[:id].nil?
       @active_cat = 0
       @items = Item
@@ -27,7 +24,7 @@ class CategoryController < ApplicationController
     @all_items = Item
     @categories = Category
     @active_cat = params[:id]
-    @items = (@active_cat == 0) ? Item : Item.where(category_id: @active_cat)
+    @items = (@active_cat.to_i == 0) ? Item : Item.where(category_id: @active_cat)
 
     respond_to do |f|
       f.html {redirect_to items_path}
