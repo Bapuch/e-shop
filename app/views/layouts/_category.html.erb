@@ -13,7 +13,7 @@
               <% @items.all.each_with_index do |item, j|%>
                 <% if j >= (4 * i) && j <= (i * 4) + 3 %>
                   <div class="part-sec">
-                    <%= link_to image_tag("#{item.image_url}_1.png", alt: item.image_url), item_path(item.id)%>
+                    <%= link_to image_tag("#{item.image_url}1.png", alt: item.image_url), item_path(item.id)%>
                     <div class="part-info">
                       <%= link_to item_path(item.id) do %>
                         <h5>

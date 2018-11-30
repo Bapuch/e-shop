@@ -21,7 +21,7 @@
       <ul id="flexiselDemo1">
         <% @items.first(8).each do |item| %>
         <li>
-          <%= image_tag item.image_url %>
+          <%= image_tag "#{item.image_url}1.png" %>
           <div class="bike-info">
             <div class="model">
               <h4><%= item.title %><span><%= item.price %>€</span></h4>
