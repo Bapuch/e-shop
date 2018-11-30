@@ -36,7 +36,7 @@
       <% end %>
     </div>
     <div class="col-md-3 cart-total">
-      <%= link_to "Continue to basket", '#', class: "continue" %>
+      <%= link_to "Back to Shopping", items_path, class: "continue" %>
       <% unless @cart.items.empty? %>
         <div class="price-details">
           <h3>Price Details</h3>
