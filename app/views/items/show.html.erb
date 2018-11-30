@@ -13,21 +13,17 @@
 						  <ul id="etalage">
 							<li>
 								<a href="optionallink.html">
-									<%= image_tag @item.image_url, class: "etalage_thumb_image img-responsive" %>
-									<%= image_tag @item.image_url, class: "etalage_source_image img-responsive", title: "" %>
+									<%= image_tag "#{@item.image_url}1.png", class: "etalage_thumb_image img-responsive" %>
+									<%= image_tag "#{@item.image_url}1.png", class: "etalage_source_image img-responsive", title: "" %>
 								</a>
 							</li>
 							<li>
-								<%= image_tag @item.image_url, class: "etalage_thumb_image img-responsive" %>
-								<%= image_tag @item.image_url, class: "etalage_source_image img-responsive", title: "" %>
+								<%= image_tag "#{@item.image_url}2.png", class: "etalage_thumb_image img-responsive" %>
+								<%= image_tag "#{@item.image_url}2.png", class: "etalage_source_image img-responsive", title: "" %>
 							</li>
 							<li>
-								<%= image_tag @item.image_url, class: "etalage_thumb_image img-responsive"  %>
-								<%= image_tag @item.image_url, class: "etalage_source_image img-responsive"  %>
-							</li>
-						    <li>
-								<%= image_tag @item.image_url, class: "etalage_thumb_image img-responsive"  %>
-								<%= image_tag @item.image_url, class: "etalage_source_image img-responsive"  %>
+								<%= image_tag "#{@item.image_url}3.png", class: "etalage_thumb_image img-responsive"  %>
+								<%= image_tag "#{@item.image_url}3.png", class: "etalage_source_image img-responsive"  %>
 							</li>
             </ul>
 					</div>
@@ -36,10 +32,6 @@
 							<h3><%= @item.title %></h3>
 							<h4></h4>
 							<p><label>$</label> <%= @item.price %>
-							<p class="size">COLOR ::</p>
-							<a class="length" href="#">Red</a>
-							<a class="length" href="#">Blue</a>
-							<a class="length" href="#">Pink</a>
 							<div class="btn_form">
                 <%= link_to "ADD TO CART", add_to_cart_path, remote: true, data: {params: {id: @item.id}.to_param} %>
 							</div>
@@ -56,7 +48,7 @@
         <div class="product">
  					 <div class="product-desc">
             <div class="product-img product-img2">
- 							 <%= image_tag rand_item.image_url, class: "img-responsive " , alt: "" %>
+ 							 <%= image_tag "#{rand_item.image_url}1.png", class: "img-responsive " , alt: "" %>
  						 </div>
  						 <div class="prod1-desc">
               <h5><%= link_to rand_item.title, item_path, class: "product_link" %></a></h5>

@@ -12,7 +12,7 @@
           <%= link_to "", delete_item_path(id: item.id), method: 'put', class: "close-btn", id: "close_#{item.id }" %>
           <div class="cart-sec">
             <div class="cart-item cyc">
-                <%= image_tag item.image_url %>
+                <%= image_tag "#{item.image_url}1.png" %>
             </div>
               <div class="cart-item-info">
                 <h3><%= item.title %><span>Model No: 3578</span></h3>
