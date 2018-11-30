@@ -23,13 +23,10 @@ class ChargesController < ApplicationController
 
     flash[:success]
     place_order
-<<<<<<< HEAD
     #envoie mail pour l'admin et le user UserMailer...
-    self.order_confirmation
-=======
+    #UserMailer.order_confirmation.deliver_now
 
     flash[:success] = "Your order has been registered. Thanks!"
->>>>>>> 69f72c2227b6816573e52396f4b0ecb6817eca77
   rescue Stripe::CardError => e
     flash[:error] = e.message
     redirect_to new_charge_path
@@ -64,15 +61,14 @@ class ChargesController < ApplicationController
     item.save!
   end
 
+#Send email to admin if params admins  
+  #def order_confirmation
+   # @user = current_user
+    #if @user.(params[:admin]) == true
+     #   @order = current_user.order
+      #  UserMailer.order_confirmation.deliver_now
+   # end 
+ # end 
   
-  def order_confirmation
-    @user = current_user
-    if @user.(params[:admin]) == true
-        @order = current_user.order
-        UserMailer.order_confirmation.deliver_now
-    end 
-  end 
-  
-
 
 end
