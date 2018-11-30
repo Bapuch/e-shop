@@ -1,5 +1,6 @@
 <%= render 'layouts/small_banner'%>
 <div class="parts">
+
 	 <div class="container">
 		 <h2>ALL ROBOTS ALL</h2>
 		 <div class="bike-parts-sec">
@@ -253,6 +254,14 @@
 			 </div>			 
 			 <div class="clearfix"></div>
 		 </div>
+
+
+  <div class="container">
+    <h2>OUR ROBOTS</h2>
+    <div class="bike-parts-sec">
+      <%= render 'layouts/category', locals: { all_items: @all_items, items: @items, categories: @categories, active_cat: @active_cat} %>
+    </div>
+  </div>
 
 </div>
 

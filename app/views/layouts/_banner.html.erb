@@ -1,7 +1,7 @@
 <div class="container">
   <div class="header">
     <div class="logo">
-      <%= link_to image_tag("logo.png", alt: ""), items_path %>
+      <%= link_to image_tag("logo.png", alt: ""), root_path %>
     </div>
     <div class="top-nav">
       <label class="mobile_menu" for="mobile_menu">
@@ -9,11 +9,11 @@
       </label>
       <input id="mobile_menu" type="checkbox">
         <ul class="nav">
-          <li class="dropdown1"><%= link_to 'ROBOTS', '#' %>
+          <li class="dropdown1"><%= link_to 'ROBOTS', items_path %>
             <ul class="dropdown2">
-              <li><%= link_to 'MENAGERS', '#' %></li>
-              <li><%= link_to 'GUERRIERS', '#' %></li>
-              <li><%= link_to 'COMPAGNIE', '#' %></li>
+              <% @categories.all.each do |cat| %>
+                <li><%= link_to cat.name, items_path(id: cat.id) %></li>
+              <% end %>
             </ul>
           </li>
 
