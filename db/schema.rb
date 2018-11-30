@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 2018_11_29_133215) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "price"
     t.string "label"
     t.date "date"
     t.string "title"
@@ -59,7 +60,6 @@ ActiveRecord::Schema.define(version: 2018_11_29_133215) do
     t.string "image_url"
     t.integer "quantity"
     t.string "order_id"
-    t.integer "price"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 

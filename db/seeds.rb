@@ -9,10 +9,17 @@
 
 def category
 # Create 3 categories
+<<<<<<< HEAD
   Category.create(name: "War Bots")
   Category.create(name: "House Bots")
   Category.create(name: "Sex Bots")
 end
+=======
+
+Category.create(name: "Robots guerriers")
+Category.create(name: "Cleanbot")
+Category.create(name: "Sexbot")
+>>>>>>> e2bd2d364e4203e6ab3127efa471cabd9fcf0c77
 # Create 20 random items
  #destroy all items first
 def test_item

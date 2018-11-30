@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   put 'delete_item', to: "shop#delete_item"
   put 'update_quantity', to: "shop#update_quantity"
   put 'place_order', to: "shop#place_order"
+  put 'order_confirmation', to: "charges#order_confirmation"
   put 'active_cat', to: "category#update"
 
 end
