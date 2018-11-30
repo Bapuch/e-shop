@@ -1,0 +1,4 @@
+$(document).ready(function() {
+  let new_cat = $("<%= j (render 'layouts/category', locals: { all_items: @all_items, items: @items, categories: @categories, active_cat: @active_cat}) %>");
+  $(".bike-parts-sec").html(new_cat);
+});
