@@ -23,6 +23,8 @@ class ChargesController < ApplicationController
 
     flash[:success]
     place_order
+    #envoie mail order user UserMailer...
+    UserMailer.order_confirmation(current_user).deliver_now
 
     flash[:success] = "Your order has been registered. Thanks!"
   rescue Stripe::CardError => e
@@ -58,7 +60,5 @@ class ChargesController < ApplicationController
     item.total_price = item.quantity * item.unit_price
     item.save!
   end
-
-
 
 end
