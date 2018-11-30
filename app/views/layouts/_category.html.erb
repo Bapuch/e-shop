@@ -8,7 +8,7 @@
         </div>
         <div class="bike-apparels">
           <% tot_parts = (@items.count / 4).ceil %>
-          <% tot_parts.times do |i| %>
+          <% (tot_parts + 1).times do |i| %>
             <div class="parts<%= i %>">
               <% @items.all.each_with_index do |item, j|%>
                 <% if j >= (4 * i) && j <= (i * 4) + 3 %>
