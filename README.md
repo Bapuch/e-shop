@@ -12,8 +12,8 @@ Tu peux même jeter un coup d'oeil à notre trello:
 <strong>[Trello](https://trello.com/invite/b/zZxh5aJ6/58654e9ac6efdc2c366ba1a87d5c7fc0/boutique-e-commerce)</strong>
 
 Pour nous faciliter la tâche, on t'a créé un utilisateur avec le flag admin.
-admin@boutique.com  // 123456
-Tu pourras avoir accès à un dashboard d'administration de la plateforme
+Tu nous demanderas les logins par telephone :)
+
 
 ### Travail réalisé par
 --------------------------------------------------
