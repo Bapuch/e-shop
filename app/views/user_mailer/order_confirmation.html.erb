@@ -1,1 +1,34 @@
-Hi <%= @user.name %>
+
+<h3>Bonjour, <%= @user.email %></h3>
+<h3>Merci pour votre commande, Veuillez trouver ci dessous la liste de votre commande </h3>
+  <table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Date</th>
+      <th scope="col">Produit</th>
+      <th scope="col">Description</th>
+      <th scope="col">Prix unité</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Prix total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @user.orders.each do |order| %>
+    <tr>
+      <th scope="row"><%= order.order_id %></th>
+      <td><%= order.date %></td>
+      <td><%= order.title %></td>
+      <td><%= order.description %></td>
+      <td><%= order.unit_price %></td>
+      <td><%= order.quantity %></td>
+      <td><%= order.total_price %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+

@@ -1,6 +1,29 @@
-<hi>Hello !</h1>
+<h1>New order<%= order.order_id %> have been made </h1>
+<h2>Récapitulatif de vos commandes:</h2>
 
-<p>You have successfully signed up</p>
-<p>Enjoy your navigation on our website</p>
-
-<div><%= link_to "Retour vers le site", href='https://e-boots-dev.herokuapp.com/'%></div>
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Date</th>
+      <th scope="col">Produit</th>
+      <th scope="col">Description</th>
+      <th scope="col">Prix unité</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Prix total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @user.orders.each do |order| %>
+    <tr>
+      <th scope="row"><%= order.order_id %></th>
+      <td><%= order.date %></td>
+      <td><%= order.title %></td>
+      <td><%= order.description %></td>
+      <td><%= order.unit_price %></td>
+      <td><%= order.quantity %></td>
+      <td><%= order.total_price %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
