@@ -54,11 +54,11 @@ end
 
 def cleanbot
   cat = Category.find_by(name: "House Bots")
-  new_item = Item.new(title: Faker::Name.name, description: Faker::Lorem.paragraph(8), price: Faker::Number.decimal(3), image_url: "cleantbot_n1_1_", category_id: cat.id)
+  new_item = Item.new(title: Faker::Name.name, description: Faker::Lorem.paragraph(8), price: Faker::Number.decimal(3), image_url: "cleantbot_n1_", category_id: cat.id)
   new_item.save
-  new_item = Item.new(title: Faker::Name.name, description: Faker::Lorem.paragraph(8), price: Faker::Number.decimal(3), image_url: "cleantbot_n2_1_", category_id: cat.id)
+  new_item = Item.new(title: Faker::Name.name, description: Faker::Lorem.paragraph(8), price: Faker::Number.decimal(3), image_url: "cleantbot_n2_", category_id: cat.id)
   new_item.save
-  new_item = Item.new(title: Faker::Name.name, description: Faker::Lorem.paragraph(8), price: Faker::Number.decimal(2), image_url: "cleantbot_n3_1_", category_id: cat.id)
+  new_item = Item.new(title: Faker::Name.name, description: Faker::Lorem.paragraph(8), price: Faker::Number.decimal(2), image_url: "cleantbot_n3_", category_id: cat.id)
   new_item.save
 end
 
