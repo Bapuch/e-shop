@@ -1,24 +1,27 @@
-# README
+## E-shop
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Greetings
+--------------------------------------------------
+Dear machin,
 
-Things you may want to cover:
+Attaché à ce repo se trouve notre application
+<strong>[E-shop production](https://e-boot-prod.herokuapp.com/)</strong>
+<strong>[E-shop dev]https://e-boots-dev.herokuapp.com/)</strong>
 
-* Ruby version
+Tu peux même jeter un coup d'oeil à notre trello:
+<strong>[Trello](https://trello.com/invite/b/zZxh5aJ6/58654e9ac6efdc2c366ba1a87d5c7fc0/boutique-e-commerce)</strong>
 
-* System dependencies
+Pour nous faciliter la tâche, on t'a créé un utilisateur avec le flag admin.
+admin@boutique.com  // 123456
+Tu pourras avoir accès à un dashboard d'administration de la plateforme
 
-* Configuration
+### Travail réalisé par
+--------------------------------------------------
+Noms | Pseudo Slack
+------------ | -------------
+Maëlle Ngachili|@Maëlle
+Christine Hoang|@Christine
+Julien Gracia|@Julien
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Bonne correction ! :poop:
+--------------------------------------------------
