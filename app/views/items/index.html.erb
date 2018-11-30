@@ -7,7 +7,7 @@
 			 	<div class="col-md-4 cate-grid grid<%= i+1 %>">
 					<h4><%= category.name %></h4>
 					<p>Venez les découvrir !</p>
-					<%= link_to "Boutique", items_path, class: "store" %>
+          <%= link_to "Boutique", items_path(id: category.id), class: "store" %>
 				</div>
 			 <% end %>
 			 <div class="clearfix"></div>
@@ -16,7 +16,7 @@
 </div>
 <!--bikes-->
 <div id="boutique" class="bikes">
-    <h3>PRODUITS</h3>
+    <h3>POPULAR ROBOTS</h3>
     <div class="bikes-grids">
       <ul id="flexiselDemo1">
         <% @items.first(8).each do |item| %>
@@ -27,7 +27,7 @@
               <h4><%= item.title %><span><%= item.price %>€</span></h4>
             </div>
             <div class="model-info">
-              <%= link_to "Acheter", item_path(item) %>
+              <%= link_to "Buy now", item_path(item) %>
             </div>
             <div class="clearfix"></div>
           </div>
