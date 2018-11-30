@@ -52,8 +52,27 @@ def sexbot
   new_item.save
 end
 
+def cleanbot
+  cat = Category.find_by(name: "House Bots")
+  new_item = Item.new(title: Faker::Name.name, description: Faker::Lorem.paragraph(8), price: Faker::Number.decimal(3), image_url: "cleantbot_n1_1_", category_id: cat.id)
+  new_item.save
+  new_item = Item.new(title: Faker::Name.name, description: Faker::Lorem.paragraph(8), price: Faker::Number.decimal(3), image_url: "cleantbot_n2_1_", category_id: cat.id)
+  new_item.save
+  new_item = Item.new(title: Faker::Name.name, description: Faker::Lorem.paragraph(8), price: Faker::Number.decimal(2), image_url: "cleantbot_n3_1_", category_id: cat.id)
+  new_item.save
+end
+
 def del_all_items
   Item.destroy_all
 end
 
+def del_catetgory
+  Category.destroy_all
+end
+
+del_all_items
+del_catetgory
+category
+warbot
 sexbot
+cleanbot
