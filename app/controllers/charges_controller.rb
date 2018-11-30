@@ -24,7 +24,7 @@ class ChargesController < ApplicationController
     flash[:success]
     place_order
     #envoie mail order user UserMailer...
-    UserMailer.order_confirmation.deliver_now
+    UserMailer.order_confirmation(current_user).deliver_now
 
     flash[:success] = "Your order has been registered. Thanks!"
   rescue Stripe::CardError => e
